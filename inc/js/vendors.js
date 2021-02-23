@@ -1,0 +1,1 @@
+// BDAC vendors.js
