@@ -115,4 +115,4 @@
       </div>
     </nav>
     
-    <main id="main">
+    <main id="main<?php echo ( !is_front_page() ? '-alt' : ''  ); ?>" >

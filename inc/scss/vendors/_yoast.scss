@@ -1,0 +1,9 @@
+#breadcrumbs {
+  a {
+    color: $black;
+
+    &:hover {
+      color: $primary-colour;
+    }
+  }
+}

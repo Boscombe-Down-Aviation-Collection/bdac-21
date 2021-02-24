@@ -1,20 +1,28 @@
 // Custom SCSS
 
 // --------------------
-// 1: Base Styles
+// 0: Base Styles
 // --------------------
 
-// 1: - Variales
+// 0: - Variales
 @import "./base/variables";
 
-// 1: - Resets
+// 0: - Resets
 @import "./base/resets";
 
-// 1: - Titles
+// 0: - Titles
 @import "./base/titles";
 
-// 1: - Anchors
+// 0: - Anchors
 @import "./base/anchors";
+
+// --------------------
+// 1: Vendors
+// --------------------
+
+// 1: - Yoast
+// --------------------
+@import "./vendors/yoast";
 
 // --------------------
 // 2: Components
