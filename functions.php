@@ -666,3 +666,40 @@
     }
 
     add_action( 'after_setup_theme', 'register_navwalker' );
+
+    /**
+     *  Check if ACF is activated
+     */
+    if ( function_exists( 'acf_register_block_type' ) ) {
+        /**
+         * Adding specific ACF action
+         */
+        add_action( 'acf/init', 'register_acf_block_types' );
+    }
+
+    function register_acf_block_types() {
+
+    /**
+     * Content Blocks
+     */
+
+        /**
+         * Carousel Block
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'carousel',
+                'title'             => __( 'Carousel' ),
+                'description'       => __( 'BDAC Carousel block' ),
+                'render_template'   => 'inc/template-parts/blocks/carousel.php',
+                // 'enqueue_style'     => get_template_directory_uri() . '/inc/css/blocks/carousel.css',
+                'icon'              => 'format-gallery',
+                'keywords'          => array(
+                                        'carousel',
+                                        'banner',
+                                        'hero'
+                                    )
+                )
+        ); 
+    };
+

@@ -1,0 +1,154 @@
+.hero-section {
+  .carousel {
+    &-inner {
+      .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $secondary-colour;
+
+        &-red {
+          background: $primary-colour;
+        }
+        &-white {
+          background: $tertiary-colour;
+        }
+      }
+      img {
+        height: 87vh;
+        object-fit: cover;
+
+        @media (max-width: 1024px) {
+          height: 82vh;
+        }
+
+        @media (max-width: 768px) {
+          height: 80vh;
+        }
+      }
+
+      .carousel-caption {
+        top: 30px;
+        height: calc(100% - 130px);
+        padding: 0;
+        text-align: left;
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+          top: 3rem;
+        }
+
+        .lead {
+          @media (max-width: 1024px) {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          right: 1rem;
+          left: 1rem;
+        }
+
+        .container,
+        .row {
+          height: 100%;
+        }
+
+        h1 {
+          color: $primary-colour;
+          letter-spacing: 2.5px;
+          font-size: 3.2rem;
+          font-weight: 700;
+
+          @media (max-width: 768px) {
+            font-size: 2.8rem;
+          }
+        }
+
+        .colour {
+          &-red {
+            color: $primary-colour;
+          }
+          &-blue {
+            color: $secondary-colour;
+          }
+          &-white {
+            color: $tertiary-colour;
+          }
+        }
+
+        .carousel-link {
+          display: flex;
+          justify-content: center;
+
+          .btn-bdac {
+            color: $tertiary-colour;
+            padding: 1rem 3.5rem;
+            border: 0.2rem solid $tertiary-colour;
+            transition: all 600ms;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            i {
+              color: inherit;
+              margin-left: 10px;
+              font-size: 1.2rem;
+              top: 1px;
+              position: relative;
+              @media (max-width: 1024px) {
+                font-size: 1rem;
+              }
+            }
+            &:hover,
+            &:focus {
+              background: $tertiary-colour;
+              color: $primary-colour;
+            }
+            &:after {
+              content: "";
+              display: none;
+              height: 0;
+              background-color: transparent;
+            }
+            a:hover,
+            a:focus {
+              color: $primary-colour;
+              text-decoration: underline;
+            }
+            @media (max-width: 1024px) {
+              padding: 0.75rem 2rem;
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        @media (max-width: 1024px) {
+          text-align: center;
+        }
+
+        @media (max-width: 720px) {
+          text-align: center;
+
+          .container,
+          .row {
+            padding: 0;
+          }
+
+          h1 {
+            font-size: 2.2rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+
+        @media (max-width: 540px) {
+        }
+      }
+    }
+  }
+}
