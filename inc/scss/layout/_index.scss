@@ -1,0 +1,26 @@
+.blog {
+  #main {
+    margin-top: 82px;
+  }
+
+  .bdac-post {
+    &-title a {
+      color: $secondary-colour;
+      transition: 300ms;
+
+      &:hover {
+        color: $primary-colour;
+        text-decoration: none;
+      }
+    }
+    &-link {
+      color: $secondary-colour;
+      transition: 300ms ease;
+
+      &:hover {
+        color: $primary-colour;
+        text-decoration: none;
+      }
+    }
+  }
+}

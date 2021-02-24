@@ -14,7 +14,7 @@
 
   <body <?php body_class(); ?>>
     <!-- Header -->
-    <nav id="nav" class="navbar fixed-top navbar-expand-lg">
+    <nav id="nav" class="navbar <?php echo ( !is_front_page() ? 'navbar-not-front' : ''  ); ?> fixed-top navbar-expand-lg">
       <div class="header-social d-none d-md-block ">
         <div class="container">
         <div class="header-opening" style="font-size: 0.8rem;">

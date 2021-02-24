@@ -632,6 +632,15 @@
     function bdac_widgets() {
 
         register_sidebar( array(
+            'name'          => 'Index Sidebar',
+            'id'            => 'index_sidebar',
+            'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-red">',
+            'after_title'   => '</h6>',
+            'before_widget' => '<div class="my-3">',
+            'after_widget'  => '</div><hr>'
+        ) );
+
+        register_sidebar( array(
             'name'          => 'Footer Description',
             'id'            => 'footer_description',
             'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-white">',

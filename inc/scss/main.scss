@@ -13,6 +13,9 @@
 // 1: - Titles
 @import "./base/titles";
 
+// 1: - Anchors
+@import "./base/anchors";
+
 // --------------------
 // 2: Components
 // --------------------
@@ -25,3 +28,13 @@
 
 // 2: - Buttons
 @import "./base/buttons";
+
+// 2: - Cards
+@import "./components/cards";
+
+// --------------------
+// 3: Layout
+// --------------------
+
+// 3: - Index
+@import "./layout/index";

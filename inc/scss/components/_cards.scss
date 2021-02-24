@@ -1,0 +1,155 @@
+.bdac {
+  &-post {
+    height: 15.6rem;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    overflow: hidden;
+
+    &-overlay {
+      background: rgba(7, 31, 91, 0.7);
+      color: #fdfdfd;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      bottom: -100%;
+      right: 0;
+      transition: 600ms ease;
+      z-index: 1;
+    }
+
+    &:hover &-overlay {
+      top: 0;
+      bottom: 0;
+    }
+
+    &-button {
+      width: 50%;
+      height: 100%;
+      a {
+        background: #d91f26;
+        color: #fdfdfd;
+        width: 100%;
+        height: 20%;
+      }
+    }
+
+    &-meta-date {
+      background: #071f5b;
+      color: #fdfdfd;
+    }
+  }
+
+  &-card {
+    &-header {
+      hr {
+        background: $primary-colour;
+        width: 30%;
+      }
+    }
+
+    &-link {
+      color: $secondary-colour;
+      transition: 300ms ease;
+
+      &:hover {
+        color: $primary-colour;
+        text-decoration: none;
+      }
+    }
+
+    &-img {
+      background-color: $secondary-colour;
+      background-size: cover;
+      height: 15rem;
+      overflow: hidden;
+      transition: 300ms;
+
+      &-overlay {
+        background: rgba(7, 31, 91, 0.7);
+        color: #fdfdfd;
+        height: 100%;
+        transform: translateY(100%);
+        transition: 600ms ease;
+
+        p {
+          margin: 0;
+          padding: 1rem 1rem 0;
+        }
+
+        &-button {
+          background: #d91f26;
+          color: #fdfdfd;
+          transition: 600ms ease;
+          width: 100%;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          position: relative;
+
+          &:hover {
+            background: #fdfdfd;
+            color: #d91f26;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &:hover &-overlay {
+        transform: translateY(0);
+      }
+    }
+
+    &-meta {
+      padding: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: #fdfdfd;
+
+      &-title {
+        padding: 0.5rem;
+
+        h5 {
+          margin-bottom: 0.1rem;
+          a {
+            color: #071f5b;
+            transition: 300ms;
+
+            &:hover {
+              color: #d91f26;
+              text-decoration: none;
+            }
+          }
+        }
+        small a {
+          color: $black;
+          font-weight: 700;
+          transition: 300ms;
+
+          &:hover {
+            color: #d91f26;
+            text-decoration: none;
+          }
+        }
+
+        a {
+          &:hover,
+          &:hover h5,
+          &:hover small {
+            color: #d91f26;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &-info {
+        background: #071f5b;
+        color: #fdfdfd;
+        padding: 1rem 0.5rem;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
