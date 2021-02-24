@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $tertiary-colour;
+  color: $black;
+}
+
+#main {
+  background: $tertiary-colour;
+  color: $black;
+  min-height: calc(100vh - 60px - 0.125rem);
+  margin-top: 60px;
+
+  @media (min-width: 1080px) {
+    min-height: calc(100vh - 24px - 0.125rem);
+    margin-top: 24px;
+  }
+}

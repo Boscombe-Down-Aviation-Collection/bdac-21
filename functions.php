@@ -625,6 +625,29 @@
 
     add_action( 'after_setup_theme', 'bdac_features' );
 
+    /**
+     * Register Widgets
+     */
+
+    function bdac_widgets() {
+
+        register_sidebar( array(
+            'name'          => 'Footer Description',
+            'id'            => 'footer_description',
+            'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-white">',
+            'after_title'   => '</h6>'
+        ) );
+
+        register_sidebar( array(
+            'name'          => 'Footer Menu',
+            'id'            => 'footer_menu',
+            'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-white">',
+            'after_title'   => '</h6>'
+        ) );
+    
+    }
+    add_action( 'widgets_init', 'bdac_widgets' );
+
     
     /**
      * Register Custom Navigation Walker

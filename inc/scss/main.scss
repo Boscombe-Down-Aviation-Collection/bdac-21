@@ -7,12 +7,18 @@
 // 1: - Variales
 @import "./base/variables";
 
+// 1: - Resets
+@import "./base/resets";
+
 // --------------------
 // 2: Components
 // --------------------
 
 // 2: - Header
 @import "./components/header";
+
+// 2: - Footer
+@import "./components/footer";
 
 // 2: - Buttons
 @import "./base/buttons";

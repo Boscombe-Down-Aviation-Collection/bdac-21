@@ -1,0 +1,54 @@
+#footer {
+  background: $black;
+  color: $tertiary-colour;
+  min-height: 20rem;
+  padding: 2rem 0;
+  border-top: $default-border;
+  list-style: none;
+
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+
+  h6 {
+    color: $tertiary-colour;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: $default-border;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      margin: 0.75rem 0;
+      list-style: none;
+
+      a {
+        color: $tertiary-colour;
+
+        &:hover {
+          color: $primary-colour;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 991px) {
+    font-size: 0.8rem;
+
+    h6 {
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: $default-border;
+      font-size: 0.875rem;
+      letter-spacing: 0;
+    }
+  }
+}
