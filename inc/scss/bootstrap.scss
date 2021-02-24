@@ -1,0 +1,7 @@
+// Bootstrap Overrides
+$container-max-widths: (
+  xl: 1380px
+) !default;
+
+// Import Boostrap
+@import "~bootstrap/scss/bootstrap";

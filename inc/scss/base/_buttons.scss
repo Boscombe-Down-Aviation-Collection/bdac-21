@@ -1,0 +1,104 @@
+.btn-bdac {
+  color: $secondary-colour;
+  padding: 5px 0;
+  border: 0.125rem solid $primary-colour;
+  border-radius: 4px;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  transition-duration: all 330ms;
+  -webkit-transition-duration: all 330ms;
+  -o-transition-duration: all 330ms;
+  z-index: 1;
+
+  i {
+    margin-left: 10px;
+    position: relative;
+    color: inherit;
+  }
+  &:hover {
+    color: #fff;
+  }
+
+  &::after {
+    background-color: $primary-colour;
+    color: #fff;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    background: #cc4627;
+    background: -webkit-gradient(linear, left top, right top, from(#cc4627), to($primary-colour));
+    background: -o-linear-gradient(left, #cc4627, $primary-colour);
+    background: linear-gradient(to right, #cc4627, $primary-colour);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    -webkit-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+    content: " ";
+    display: block;
+    width: 0;
+    height: 2px;
+  }
+
+  &:hover::after {
+    color: #fff;
+    opacity: 1;
+  }
+  a:hover,
+  a:focus {
+    color: $primary-colour;
+    text-decoration: underline;
+  }
+
+  &-red {
+    background: $primary-colour;
+    color: $tertiary-colour;
+    border: $default-border;
+
+    &:hover,
+    &:focus {
+      background: $tertiary-colour;
+      color: $primary-colour;
+    }
+  }
+  &-blue {
+    background: $secondary-colour;
+    color: $tertiary-colour;
+    border-color: $secondary-colour;
+
+    &:hover,
+    &:focus {
+      background: $tertiary-colour;
+      color: $secondary-colour;
+    }
+  }
+
+  &-donation {
+    background: $primary-colour;
+    color: $tertiary-colour;
+    height: 100%;
+    border: none;
+    border-left: $default-border;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 600ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: $tertiary-colour;
+      color: $primary-colour;
+      border-color: $primary-colour;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+.customize-support {
+  .navbar .header-social {
+    top: 32px;
+  }
+  #nav {
+    top: 56px;
+  }
+}
+
+.navbar {
+  padding: 0;
+  border-bottom: $default-border;
+  -webkit-transition: padding 200ms;
+  -o-transition: padding 200ms;
+  transition: padding 200ms;
+  background-color: $tertiary-colour;
+  top: 25px;
+  z-index: 1030;
+
+  @media (max-width: 540px) {
+    top: 0;
+  }
+
+  .container {
+    margin-right: 0;
+  }
+
+  .navbar-toggler-icon {
+    margin: 9px;
+  }
+
+  .header-social {
+    background: $secondary-colour;
+    color: $tertiary-colour;
+    height: 25px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+
+    .container {
+      max-width: 100%;
+      padding: 0 19px;
+    }
+
+    &-links {
+      i {
+        color: $tertiary-colour;
+        margin: 0.2rem 0 0.2rem 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  i {
+    color: $secondary-colour;
+    margin: 0.5rem;
+    font-size: 1.125rem;
+    position: relative;
+    top: 1px;
+    transition: all 600ms;
+
+    &:hover {
+      color: $primary-colour;
+    }
+  }
+
+  .logo-container {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+
+    .logo {
+      border-radius: 100%;
+      box-shadow: 0.15rem 0.15rem 0.6rem rgba(7, 31, 91, 0.65);
+      transition: box-shadow 300ms;
+
+      &:hover {
+        box-shadow: 0.07rem 0.07rem 0.3rem rgba(7, 31, 91, 0.85);
+      }
+    }
+  }
+  .menu-primary-menu-container,
+  .menu-navbar-container {
+    margin-left: auto;
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      padding-right: 1rem;
+      border-right: none;
+    }
+  }
+  &-expand-lg .navbar-nav {
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+
+    .nav {
+      &-item {
+        @media (max-width: 991px) {
+          background: rgba(7, 31, 91, 0.01);
+          margin: 0.3rem;
+        }
+      }
+      &-link {
+        color: $secondary-colour;
+        padding: 0.5rem 1rem;
+        transition: opacity 300ms;
+
+        @media (max-width: 991px) {
+          font-size: 1.1rem;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .donate-area {
+    height: 100%;
+
+    .header-donation {
+      width: 12.5rem;
+      height: 58px;
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 991px) {
+    background: none;
+    top: 24px;
+    border-bottom: none;
+    transition: all 600ms;
+
+    .logo-container {
+      position: absolute;
+      top: 8px;
+      left: 15px;
+      transition: transform 600ms ease;
+    }
+
+    .menu-primary-menu-container {
+      .nav {
+        &-link {
+          color: $tertiary-colour;
+        }
+      }
+    }
+
+    &-scrolled,
+    &-not-front {
+      background: $tertiary-colour;
+      border-bottom: $default-border;
+
+      .logo-container {
+        position: absolute;
+        transform: translateY(-10px);
+      }
+
+      .menu-primary-menu-container {
+        .nav {
+          &-link {
+            color: $secondary-colour;
+          }
+        }
+      }
+    }
+  }
+}

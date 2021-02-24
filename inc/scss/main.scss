@@ -1,1 +1,18 @@
-// BDAC Main SCSS
+// Custom SCSS
+
+// --------------------
+// 1: Base Styles
+// --------------------
+
+// 1: - Variales
+@import "./base/variables";
+
+// --------------------
+// 2: Components
+// --------------------
+
+// 2: - Header
+@import "./components/header";
+
+// 2: - Buttons
+@import "./base/buttons";
