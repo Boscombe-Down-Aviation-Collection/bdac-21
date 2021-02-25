@@ -701,5 +701,121 @@
                                     )
                 )
         ); 
+
+        /**
+         * Intro
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'intro',
+                'title'             => __( 'BDAC Intro Block' ),
+                'description'       => __( 'BDAC intro block' ),
+                'category'          => 'BDAC',
+                'render_template'   => 'inc/template-parts/blocks/intro.php',
+                'icon'              => 'id',
+                'keywords'          => array(
+                                        'intro',
+                                        'text'
+                                    )
+                )
+        );
+
+    }
+
+    function get_blog() {
+        $args = array(
+            'posts_per_page'    => 1,
+            'post_type' => 'post',
+        );
+        $the_blog = new WP_Query( $args );
+        
+        while ( $the_blog->have_posts() ) {
+            $the_blog->the_post();
+
+            $postTitle      = get_the_title();
+            $postThumb      = get_the_post_thumbnail_url();
+            $postContent    = wp_trim_words( get_the_excerpt(), 20 );
+            $postLink       = get_the_permalink();
+            $authorId       = get_the_author_meta( 'ID' );
+            $postAuthor     = get_author_name();
+            $postAuthorLink = get_author_posts_url( $authorId );
+            $postCategory   = get_the_category_list( ', ' );
+            $postDate       = get_the_time( 'dS F' );
+
+            
+            return '
+                <div class="card bdac-card-img mb-3" style="background: url(' . $postThumb . '); background-size: cover;">
+                    <div class="bdac-card-img-overlay d-flex flex-column">
+                        <p>' . $postContent . '</p>
+                        <div class="col-5 d-flex mt-auto p-0">
+                            <a class="bdac-card-img-overlay-button text-center mt-auto" href="' . $postLink . '">Read More <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 bdac-card-meta">
+                        <div class="bdac-card-meta-title">
+                            <h5><a href="' . $postLink .'" title="Posts by BDAC Admin" rel="author">' . $postTitle . '</a></h5>
+                            <small>By <a href="' . $postAuthorLink . '">' . $postAuthor . '</a> in ' . $postCategory . '</small>
+                        </div>
+                        <div class="bdac-card-meta-info">
+                            <p>' . $postDate . '</p>
+                        </div> 
+                    </div>
+                </div>
+            ';
+        }
+        wp_reset_postdata();
     };
 
+    function get_events() {
+        $today = date('Ymd');
+        $eventsSection = new WP_Query(array(
+            'posts_per_page'    => 1,
+            'post_type'         => 'events',
+            'meta_key'          => 'event_date',
+            'orderby'           => 'meta_value',
+            'order'             => 'ASC',
+            'meta_query'        => array(
+                array(
+                    'key'       => 'event_date',
+                    'compare'   => '>=',
+                    'value'     => $today,
+                    'type'      => 'numeric'
+                )
+            )
+        ));
+
+        while($eventsSection->have_posts()) {
+            $eventsSection->the_post();
+
+            $eventTitle         = get_the_title();
+            $eventLink          = get_the_permalink();
+            $eventHeroImg       = get_the_post_thumbnail_url();
+            $eventExcerpt       = '';
+            $postId             = $eventsSection->post->ID;
+
+            $eventSpeaker       = get_field( 'event_speaker', $postId );
+            $eventDescription   = wp_trim_words( get_field( 'event_description', $postId ), 20 );
+            $eventDate		    = get_field( 'event_date', $postId );
+
+            return '
+                <div class="card bdac-card-img mb-3" style="background: url(' . $eventHeroImg . '); background-size: cover;">
+                    <div class="bdac-card-img-overlay d-flex flex-column">
+                        <p>' . $eventDescription . '</p>
+                        <div class="col-5 d-flex mt-auto p-0">
+                            <a class="bdac-card-img-overlay-button text-center mt-auto" href="' . $eventLink . '">Read More <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-7 bdac-card-meta">
+                        <div class="bdac-card-meta-title">
+                            <h5><a href="' . $eventLink . '" title="Posts by BDAC Admin" rel="author">' . $eventTitle . '</a></h5>
+                            ' .( $eventSpeaker ? '<small>' . $eventSpeaker . '</small>' : '' ) . '
+                        </div>
+                        <div class="bdac-card-meta-info">
+                            <p>' . $eventDate . '</p>
+                        </div> 
+                    </div>
+                </div>
+            ';
+        };
+        wp_reset_postdata();
+    }
