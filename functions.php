@@ -700,7 +700,24 @@
                                         'hero'
                                     )
                 )
-        ); 
+        );
+
+        /**
+         * General Content Block
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'general',
+                'title'             => __( 'General Content' ),
+                'description'       => __( 'General Content block' ),
+                'render_template'   => 'inc/template-parts/blocks/general.php',
+                'icon'              => 'edit',
+                'keywords'          => array(
+                                        'general',
+                                        'generic'
+                                    )
+                )
+        );
 
         /**
          * Intro

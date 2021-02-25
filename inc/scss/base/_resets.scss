@@ -28,3 +28,35 @@ body {
     }
   }
 }
+
+// Colours
+
+.bdac-bg {
+  &-red {
+    background: $primary-colour;
+  }
+  &-blue {
+    background: $secondary-colour;
+  }
+  &-white {
+    background: $tertiary-colour;
+  }
+  &-black {
+    color: $black;
+  }
+}
+
+.bdac-colour {
+  &-red {
+    color: $primary-colour;
+  }
+  &-blue {
+    color: $secondary-colour;
+  }
+  &-white {
+    color: $tertiary-colour;
+  }
+  &-black {
+    color: $black;
+  }
+}
