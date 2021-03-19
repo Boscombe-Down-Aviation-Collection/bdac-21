@@ -6,6 +6,6 @@ module.exports = merge(common, {
   mode: "development",
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "inc/dist")
+    path: path.resolve(__dirname, "inc/dist/js")
   }
 })
