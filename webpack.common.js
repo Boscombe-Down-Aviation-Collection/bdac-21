@@ -7,7 +7,7 @@ module.exports = {
     bootstrap: "./inc/scss/bootstrap.scss",
     main: "./inc/scss/main.scss"
   },
-  plugins: [new MiniCssExtractPlugin({ filename: "../css/[name].css" })],
+  plugins: [new MiniCssExtractPlugin({ filename: "css/[name].css" })],
   module: {
     rules: [
       {
