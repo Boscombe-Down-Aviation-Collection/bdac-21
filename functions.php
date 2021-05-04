@@ -737,6 +737,47 @@
                 )
         );
 
+        /**
+         * Styling Blocks
+         */
+
+        /**
+         * Arrow
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'arrow',
+                'title'             => __( 'Arrow' ),
+                'description'       => __( 'BDAC arrow block' ),
+                'render_template'   => 'inc/template-parts/styling/arrow.php',
+                'category'			=> 'formatting',
+                'icon'              => 'arrow-up-alt2',
+                'keywords'          => array(
+                                        'arrow',
+                                        'styling'
+                )
+            )
+        ); 
+        
+        /**
+         * Inverted Arrow
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'inverted arrow',
+                'title'             => __( 'Inverted Arrow' ),
+                'description'       => __( 'BDAC inverted arrow block' ),
+                'render_template'   => 'inc/template-parts/styling/arrow_inv.php',
+                'category'			=> 'formatting',
+                'icon'              => 'arrow-down-alt2',
+                'keywords'          => array(
+                                        'inverted arrow',
+                                        'arrow',
+                                        'styling'
+                                    )
+                )
+        );
+
     }
 
     function get_blog() {
