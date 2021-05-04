@@ -703,6 +703,24 @@
         );
 
         /**
+         * FAQ Block
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'faq',
+                'title'             => __( 'FAQ' ),
+                'description'       => __( 'BDAC FAQ block' ),
+                'render_template'   => 'inc/template-parts/blocks/faq.php',
+                'icon'              => 'list-view',
+                'keywords'          => array(
+                                        'faq',
+                                        'questions',
+                                        'frequently asked questions'
+                                    )
+            )
+        );
+
+        /**
          * General Content Block
          */
         acf_register_block_type(
