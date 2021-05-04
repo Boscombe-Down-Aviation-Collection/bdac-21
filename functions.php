@@ -761,26 +761,18 @@
 
             
             return '
-                <div class="card bdac-card-img mb-3" style="background: url(' . $postThumb . '); background-size: cover;">
-                    <div class="bdac-card-img-overlay d-flex flex-column">
-                        <p>' . $postContent . '</p>
-                        <div class="col-5 d-flex mt-auto p-0">
-                            <a class="bdac-card-img-overlay-button text-center mt-auto" href="' . $postLink . '">Read More <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-7 bdac-card-meta">
-                        <div class="bdac-card-meta-title">
-                            <h5><a href="' . $postLink .'" title="Posts by BDAC Admin" rel="author">' . $postTitle . '</a></h5>
-                            <small>By <a href="' . $postAuthorLink . '">' . $postAuthor . '</a> in ' . $postCategory . '</small>
-                        </div>
-                        <div class="bdac-card-meta-info">
-                            <p>' . $postDate . '</p>
-                        </div> 
+                <div class="bdac-card mb-3"  style="background: url(' . $postThumb . '); background-size: cover; background-position-x: center;">
+                    <div class="bdac-card-content">
+                        <h3 class="bdac-card-content-title mb-3"><a href="' . $postLink .'" title="Posts by BDAC Admin" rel="author">' . $postTitle . '</a></h3>
+                        <small class="bdac-card-content-meta">By <a href="' . $postAuthorLink . '">' . $postAuthor . '</a> in ' . $postCategory . '</small>
+                        <p class="bdac-card-content-body mt-3">' . $postContent . '</p>
+                        <a href="' . $postLink .'" class="bdac-card-content-link">Learn More <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             ';
         }
         wp_reset_postdata();
+        
     };
 
     function get_events() {
@@ -815,21 +807,12 @@
             $eventDate		    = get_field( 'event_date', $postId );
 
             return '
-                <div class="card bdac-card-img mb-3" style="background: url(' . $eventHeroImg . '); background-size: cover;">
-                    <div class="bdac-card-img-overlay d-flex flex-column">
-                        <p>' . $eventDescription . '</p>
-                        <div class="col-5 d-flex mt-auto p-0">
-                            <a class="bdac-card-img-overlay-button text-center mt-auto" href="' . $eventLink . '">Read More <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-7 bdac-card-meta">
-                        <div class="bdac-card-meta-title">
-                            <h5><a href="' . $eventLink . '" title="Posts by BDAC Admin" rel="author">' . $eventTitle . '</a></h5>
-                            ' .( $eventSpeaker ? '<small>' . $eventSpeaker . '</small>' : '' ) . '
-                        </div>
-                        <div class="bdac-card-meta-info">
-                            <p>' . $eventDate . '</p>
-                        </div> 
+                <div class="bdac-card mb-3"  style="background: url(' . $eventHeroImg . '); background-size: cover; background-position-x: center;">
+                    <div class="bdac-card-content">
+                        <h3 class="bdac-card-content-title mb-3"><a href="' . $eventLink .'" title="Posts by BDAC Admin" rel="author">' . $eventTitle . '</a></h3>
+                        <small class="bdac-card-content-meta">By <a href="' . $eventLink . '">' . $eventSpeaker . '</a> | <span>' . $eventDate . '</span></small>
+                        <p class="bdac-card-content-body mt-3">' . $eventDescription . '</p>
+                        <a href="' . $eventLink .'" class="bdac-card-content-link">Learn More <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             ';
