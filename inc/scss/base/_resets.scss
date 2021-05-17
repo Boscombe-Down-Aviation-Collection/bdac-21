@@ -31,32 +31,42 @@ body {
 
 // Colours
 
-.bdac-bg {
-  &-red {
-    background: $primary-colour;
+.bdac {
+  &-bg {
+    &-red {
+      background: $primary-colour;
+    }
+    &-blue {
+      background: $secondary-colour;
+    }
+    &-white {
+      background: $tertiary-colour;
+    }
+    &-black {
+      color: $black;
+    }
   }
-  &-blue {
-    background: $secondary-colour;
-  }
-  &-white {
-    background: $tertiary-colour;
-  }
-  &-black {
-    color: $black;
-  }
-}
 
-.bdac-colour {
-  &-red {
-    color: $primary-colour;
+  &-colour {
+    &-red {
+      color: $primary-colour;
+    }
+    &-blue {
+      color: $secondary-colour;
+    }
+    &-white {
+      color: $tertiary-colour;
+    }
+    &-black {
+      color: $black;
+    }
   }
-  &-blue {
-    color: $secondary-colour;
-  }
-  &-white {
-    color: $tertiary-colour;
-  }
-  &-black {
-    color: $black;
+
+  &-shadow {
+    box-shadow: 0.15rem 0.15rem 0.6rem rgba($secondary-colour, 65%);
+
+    &:hover {
+      box-shadow: 0.07rem 0.07rem 0.3rem rgba($secondary-colour, 0.85);
+    }
   }
 }
