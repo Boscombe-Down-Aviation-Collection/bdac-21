@@ -1,18 +1,28 @@
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px
-// ) !default;
-
 .map-section {
-  .container {
-    padding: 0;
+  &-title {
+    text-align: center;
+
+    &::after {
+      content: "";
+      background: #d91f26;
+      width: 20%;
+      height: 0.15rem;
+      position: absolute;
+      left: 40%;
+      right: 40%;
+      bottom: 0;
+    }
   }
 
   &-card {
     overflow: hidden;
+    border-radius: 0.3rem;
+
+    @media (max-width: 768px) {
+      .bdac-shadow {
+        box-shadow: none !important;
+      }
+    }
 
     &-location {
       width: 100%;
@@ -23,19 +33,24 @@
 
   &-content {
     height: 100%;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     border-radius: 0.3rem;
-  }
 
-  @media (min-width: 768px) {
-    .container {
-      padding: 0 15px;
-    }
+    ul {
+      margin-left: 1rem;
 
-    &-card {
-      border-radius: 0.3rem;
-      overflow: hidden;
-      transition: transform 600ms ease, box-shadow 600ms ease;
+      li {
+        list-style: none;
+
+        &::before {
+          content: "\2022";
+          color: $primary-colour;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
     }
   }
 }
