@@ -13,7 +13,7 @@
     $mapDirections  = get_field( 'map_list_items' );
 
     echo '
-        <section class="' .  esc_attr( $className ) . ' py-1 py-md-5">
+        <section class="' .  esc_attr( $className ) . '">
 
             <div class="container">
                 <div class="bdac-faq-title mb-3 mb-lg-5 pb-2">

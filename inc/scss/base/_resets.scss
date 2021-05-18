@@ -19,13 +19,21 @@ body {
     margin-top: 100px;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 992px) {
     min-height: calc(100vh - 24px - 0.125rem);
     margin-top: 24px;
 
     &-alt {
       margin-top: 82px;
     }
+  }
+}
+
+section {
+  padding: 1rem 0;
+
+  @media (min-width: 992px) {
+    padding: 3rem 0 1rem;
   }
 }
 

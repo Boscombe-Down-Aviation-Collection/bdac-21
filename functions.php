@@ -244,7 +244,7 @@
                         <h3 class="bdac-card-content-title mb-3"><a href="' . $postLink .'" title="Posts by BDAC Admin" rel="author">' . $postTitle . '</a></h3>
                         <small class="bdac-card-content-meta">By <a href="' . $postAuthorLink . '">' . $postAuthor . '</a> in ' . $postCategory . '</small>
                         <p class="bdac-card-content-body mt-3">' . $postContent . '</p>
-                        <a href="' . $postLink .'" class="bdac-card-content-link">Learn More <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        <a href="' . $postLink .'" class="bdac-card-content-link mt-auto">Learn More <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             ';

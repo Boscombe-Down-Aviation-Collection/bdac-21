@@ -15,7 +15,7 @@
 
 ?>
 
-<section class="<?php echo esc_attr( $className ); ?>">
+<section class="<?php echo esc_attr( $className ); ?> p-0">
     <div id="mainCarousel" class="carousel slide" data-ride="carousel">
         
         <ol class="carousel-indicators">

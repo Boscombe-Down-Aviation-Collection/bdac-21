@@ -119,6 +119,7 @@
 
       &-body {
         color: rgba($tertiary-colour, 0.95);
+        min-height: 4.5rem;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
