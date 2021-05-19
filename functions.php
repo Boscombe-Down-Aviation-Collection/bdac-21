@@ -37,7 +37,7 @@
             'id'            => 'index_sidebar',
             'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-red">',
             'after_title'   => '</h6>',
-            'before_widget' => '<div class="my-3">',
+            'before_widget' => '<div>',
             'after_widget'  => '</div><hr>'
         ) );
 
