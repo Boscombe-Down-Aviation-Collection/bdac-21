@@ -42,7 +42,7 @@
                                         get_events() : 
                                         (
                                             $introNews ?
-                                            get_blog() :
+                                            get_blog(1) :
                                             ''
                                         )    
                                     ) 
