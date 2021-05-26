@@ -1,3 +1,4 @@
+const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
@@ -7,12 +8,22 @@ module.exports = {
     bootstrap: "./inc/scss/bootstrap.scss",
     main: "./inc/scss/main.scss"
   },
-  plugins: [new MiniCssExtractPlugin({ filename: "../css/[name].css" })],
   module: {
     rules: [
       {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: {
+          loader: "file-loader",
+          options: {
+            entry: path.resolve(__dirname, "inc/img"),
+            name: "[name].[ext]",
+            outputPath: "../img/"
+          }
+        }
       }
     ]
   },
