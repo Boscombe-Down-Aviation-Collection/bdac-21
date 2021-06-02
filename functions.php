@@ -93,6 +93,13 @@
                 'render_template'   => 'inc/template-parts/blocks/carousel.php',
                 // 'enqueue_style'     => get_template_directory_uri() . '/inc/css/blocks/carousel.css',
                 'icon'              => 'format-gallery',
+                'mode'              => 'preview',
+                'supports'		    => [
+                    'align'			    => false,
+                    'anchor'		    => true,
+                    'customClassName'	=> true,
+                    'jsx' 			    => true,
+                ],
                 'keywords'          => array(
                                         'carousel',
                                         'banner',
