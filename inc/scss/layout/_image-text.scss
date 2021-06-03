@@ -1,0 +1,85 @@
+.image-text {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .row {
+    @media (min-width: 992px) {
+      align-items: center;
+    }
+  }
+
+  &-image {
+    box-shadow: 0.15rem 0.15rem 0.6rem rgba(7, 31, 91, 0.65);
+    transition: transform 600ms ease, box-shadow 600ms ease;
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: 992px) {
+      max-height: 60vh;
+      border-radius: 0.3rem;
+    }
+
+    &:hover {
+      box-shadow: 0.07rem 0.07rem 0.3rem rgba(7, 31, 91, 0.85);
+      transform: scale(1.008);
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    &-caption {
+      background: $tertiary-colour;
+      padding: 0.25rem 1rem 0.25rem 2rem;
+      border-radius: 0 0.3rem 0.3rem 0;
+      position: absolute;
+      left: 0;
+      bottom: 2rem;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-content {
+    width: 50%;
+    padding: 2rem;
+    align-items: center;
+    box-shadow: 0.15rem 0.15rem 0.6rem rgba(7, 31, 91, 0.65);
+    transition: transform 600ms ease, box-shadow 600ms ease;
+
+    @media (min-width: 992px) {
+      margin-left: -7.5rem;
+      border-radius: 0.3rem;
+      align-items: start;
+    }
+
+    &:hover {
+      box-shadow: 0.07rem 0.07rem 0.3rem rgba(7, 31, 91, 0.85);
+      transform: scale(1.008);
+    }
+
+    p {
+      min-height: 6rem;
+    }
+
+    .btn-bdac {
+      width: fit-content;
+      padding: 0.5rem 1.25rem;
+      border: $default-border;
+      border-color: $tertiary-colour;
+      border-radius: 0.3rem;
+      color: $tertiary-colour;
+      font-weight: 500;
+
+      &:hover {
+        background: $tertiary-colour;
+        color: $primary-colour;
+      }
+    }
+  }
+}

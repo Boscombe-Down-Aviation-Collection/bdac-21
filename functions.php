@@ -137,6 +137,23 @@
         );
 
         /**
+         * Image Text Block
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'image-text',
+                'title'             => __( 'Image Text Content' ),
+                'description'       => __( 'Image Text Content block' ),
+                'render_template'   => 'inc/template-parts/blocks/image-text.php',
+                'icon'              => 'edit',
+                'keywords'          => array(
+                                        'image text',
+                                        'image and text content block'
+                                    )
+                )
+        );
+
+        /**
          * Intro
          */
         acf_register_block_type(
