@@ -8,6 +8,7 @@
         right: 0;
         bottom: 0;
         background: $secondary-colour;
+        z-index: 1;
 
         &-red {
           background: $primary-colour;
@@ -46,9 +47,9 @@
           }
         }
 
-        @media (max-width: 1024px) {
-          right: 1rem;
-          left: 1rem;
+        @media (min-width: 1024px) {
+          right: 10%;
+          left: 10%;
         }
 
         .container,
