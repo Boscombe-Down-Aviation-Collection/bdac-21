@@ -14,7 +14,7 @@
   -o-transition: padding 200ms;
   transition: padding 200ms;
   background-color: $tertiary-colour;
-  top: 25px;
+  top: 34px;
   z-index: 1030;
 
   @media (max-width: 540px) {
@@ -32,8 +32,9 @@
   .header-social {
     background: $secondary-colour;
     color: $tertiary-colour;
-    height: 25px;
+    height: 34px;
     width: 100%;
+    padding: 5px 0;
     position: fixed;
     top: 0;
     bottom: 25px;
@@ -150,7 +151,7 @@
 
   @media (min-width: 991px) {
     background: none;
-    top: 24px;
+    top: 34px;
     border-bottom: none;
     transition: all 600ms;
 
