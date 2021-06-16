@@ -15,7 +15,7 @@
 
 ?>
 
-<section class="<?php echo esc_attr( $className ); ?>">
+<section class="<?php echo esc_attr( $className ); ?> p-0">
     <div id="mainCarousel" class="carousel slide" data-ride="carousel">
         
         <ol class="carousel-indicators">
@@ -39,6 +39,7 @@
 
                     // Variables
                     $carouselImg            = get_sub_field( 'carousel_img' );
+                    $carouselImgGrey        = get_sub_field( 'carousel_img_grey' );
                     $carouselTitle          = get_sub_field( 'carousel_title' );
                     $carouselSubtitle       = get_sub_field( 'carousel_subtitle' );
                     $carouselBtn            = get_sub_field( 'carousel_button' );
@@ -51,7 +52,7 @@
                     $carouselBtnColour      = get_sub_field( 'carousel_btn_colour' );
 
                     $oneCol                 = '<div class="col align-self-center" ' . $alignCol . '>';
-                    $twoCol                 = '<div class="col-lg-%s col-xl-%s align-self-center %s" ' . $alignCol . '>';
+                    $twoCol                 = '<div class="col col-sm-%s col-lg-%s align-self-center %s" ' . $alignCol . '>';
                     $endCol                 = '</div>';
                     $alignCol               = ( !$carouselAlign ? '' : 'style="text-align:' . $carouselAlign . '"' );
                     $carouselColour         = ( 
@@ -79,43 +80,36 @@
                                                 </button>
                                             </a>';
 
-            ?>
-                <div class="carousel-item  <?php echo ( $slide === 0 ? 'active' : '' ); ?>">
-                    <?php echo ($carouselOverlay !== 'none' ? '<div class="' . $carouselColour . '" style="opacity: ' . $carouselOpacity . '"></div>' : '' ); ?>    
-                
-
-                    <img class="d-block w-100" src="<?php echo $carouselImg[ 'url' ]; ?>" alt="<?php echo $carouselImg['alt'] ?>" />
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row align-content-center">
-
-                                <?php
-                                    echo ( 
-                                        $carouselBtn ? 
-                                        sprintf($twoCol, '12', '8', '') . $carouselContent . $endCol . 
-                                        sprintf($twoCol, '12', '4', ' justify-content-center carousel-link') . $carouselButton . $endCol : 
-                                        '<div class="col align-self-center" style="text-align:' . $carouselAlign . '">'
-                                            . $carouselContent . $endCol
-                                    ); 
-                                ?>
-
+                    echo
+                    '<div class="carousel-item ' . ( $slide === 0 ? 'active' : '' ) . '">' . 
+                        ($carouselOverlay !== 'none' ? '<div class="' . $carouselColour . '" style="opacity: ' . $carouselOpacity . '"></div>' : '' ) . '
+                        <img class="d-block w-100' . ($carouselImgGrey ? ' bdac-greyscale' : '') . '" src=" ' . $carouselImg[ 'url' ] . '" alt="' . $carouselImg['alt'] . '" />
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <div class="row align-content-center">           
+                                ' . ( 
+                                    $carouselBtn ? 
+                                    sprintf($twoCol, '12', '8', '') . $carouselContent . $endCol . 
+                                    sprintf($twoCol, '12', '4', ' justify-content-center carousel-link') . $carouselButton . $endCol : 
+                                    '<div class="col align-self-center" style="text-align:' . $carouselAlign . '">'
+                                        . $carouselContent . $endCol
+                                ) .
+                                    '</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            <?php
-                    $slide++;
-                    endwhile;
-                    wp_reset_postdata(); 
-                endif;     
-            ?>
-
-        </div>
-
-        <?php 
-            echo ( $slide > 1 ? 
-            sprintf( $carouselArrow, 'prev', 'Previous' ) . sprintf( $carouselArrow, 'next', 'Next' ) : 
-            '' );
+                    '; 
+                $slide++;
+                endwhile;
+                wp_reset_postdata(); 
+            endif;     
+        echo 
+        '</div>' . 
+        ( 
+            $slide > 1 
+            ? sprintf( $carouselArrow, 'prev', 'Previous' ) . sprintf( $carouselArrow, 'next', 'Next' ) 
+            : '' 
+        );
         ?>
     </div>
 </section>

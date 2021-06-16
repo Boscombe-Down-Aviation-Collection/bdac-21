@@ -19,7 +19,7 @@ body {
     margin-top: 100px;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 992px) {
     min-height: calc(100vh - 24px - 0.125rem);
     margin-top: 24px;
 
@@ -29,34 +29,56 @@ body {
   }
 }
 
-// Colours
+section {
+  padding: 1rem 0;
 
-.bdac-bg {
-  &-red {
-    background: $primary-colour;
-  }
-  &-blue {
-    background: $secondary-colour;
-  }
-  &-white {
-    background: $tertiary-colour;
-  }
-  &-black {
-    color: $black;
+  @media (min-width: 992px) {
+    padding: 3rem 0 1rem;
   }
 }
 
-.bdac-colour {
-  &-red {
-    color: $primary-colour;
+// Colours
+
+.bdac {
+  &-bg {
+    &-red {
+      background: $primary-colour;
+    }
+    &-blue {
+      background: $secondary-colour;
+    }
+    &-white {
+      background: $tertiary-colour;
+    }
+    &-black {
+      color: $black;
+    }
   }
-  &-blue {
-    color: $secondary-colour;
+
+  &-colour {
+    &-red {
+      color: $primary-colour;
+    }
+    &-blue {
+      color: $secondary-colour;
+    }
+    &-white {
+      color: $tertiary-colour;
+    }
+    &-black {
+      color: $black;
+    }
   }
-  &-white {
-    color: $tertiary-colour;
+
+  &-greyscale {
+    filter: grayscale(80%);
   }
-  &-black {
-    color: $black;
+
+  &-shadow {
+    box-shadow: 0.15rem 0.15rem 0.6rem rgba($secondary-colour, 65%);
+
+    &:hover {
+      box-shadow: 0.07rem 0.07rem 0.3rem rgba($secondary-colour, 0.85);
+    }
   }
 }

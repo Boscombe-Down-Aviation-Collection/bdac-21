@@ -44,11 +44,30 @@
 // 3: Layout
 // --------------------
 
+// Block Elements
+
 // 3: - Index
 @import "./layout/index";
 
 // 3: - Carousel
 @import "./layout/carousel";
 
+// 3: - FAQ
+@import "./layout/faq";
+
+// 3: - FAQ
+@import "./layout/image-text";
+
 // 3: - Intro
 @import "./layout/intro";
+
+// 3: - Map
+@import "./layout/map";
+
+// Stlying Elements
+
+// 3: - Arrow
+@import "./layout/arrow";
+
+// 3: - Inverted Arrow
+@import "./layout/arrow_inv";
