@@ -70,6 +70,10 @@ section {
     }
   }
 
+  &-greyscale {
+    filter: grayscale(80%);
+  }
+
   &-shadow {
     box-shadow: 0.15rem 0.15rem 0.6rem rgba($secondary-colour, 65%);
 
