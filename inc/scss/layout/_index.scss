@@ -23,4 +23,44 @@
       }
     }
   }
+
+  aside {
+    ul {
+      li {
+        list-style: none;
+
+        a {
+          color: $secondary-colour;
+          transition: 300ms ease;
+          position: relative;
+
+          &::after {
+            content: "";
+            background: $primary-colour;
+            width: 100%;
+            height: 0.0625rem;
+            position: absolute;
+            left: 0;
+            bottom: -0.3rem;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 300ms ease;
+          }
+
+          &:hover {
+            color: $primary-colour;
+            text-decoration: none;
+
+            &::after {
+              transform: scaleX(1);
+            }
+          }
+
+          &:hover {
+            color: $primary-colour;
+          }
+        }
+      }
+    }
+  }
 }

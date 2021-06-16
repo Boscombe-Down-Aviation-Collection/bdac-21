@@ -6,8 +6,15 @@
   border-top: $default-border;
   list-style: none;
 
-  .footer-section {
-    margin-bottom: 2rem;
+  .footer {
+    &-section {
+      margin-bottom: 2rem;
+    }
+
+    &-associate {
+      max-height: 80px;
+      margin: 0 1rem;
+    }
   }
 
   h6 {
@@ -21,6 +28,7 @@
 
   p {
     margin-bottom: 0.5rem;
+    font-size: 0.9rem;
   }
 
   ul {
@@ -32,6 +40,7 @@
 
       a {
         color: $tertiary-colour;
+        font-size: 0.9rem;
 
         &:hover {
           color: $primary-colour;

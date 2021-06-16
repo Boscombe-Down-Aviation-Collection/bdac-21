@@ -1,0 +1,102 @@
+.c-arrow {
+  position: relative;
+  width: 100%;
+  left: 0;
+  margin-left: 0;
+  margin-top: -4vw;
+  height: 150px;
+  height: 4vw;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    margin-top: -10vw;
+    height: 10vw;
+  }
+
+  &__left,
+  &__right {
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+  }
+  .c-arrow {
+    margin-bottom: -1px;
+  }
+  // Left Arrow
+  &--white.c-arrow > .c-arrow__left {
+    border: 0;
+    // border-right: 1920px solid transparent;
+    // border-bottom: 150px solid $tertiary-colour;
+    border-left: 1920px solid transparent;
+    border-top: 150px solid $tertiary-colour;
+
+    @media (max-width: 768px) {
+      border-bottom-width: 350px;
+    }
+  }
+  &--red.c-arrow > .c-arrow__left {
+    border: 0;
+    // border-right: 1920px solid transparent;
+    // border-bottom: 150px solid $primary-colour;
+    border-left: 1920px solid transparent;
+    border-top: 150px solid $primary-colour;
+
+    @media (max-width: 768px) {
+      border-bottom-width: 350px;
+    }
+  }
+  &--blue.c-arrow > .c-arrow__left {
+    border: 0;
+    // border-right: 1920px solid transparent;
+    // border-bottom: 150px solid $secondary-colour;
+    border-left: 1920px solid transparent;
+    border-top: 150px solid $secondary-colour;
+
+    @media (max-width: 768px) {
+      border-bottom-width: 350px;
+    }
+  }
+  &__left {
+    right: 50%;
+  }
+
+  // Right Arrow
+  &--white.c-arrow > .c-arrow__right {
+    border: 0;
+    // border-right: 1920px solid $tertiary-colour;
+    // border-top: 150px solid transparent;
+    border-left: 1920px solid $tertiary-colour;
+    border-bottom: 150px solid transparent;
+
+    @media (max-width: 768px) {
+      border-top-width: 350px;
+    }
+  }
+  &--red.c-arrow > .c-arrow__right {
+    border: 0;
+    // border-right: 1920px solid $primary-colour;
+    // border-top: 150px solid transparent;
+    border-left: 1920px solid $primary-colour;
+    border-bottom: 150px solid transparent;
+
+    @media (max-width: 768px) {
+      border-top-width: 350px;
+    }
+  }
+  &--blue.c-arrow > .c-arrow__right {
+    border: 0;
+    // border-right: 1920px solid $secondary-colour;
+    // border-top: 150px solid transparent;
+    border-left: 1920px solid $secondary-colour;
+    border-bottom: 150px solid transparent;
+
+    @media (max-width: 768px) {
+      border-top-width: 350px;
+    }
+  }
+  &__right {
+    left: 50%;
+  }
+}

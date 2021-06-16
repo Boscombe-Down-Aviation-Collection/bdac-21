@@ -14,56 +14,17 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 footer-section bdac-colour-white">
                     <?php 
-                        $today = date('Y M jS');
-                        $args = array(  
-                            'post_type'         => 'opening_hours',
-                            'post_status'       => 'publish',
-                            'posts_per_page'    => 2,
-                            'meta_key'          => 'season_to',
-                            'orderby'           => 'meta_value',
-                            'order'             => 'ASC',
-                            'meta_query'        => array(
-                                array(
-                                    'key'       => 'season_to',
-                                    'compare'   => '>=',
-                                    'value'     => $today
-                                )
-                            )
-                        );
-
-                        $seasons = new WP_Query( $args ); 
-                            
-                        while ( $seasons->have_posts() ) : $seasons->the_post(); 
-
-                            $seasonTitle    = get_the_title();
-                            $seasonStart    = get_field( 'season_from' );
-                            $seasonEnd      = get_field( 'season_to' );
-                            $dateEnd        = get_field( 'season_to' );
-                            $dayOpen        = get_field( 'season_opening' );
-                            $dayClose       = get_field( 'season_closing' );
-                            $dayEntry       = get_field( 'season_entry' );
-                            $weekStart      = get_field( 'season_start' );
-                            $weekEnd        = get_field( 'season_end' );
-
-                            $h6             = '<h6>';
-                            $h6End          = '</h6>';
-                            $p              = '<p>';
-                            $pEnd           = '</p>';
-                            $br             = '<br>';
-
-                            echo 
-                                $h6 . $seasonTitle . $h6End 
-                                . $p . $seasonStart . ' - ' . $seasonEnd . $br . 
-                                $weekStart . ' to ' . $weekEnd . ', ' . $dayOpen . ' to ' . $dayClose . $br .
-                                'Last entry ' . $dayEntry . $pEnd . $br;
-                        endwhile;
-
-                        wp_reset_postdata(); 
+                        echo bdac_opening_query( 2, 6 );
                     ?>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3 footer-section bdac-colour-white">
                     <?php dynamic_sidebar( 'footer_menu' ); ?>
                 </div>
+            </div>
+            <div class="row d-flex flex-row justify-content-center align-items-center">
+                <div id="TA_cdsratingsonlynarrow587" class="TA_cdsratingsonlynarrow"><ul id="aRyf7pLgfs" class="TA_links ry6Z9Dl footer-associate"><li id="pKDcJk3f" class="ik8vvuK1Vi"><a target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g186414-d3310055-Reviews-Boscombe_Down_Aviation_Collection-Salisbury_Wiltshire_England.html"><img src="https://www.tripadvisor.co.uk/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-18034-2.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=587&amp;locationId=3310055&amp;lang=en_UK&amp;border=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+                <img src="<?php bloginfo('template_url'); ?>/dist/img/heritage-lottery-fund-logo.png" alt="Heritage Lottery Fund Logo" class="footer-associate">
+                <img src="<?php bloginfo('template_url'); ?>/dist/img/AviationHeritageLogo_500px.png" alt="Aviation Heritage Logo" class="footer-associate">
             </div>
         </div>
     </footer>
