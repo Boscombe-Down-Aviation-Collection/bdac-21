@@ -17,7 +17,7 @@
     <nav id="nav" class="navbar <?php echo ( !is_front_page() ? 'navbar-not-front' : ''  ); ?> fixed-top navbar-expand-lg">
       <div class="header-social d-none d-md-block ">
         <div class="container">
-        <div class="header-opening" style="font-size: 0.8rem;">
+        <div class="header-opening">
           <p class="header-opening-hours bdac-colour-white m-0">
             <span class="header-opening-hours-current">
               <?php 
