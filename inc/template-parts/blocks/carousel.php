@@ -45,6 +45,7 @@
                     $carouselBtn            = get_sub_field( 'carousel_button' );
                     $carouselLink           = get_sub_field( 'carousel_link' );
                     $carouselAlign          = get_sub_field( 'carousel_align' );
+                    $carouselInterval       = get_sub_field( 'carousel_interval' );
                     $carouselOverlay        = get_sub_field( 'carousel_overlay' );
                     $carouselOpacity        = get_sub_field( 'carousel_opacity' ) / 100;
                     $carouselTitleColour    = get_sub_field( 'carousel_title_colour' );
@@ -81,7 +82,7 @@
                                             </a>';
 
                     echo
-                    '<div class="carousel-item ' . ( $slide === 0 ? 'active' : '' ) . '">' . 
+                    '<div class="carousel-item ' . ( $slide === 0 ? 'active' : '' ) . '" data-interval="' . ( $carouselInterval ? $carouselInterval : 8500 ) . '">' . 
                         ($carouselOverlay !== 'none' ? '<div class="' . $carouselColour . '" style="opacity: ' . $carouselOpacity . '"></div>' : '' ) . '
                         <img class="d-block w-100' . ($carouselImgGrey ? ' bdac-greyscale' : '') . '" src=" ' . $carouselImg[ 'url' ] . '" alt="' . $carouselImg['alt'] . '" />
                         <div class="carousel-caption">
