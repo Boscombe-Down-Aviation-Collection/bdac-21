@@ -28,6 +28,16 @@
             </div>
         </div>
     </footer>
+
+    <div class="search-overlay">
+        <div class="search-overlay-top">
+            <div class="container d-flex">
+                <i class="fa fa-search search-overlay-icon" aria-hidden="true"></i>
+                <input id="search-term" class="search-overlay-top-term" type="text" placeholder="What are you looking for" autocomplete="off">
+                <i class="fa fa-times search-overlay-close bdac-shadow"></i>
+            </div>
+        </div>
+    </div>
     
     
     <?php wp_footer(); ?>

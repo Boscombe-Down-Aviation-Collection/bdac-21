@@ -1,0 +1,65 @@
+.search-overlay {
+  background-color: rgba($tertiary-colour, 0.96);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: scale(1.09);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  visibility: hidden;
+
+  &-icon,
+  &-close {
+    display: inline-block;
+  }
+
+  &-close {
+    background: $primary-colour;
+    color: $tertiary-colour;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.6rem;
+    transition: 300ms ease;
+
+    &:hover {
+      background: $tertiary-colour;
+      color: $primary-colour;
+    }
+  }
+
+  &-active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &-top {
+    background: rgba($secondary-colour, 0.1);
+
+    .container {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-term {
+      background: none;
+      color: $tertiary-colour;
+      width: calc(80%);
+      padding: 1rem;
+      border: none;
+
+      &:focus {
+        color: $primary-colour;
+        outline: none;
+      }
+    }
+  }
+}
+
+.body-no-scroll {
+  overflow: hidden;
+}

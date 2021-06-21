@@ -15,10 +15,18 @@
   transition: padding 200ms;
   background-color: $tertiary-colour;
   top: 34px;
-  z-index: 1030;
+  z-index: 50;
 
   @media (max-width: 540px) {
     top: 0;
+  }
+
+  &-search {
+    padding: 0.5rem 1rem;
+
+    > i {
+      color: $tertiary-colour !important;
+    }
   }
 
   .container {
