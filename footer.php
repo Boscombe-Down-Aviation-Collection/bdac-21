@@ -37,6 +37,10 @@
                 <i class="fa fa-times search-overlay-close bdac-shadow"></i>
             </div>
         </div>
+        <div class="container">
+            <div class="search-overlay-results">
+            </div>
+        </div>
     </div>
     
     
