@@ -72,7 +72,25 @@ class Search {
       this.searchResults.html(`
             <h3 class="section-title">General Information</h3>
             ${posts.length ? '<ul class="">' : "<p>No matches for that search term</p>"}
-            ${posts.map(post => `<li><a href="${post.link}">${post.title.rendered}</a></li>`).join("")}
+            ${posts
+              .map(
+                post => `
+                <div class="bdac-card mb-3" style="background: url(${post.link}); background-size: cover; background-position-x: center;">
+                    <div class="bdac-card-content">
+                        <h3 class="bdac-card-content-title mb-3">
+                            <a href="${post.link}" title="Posts by BDAC Admin" rel="author">${post.title.rendered}</a>
+                        </h3>
+                        <small class="bdac-card-content-meta">By <a href="${post.link}">Tim Miles AFC</a> on 16th November</small>
+                        <p class="bdac-card-content-body mt-3">${post.content.rendered}</p>
+                        <a href="${post.link}" class="bdac-card-content-link mt-auto">
+                            Learn More <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                `
+                // <li><a href="${post.link}">${post.title.rendered}</a></li>
+              )
+              .join("")}
             ${posts.length ? "</ul>" : ""}
         `)
       this.isSpinnerVisible = false
