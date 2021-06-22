@@ -5,6 +5,9 @@
         wp_enqueue_script( 'bdac-dist-vendors', get_template_directory_uri() . '/dist/js/vendors.js', array(), false, true  );
         wp_enqueue_script( 'bdac-dist-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array(), false, true  );
         wp_enqueue_script( 'bdac-dist-main', get_template_directory_uri() . '/dist/js/main.js', array(), false, true  );
+        wp_localize_script( 'bdac-dist-main', 'bdacData', array(
+            'root_url' => get_site_url()
+        ) );
 
         // Stylesheets
         wp_enqueue_style( 'google-fonts-open-sans', '//fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' );
