@@ -68,9 +68,9 @@ class Search {
   }
 
   getResults() {
-    $.getJSON(`${bdacData.root_url}/wp-json/wp/v2/posts?search=${this.searchField.val()}`, posts => {
-      $.getJSON(`${bdacData.root_url}/wp-json/wp/v2/pages?search=${this.searchField.val()}`, pages => {
-        let combinedResults = posts.concat(pages)
+    $.when($.getJSON(`${bdacData.root_url}/wp-json/wp/v2/posts?search=${this.searchField.val()}`), $.getJSON(`${bdacData.root_url}/wp-json/wp/v2/pages?search=${this.searchField.val()}`)).then(
+      (posts, pages) => {
+        let combinedResults = posts[0].concat(pages[0])
         this.searchResults.html(`
                 <h3 class="section-title">General Information</h3>
                 ${combinedResults.length ? '<ul class="">' : "<p>No matches for that search term</p>"}
@@ -78,8 +78,11 @@ class Search {
                 ${combinedResults.length ? "</ul>" : ""}
             `)
         this.isSpinnerVisible = false
-      })
-    })
+      },
+      () => {
+        this.searchResults.html("<p>Unexpected error, please try again</p>")
+      }
+    )
   }
 
   searchBox() {
