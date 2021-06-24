@@ -69,13 +69,16 @@ class Search {
 
   getResults() {
     $.getJSON(`${bdacData.root_url}/wp-json/wp/v2/posts?search=${this.searchField.val()}`, posts => {
-      this.searchResults.html(`
-            <h3 class="section-title">General Information</h3>
-            ${posts.length ? '<ul class="">' : "<p>No matches for that search term</p>"}
-            ${posts.map(post => `<li><a href="${post.link}">${post.title.rendered}</a></li>`).join("")}
-            ${posts.length ? "</ul>" : ""}
-        `)
-      this.isSpinnerVisible = false
+      $.getJSON(`${bdacData.root_url}/wp-json/wp/v2/pages?search=${this.searchField.val()}`, pages => {
+        let combinedResults = posts.concat(pages)
+        this.searchResults.html(`
+                <h3 class="section-title">General Information</h3>
+                ${combinedResults.length ? '<ul class="">' : "<p>No matches for that search term</p>"}
+                ${combinedResults.map(result => `<li><a href="${result.link}">${result.title.rendered}</a></li>`).join("")}
+                ${combinedResults.length ? "</ul>" : ""}
+            `)
+        this.isSpinnerVisible = false
+      })
     })
   }
 
