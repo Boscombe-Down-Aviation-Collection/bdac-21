@@ -69,6 +69,12 @@
 
     add_action( 'after_setup_theme', 'register_navwalker' );
 
+    
+    /**
+     * Register Custom REST Query
+     */
+    require get_theme_file_path('/inc/search-route.php');
+
     /**
      *  Check if ACF is activated
      */
