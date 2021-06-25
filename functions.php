@@ -70,6 +70,22 @@
     add_action( 'after_setup_theme', 'register_navwalker' );
 
     /**
+     * BDAC REST API Customisation
+     */
+    function bdac_custom_rest(){
+        // Author Name
+        register_rest_field( 'post', 'authorName', array(
+            'get_callback' => function() { return get_the_author(); }
+        ) );
+        // Post Thumbnail
+        register_rest_field( 'post', 'postThumbnail', array(
+            'get_callback' => function() { return get_the_post_thumbnail_url(); }
+        ) );
+    }
+
+    add_action( 'rest_api_init', 'bdac_custom_rest' );
+
+    /**
      *  Check if ACF is activated
      */
     if ( function_exists( 'acf_register_block_type' ) ) {

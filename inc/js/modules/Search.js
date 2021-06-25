@@ -74,7 +74,7 @@ class Search {
         this.searchResults.html(`
                 <h3 class="section-title">General Information</h3>
                 ${combinedResults.length ? '<ul class="">' : "<p>No matches for that search term</p>"}
-                ${combinedResults.map(result => `<li><a href="${result.link}">${result.title.rendered}</a></li>`).join("")}
+                ${combinedResults.map(result => `<li><a href="${result.link}">${result.title.rendered}</a> ${result.type === "post" ? `by ${result.authorName}` : ""}</li>`).join("")}
                 ${combinedResults.length ? "</ul>" : ""}
             `)
         this.isSpinnerVisible = false
