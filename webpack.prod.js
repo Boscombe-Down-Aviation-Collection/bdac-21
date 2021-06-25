@@ -7,7 +7,7 @@ module.exports = merge(common, {
   mode: "production",
   output: {
     filename: "/js/[name].bundle.js",
-    path: path.resolve(__dirname, "inc/dist")
+    path: path.resolve(__dirname, "dist")
   },
   optimization: {
     minimizer: [new TerserPlugin()]
