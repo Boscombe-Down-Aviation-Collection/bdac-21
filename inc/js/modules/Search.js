@@ -73,9 +73,15 @@ class Search {
         let combinedResults = posts[0].concat(pages[0])
         this.searchResults.html(`
                 <h3 class="section-title">General Information</h3>
-                ${combinedResults.length ? '<ul class="">' : "<p>No matches for that search term</p>"}
-                ${combinedResults.map(result => `<li><a href="${result.link}">${result.title.rendered}</a> ${result.type === "post" ? `by ${result.authorName}` : ""}</li>`).join("")}
-                ${combinedResults.length ? "</ul>" : ""}
+                ${
+                  combinedResults.length
+                    ? `
+                        <ul class="">
+                            ${combinedResults.map(result => `<li><a href="${result.link}">${result.title.rendered}</a> ${result.type === "post" ? `by ${result.authorName}` : ""}</li>`).join("")}
+                        </ul>
+                    `
+                    : "<p>No matches for that search term</p>"
+                }
             `)
         this.isSpinnerVisible = false
       },
