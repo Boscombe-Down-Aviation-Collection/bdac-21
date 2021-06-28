@@ -8,29 +8,53 @@
     };
 
     function bdacSearchResults( $data ) {
-        $events = new WP_Query( array(
-            'post_type' => 'events',
-            's'         => sanitize_text_field( $data['event'] )
+        $searchQuery = new WP_Query( array(
+            'post_type' => array(
+                'post',
+                'page',
+                'exhibits',
+                'events'
+            ),
+            's'         => sanitize_text_field( $data['term'] )
         ) );
 
-        $eventsResults = array(
-
+        $searchQueryResults = array(
+            'generalInfo'   => array(),
+            'exhibits'      => array(),
+            'events'        => array()
         );
 
-        while($events->have_posts()) {
-            $events->the_post();
-            array_push( $eventsResults, array(
-                'title'     => get_the_title(),
-                'thumbnail' => get_the_post_thumbnail_url(),
-                'excerpt'   => get_the_excerpt(),
-                'link'      => get_the_permalink(),
-                
-            ) );
+        while($searchQuery->have_posts()) {
+            $searchQuery->the_post();
+            if( get_post_type() == 'post' || get_post_type() == 'page' ) {
+                array_push( $searchQueryResults['generalInfo'], array(
+                    'title'     => get_the_title(),
+                    'thumbnail' => get_the_post_thumbnail_url(),
+                    'excerpt'   => get_the_excerpt(),
+                    'link'      => get_the_permalink()
+                ) );
+            }
+            if( get_post_type() == 'exhibits' ) {
+                array_push( $searchQueryResults['exhibits'], array(
+                    'title'     => get_the_title(),
+                    'thumbnail' => get_the_post_thumbnail_url(),
+                    'excerpt'   => get_the_excerpt(),
+                    'link'      => get_the_permalink()
+                ) );
+            }
+            if( get_post_type() == 'events' ) {
+                array_push( $searchQueryResults['events'], array(
+                    'title'     => get_the_title(),
+                    'thumbnail' => get_the_post_thumbnail_url(),
+                    'excerpt'   => get_the_excerpt(),
+                    'link'      => get_the_permalink()
+                ) );
+            }
         }
 
-        return $eventsResults;
+        return $searchQueryResults;
     }
-    
+
     add_action( 'rest_api_init', 'bdacSearch' );
 
 ?>
