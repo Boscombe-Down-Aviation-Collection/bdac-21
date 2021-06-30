@@ -22,8 +22,6 @@
   }
 
   &-search {
-    padding: 0.5rem 1rem;
-
     > i {
       color: $tertiary-colour !important;
     }
@@ -59,21 +57,24 @@
         color: $tertiary-colour;
         margin: 0.2rem 0 0.2rem 1rem;
         font-size: 1rem;
+
+        &:hover {
+          color: $primary-colour;
+        }
       }
     }
   }
 
   i {
-    color: $secondary-colour;
-    margin: 0.5rem;
-    font-size: 1.125rem;
+    color: $tertiary-colour;
+    font-size: 1rem;
     position: relative;
     top: 1px;
     transition: all 600ms;
 
-    &:hover {
-      color: $primary-colour;
-    }
+    // &:hover {
+    //   opacity: 0.85;
+    // }
   }
 
   .logo-container {

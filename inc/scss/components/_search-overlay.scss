@@ -47,7 +47,7 @@
 
     &-term {
       background: none;
-      color: $tertiary-colour;
+      color: $secondary-colour;
       width: calc(80%);
       padding: 1rem;
       border: none;
@@ -56,6 +56,45 @@
         color: $primary-colour;
         outline: none;
       }
+    }
+  }
+
+  &-results {
+    height: calc(100vh - 5.5rem);
+    padding: 1rem;
+    overflow: hidden;
+
+    &-link {
+      color: $secondary-colour;
+
+      &:hover {
+        color: $primary-colour;
+      }
+    }
+
+    .col-sm-4 {
+      height: calc(100vh - 5.5rem);
+      padding: 1rem;
+      border-right: 0.05rem solid rgba($secondary-colour, 0.3);
+      overflow: scroll;
+
+      &:last-of-type {
+        border-right: none;
+      }
+
+      .bdac-card {
+        max-height: 245px;
+        height: 100%;
+        padding: 0;
+
+        &-content {
+          padding: 1rem 1.5rem;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
     }
   }
 }

@@ -68,27 +68,73 @@ class Search {
   }
 
   getResults() {
-    $.when($.getJSON(`${bdacData.root_url}/wp-json/wp/v2/posts?search=${this.searchField.val()}`), $.getJSON(`${bdacData.root_url}/wp-json/wp/v2/pages?search=${this.searchField.val()}`)).then(
-      (posts, pages) => {
-        let combinedResults = posts[0].concat(pages[0])
-        this.searchResults.html(`
-                <h3 class="section-title">General Information</h3>
-                ${
-                  combinedResults.length
-                    ? `
-                        <ul class="">
-                            ${combinedResults.map(result => `<li><a href="${result.link}">${result.title.rendered}</a> ${result.type === "post" ? `by ${result.authorName}` : ""}</li>`).join("")}
-                        </ul>
-                    `
-                    : "<p>No matches for that search term</p>"
-                }
-            `)
-        this.isSpinnerVisible = false
-      },
-      () => {
-        this.searchResults.html("<p>Unexpected error, please try again</p>")
-      }
-    )
+    $.getJSON(`${bdacData.root_url}/wp-json/bdac/v1/search?term=${this.searchField.val()}`, results => {
+      this.searchResults.html(`
+                <div class="col-sm-4">
+                    <h5 class="intro-section-title text-center">General Information</h5>
+                    ${
+                      results.generalInfo.length
+                        ? `
+                              <ul class="">
+                                  ${results.generalInfo.map(result => `<li><a href="${result.link}">${result.title}</a> ${result.type === "post" ? `by ${result.author}` : ""}</li>`).join("")}
+                              </ul>
+                          `
+                        : "<p>No posts for that search term</p>"
+                    }
+                </div>
+                <div class="col-sm-4">
+                    <h5 class="intro-section-title text-center">Exhibits</h5>
+                    ${
+                      results.exhibits.length
+                        ? `
+                                <ul class="">
+                                    ${results.exhibits.map(result => `<li><a href="${result.link}">${result.title}</a>`).join("")}
+                                </ul>
+                            `
+                        : `
+                            <p>No exhibits for that search term</br>
+                                <a class="search-overlay-results-link" href="${bdacData.root_url}/events">View all exhibits <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                            </p>
+                        `
+                    }
+                    <h5 class="intro-section-title text-center">Events</h5>
+                    ${
+                      results.events.length
+                        ? `
+                            ${results.events
+                              .map(
+                                result => `
+                                    <div class="bdac-card mb-3"  style="background: url(${result.thumbnail}); background-size: cover; background-position-x: center;">
+                                        <div class="bdac-card-content">
+                                            <h4 class="bdac-card-content-title mb-3">
+                                                <a href="${result.link}" title="Posts by BDAC Admin" rel="author">${result.title}</a>
+                                            </h4>
+                                            <small class="bdac-card-content-meta">By ${result.presenter} <a href="${result.link}"></a> on ${result.date}</small>
+                                            <p class="bdac-card-content-body mt-3">${result.content}</p>
+                                            <a href="${result.link}" class="bdac-card-content-link mt-auto">
+                                                View Event <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                            `
+                              )
+                              .join("")}
+                              <a class="search-overlay-results-link" href="${bdacData.root_url}/events">View all events <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        `
+                        : `
+                            <p>No events for that search term </br>
+                                <a class="search-overlay-results-link" href="${bdacData.root_url}/events">View all events <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                            </p>
+                        `
+                    }
+                </div>
+                <div class="col-sm-4">
+                    <h5 class="intro-section-title text-center">Opening Hours</h5>
+                </div>
+        `)
+      this.isSpinnerVisible = false
+    })
   }
 
   searchBox() {
@@ -102,7 +148,7 @@ class Search {
                 </div>
             </div>
             <div class="container">
-                <div class="search-overlay-results">
+                <div class="row search-overlay-results">
                 </div>
             </div>
         </div>

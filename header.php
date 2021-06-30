@@ -104,7 +104,7 @@
                 )
               );
           ?>
-          <a href="" class="navbar-search"><i class="fa fa-search"></i></a>
+          <!-- <a href="" class="navbar-search"><i class="fa fa-search"></i></a> -->
         </div>
       </div>
       <div class="donate-area d-none d-lg-block">

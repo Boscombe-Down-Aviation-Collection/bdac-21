@@ -31,7 +31,9 @@
                     'title'     => get_the_title(),
                     'thumbnail' => get_the_post_thumbnail_url(),
                     'excerpt'   => get_the_excerpt(),
-                    'link'      => get_the_permalink()
+                    'link'      => get_the_permalink(),
+                    'type'      => get_post_type(),
+                    'author'    => get_the_author()
                 ) );
             }
             if( get_post_type() == 'exhibits' ) {
@@ -39,15 +41,19 @@
                     'title'     => get_the_title(),
                     'thumbnail' => get_the_post_thumbnail_url(),
                     'excerpt'   => get_the_excerpt(),
-                    'link'      => get_the_permalink()
+                    'link'      => get_the_permalink(),
+                    'type'      => get_post_type()
                 ) );
             }
             if( get_post_type() == 'events' ) {
                 array_push( $searchQueryResults['events'], array(
                     'title'     => get_the_title(),
                     'thumbnail' => get_the_post_thumbnail_url(),
-                    'excerpt'   => get_the_excerpt(),
-                    'link'      => get_the_permalink()
+                    'presenter' => get_field( 'event_speaker', $postId ),
+                    'content'   => wp_trim_words( get_field( 'event_description', $postId ), 20 ),
+                    'date'      => get_field( 'event_date', $postId ),
+                    'link'      => get_the_permalink(),
+                    'type'      => get_post_type()
                 ) );
             }
         }
