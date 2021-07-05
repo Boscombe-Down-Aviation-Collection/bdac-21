@@ -29,7 +29,7 @@
                         (
                             $image_image['title'] && $image_image['caption'] ?
                             '<div class="' . esc_attr( $className ) . '-image-caption">
-                                <h4 class="bdac-colour-' . ( $image_header_color ? $image_header_color['value']: 'red' ) . '">' . $image_image['title'] . '</h2>
+                                <h5 class="bdac-colour-' . ( $image_header_color ? $image_header_color['value']: 'red' ) . '">' . $image_image['title'] . '</h5>
                                 <p>' . $image_image['caption'] . '</p>
                             </div>' :
                             ''

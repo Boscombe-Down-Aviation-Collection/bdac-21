@@ -6,8 +6,8 @@ const { merge } = require("webpack-merge")
 module.exports = merge(common, {
   mode: "production",
   output: {
-    filename: "/js/[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    filename: "/js/[name].js",
+    path: path.resolve(__dirname, "dist/js")
   },
   optimization: {
     minimizer: [new TerserPlugin()]

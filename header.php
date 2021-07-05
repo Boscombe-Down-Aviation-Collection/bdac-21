@@ -54,16 +54,19 @@
                     $weekStart      = get_field( 'season_start' );
                     $weekEnd        = get_field( 'season_end' );
 
+                    $openDays       = $weekStart . ' - ' . $weekEnd;
+                    $openHours      = $dayOpen . ' - ' . $dayClose;
+
                     echo ( 
                       $checkHour < $dayOpen || $checkHour >= $dayClose ? 
                       '<strong>Collection Closed</strong>, open ' . ( 
                         $checkDay == 7 ? 
-                        $weekStart . ' - ' . $weekEnd : ( 
+                        $openDays : ( 
                           $checkHour > $dayClose ? 
-                          'Today' : 
-                          'Tomorrow'
-                        ) ) . ' ' . $dayOpen . ' - ' . $dayClose : 
-                      '<strong>Collection Open</strong> ' . $dayOpen . ' - ' . $dayClose 
+                          'Tomorrow' : 
+                          'Today'
+                        ) ) . ' ' . $openHours : 
+                      '<strong>Collection Open</strong> ' . $openHours 
                     );
                 endwhile;
 
