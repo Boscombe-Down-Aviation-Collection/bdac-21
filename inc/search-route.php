@@ -51,7 +51,7 @@
                     'thumbnail' => get_the_post_thumbnail_url(),
                     'presenter' => get_field( 'event_speaker', $postId ),
                     'content'   => wp_trim_words( get_field( 'event_description', $postId ), 20 ),
-                    'date'      => get_field( 'event_date', $postId ),
+                    'date'      => get_field( 'event_date_start', $postId ),
                     'link'      => get_the_permalink(),
                     'type'      => get_post_type()
                 ) );
