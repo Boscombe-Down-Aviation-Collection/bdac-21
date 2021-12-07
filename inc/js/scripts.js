@@ -15,6 +15,13 @@ window.addEventListener("scroll", () => {
   scrollHeight > navHeight ? scrollDown() : scrollUp()
 })
 
+const appHeight = () => {
+  const doc = document.documentElement
+  doc.style.setProperty("--app-height", `${window.innerHeight}px`)
+}
+window.addEventListener("resize", appHeight)
+appHeight()
+
 /* Import Modules */
 import Search from "./modules/Search"
 

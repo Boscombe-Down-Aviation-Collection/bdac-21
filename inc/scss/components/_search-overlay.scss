@@ -1,3 +1,7 @@
+.admin-bar .search-overlay {
+  top: 32px;
+}
+
 .search-overlay {
   background-color: rgba($tertiary-colour, 0.96);
   overflow-y: auto;
@@ -72,11 +76,18 @@
       }
     }
 
+    &-wrapper {
+      height: 50%;
+
+      &-result {
+        overflow: scroll;
+      }
+    }
+
     .col-sm-4 {
       height: calc(100vh - 5.5rem);
       padding: 1rem;
       border-right: 0.05rem solid rgba($secondary-colour, 0.3);
-      overflow: scroll;
 
       &:last-of-type {
         border-right: none;

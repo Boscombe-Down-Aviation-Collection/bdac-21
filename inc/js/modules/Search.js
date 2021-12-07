@@ -83,54 +83,69 @@ class Search {
                     }
                 </div>
                 <div class="col-sm-4">
-                    <h5 class="intro-section-title text-center">Exhibits</h5>
-                    ${
-                      results.exhibits.length
-                        ? `
-                                <ul class="">
-                                    ${results.exhibits.map(result => `<li><a href="${result.link}">${result.title}</a>`).join("")}
-                                </ul>
-                            `
-                        : `
-                            <p>No exhibits for that search term</br>
-                                <a class="search-overlay-results-link" href="${bdacData.root_url}/events">View all exhibits <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                            </p>
-                        `
-                    }
+                  <div class="search-overlay-results-wrapper">
+                  <h5 class="intro-section-title text-center">Exhibits</h5>
+
+                  <div class="search-overlay-results-wrapper-result">
+
+                      ${
+                        results.exhibits.length
+                          ? `
+                                  <ul class="">
+                                      ${results.exhibits.map(result => `<li><a href="${result.link}">${result.title}</a>`).join("")}
+                                  </ul>
+                              `
+                          : `
+                              <p>No exhibits for that search term</br>
+                                  <a class="search-overlay-results-link" href="${bdacData.root_url}/events">View all exhibits <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                              </p>
+                          `
+                      }
+                    </div>
+                  </div>
+                  <div class="search-overlay-results-wrapper">
                     <h5 class="intro-section-title text-center">Events</h5>
-                    ${
-                      results.events.length
-                        ? `
-                            ${results.events
-                              .map(
-                                result => `
-                                    <div class="bdac-card mb-3"  style="background: url(${result.thumbnail}); background-size: cover; background-position-x: center;">
-                                        <div class="bdac-card-content">
-                                            <h4 class="bdac-card-content-title mb-3">
-                                                <a href="${result.link}" title="Posts by BDAC Admin" rel="author">${result.title}</a>
-                                            </h4>
-                                            <small class="bdac-card-content-meta">By ${result.presenter} <a href="${result.link}"></a> on ${result.date}</small>
-                                            <p class="bdac-card-content-body mt-3">${result.content}</p>
-                                            <a href="${result.link}" class="bdac-card-content-link mt-auto">
-                                                View Event <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <hr>
-                            `
-                              )
-                              .join("")}
-                              <a class="search-overlay-results-link" href="${bdacData.root_url}/events">View all events <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                        `
-                        : `
-                            <p>No events for that search term </br>
+
+                    <div class="search-overlay-results-wrapper-result">
+                      ${
+                        results.events.length
+                          ? `
+                              ${results.events
+                                .map(
+                                  result => `
+                                      <div class="bdac-card mb-3"  style="background: url(${result.thumbnail}); background-size: cover; background-position-x: center;">
+                                          <div class="bdac-card-content">
+                                              <h4 class="bdac-card-content-title mb-3">
+                                                  <a href="${result.link}" title="Posts by BDAC Admin" rel="author">${result.title}</a>
+                                              </h4>
+                                              <small class="bdac-card-content-meta">By ${result.presenter} <a href="${result.link}"></a> on ${result.date}</small>
+                                              <p class="bdac-card-content-body mt-3">${result.content}</p>
+                                              <a href="${result.link}" class="bdac-card-content-link mt-auto">
+                                                  View Event <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <hr>
+                              `
+                                )
+                                .join("")}
                                 <a class="search-overlay-results-link" href="${bdacData.root_url}/events">View all events <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                            </p>
-                        `
-                    }
+                          `
+                          : `
+                              <p>No events for that search term </br>
+                                  <a class="search-overlay-results-link" href="${bdacData.root_url}/events">View all events <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                              </p>
+                          `
+                      }
+                    </div>
+                  </div>
                 </div>
                 <div class="col-sm-4">
                     <h5 class="intro-section-title text-center">Opening Hours</h5>
+                    ${`
+                      <h6>${results.openingHours.title}</h6> 
+                      <p>${results.openingHours.title}</p>
+                    `}
                 </div>
         `)
       this.isSpinnerVisible = false

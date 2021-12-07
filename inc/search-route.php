@@ -13,7 +13,8 @@
                 'post',
                 'page',
                 'exhibits',
-                'events'
+                'events',
+                'opening_hours'
             ),
             's'         => sanitize_text_field( $data['term'] )
         ) );
@@ -21,7 +22,8 @@
         $searchQueryResults = array(
             'generalInfo'   => array(),
             'exhibits'      => array(),
-            'events'        => array()
+            'events'        => array(),
+            'openingHours'  => array()
         );
 
         while($searchQuery->have_posts()) {
@@ -55,6 +57,19 @@
                     'link'      => get_the_permalink(),
                     'type'      => get_post_type()
                 ) );
+            }
+            if( get_post_type() == 'opening_hours' ) {
+                array_push( $searchQueryResults['opening_hours'], array(
+                    'title'         => get_the_title(),
+                    'seasonFrom'    => get_field( 'season_from' ),
+                    'seasonTo'      => get_field( 'season_to' ),
+                    'dateEnd'       => get_field( 'season_to' ),
+                    'dayOpen'       => get_field( 'season_opening' ),
+                    'dayClose'      => get_field( 'season_closing' ),
+                    'dayEntry'      => get_field( 'season_entry' ),
+                    'weekStart'     => get_field( 'season_start' ),
+                    'weekEnd'       => get_field( 'season_end' )
+                ));
             }
         }
 
