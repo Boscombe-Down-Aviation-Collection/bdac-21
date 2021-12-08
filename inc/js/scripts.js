@@ -1,16 +1,7 @@
 // BDAC scripts.js
 
-// Header on scroll
-window.addEventListener("scroll", () => {
-  const navBar = document.querySelector("#nav")
-  const scrollHeight = window.pageYOffset
-  const navHeight = navBar.getBoundingClientRect().height
-  scrollDown = () => {
-    navBar.classList.add("navbar-scrolled", "bdac-shadow-small")
-  }
-  scrollUp = () => {
-    navBar.classList.remove("navbar-scrolled", "bdac-shadow-small")
-  }
+/* Import Modules */
+import Search from "./modules/Search"
 
-  scrollHeight > navHeight ? scrollDown() : scrollUp()
-})
+/* Instantiate Classes */
+const liveSearch = new Search()

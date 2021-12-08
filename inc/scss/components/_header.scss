@@ -15,10 +15,16 @@
   transition: padding 200ms;
   background-color: $tertiary-colour;
   top: 34px;
-  z-index: 1030;
+  z-index: 50;
 
   @media (max-width: 540px) {
     top: 0;
+  }
+
+  &-search {
+    > i {
+      color: $tertiary-colour !important;
+    }
   }
 
   .container {
@@ -51,21 +57,24 @@
         color: $tertiary-colour;
         margin: 0.2rem 0 0.2rem 1rem;
         font-size: 1rem;
+
+        &:hover {
+          color: $primary-colour;
+        }
       }
     }
   }
 
   i {
-    color: $secondary-colour;
-    margin: 0.5rem;
-    font-size: 1.125rem;
+    color: $tertiary-colour;
+    font-size: 1rem;
     position: relative;
     top: 1px;
     transition: all 600ms;
 
-    &:hover {
-      color: $primary-colour;
-    }
+    // &:hover {
+    //   opacity: 0.85;
+    // }
   }
 
   .logo-container {
@@ -184,6 +193,10 @@
         .nav {
           &-link {
             color: $secondary-colour;
+
+            i {
+              color: $secondary-colour;
+            }
           }
         }
       }

@@ -5,6 +5,9 @@
         wp_enqueue_script( 'bdac-dist-vendors', get_template_directory_uri() . '/dist/js/vendors.js', array(), false, true  );
         wp_enqueue_script( 'bdac-dist-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array(), false, true  );
         wp_enqueue_script( 'bdac-dist-main', get_template_directory_uri() . '/dist/js/main.js', array(), false, true  );
+        wp_localize_script( 'bdac-dist-main', 'bdacData', array(
+            'root_url' => get_site_url()
+        ) );
 
         // Stylesheets
         wp_enqueue_style( 'google-fonts-open-sans', '//fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' );
@@ -65,6 +68,28 @@
     }
 
     add_action( 'after_setup_theme', 'register_navwalker' );
+
+    
+    /**
+     * Register Custom REST Query
+     */
+    require get_theme_file_path('/inc/search-route.php');
+
+    /**
+     * BDAC REST API Customisation
+     */
+    function bdac_custom_rest(){
+        // Author Name
+        register_rest_field( 'post', 'authorName', array(
+            'get_callback' => function() { return get_the_author(); }
+        ) );
+        // Post Thumbnail
+        register_rest_field( 'post', 'postThumbnail', array(
+            'get_callback' => function() { return get_the_post_thumbnail_url(); }
+        ) );
+    }
+
+    add_action( 'rest_api_init', 'bdac_custom_rest' );
 
     /**
      *  Check if ACF is activated
