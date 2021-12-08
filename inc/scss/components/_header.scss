@@ -193,6 +193,10 @@
         .nav {
           &-link {
             color: $secondary-colour;
+
+            i {
+              color: $secondary-colour;
+            }
           }
         }
       }
