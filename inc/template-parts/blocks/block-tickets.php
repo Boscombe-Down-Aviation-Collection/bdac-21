@@ -1,16 +1,31 @@
-<?php 
+<?php
+
+    $tickets_header         = get_field( 'tickets_header' );
+    $tickets_description    = get_field( 'tickets_description' );
+    $tickets_table          = get_field( 'tickets_table' );
 
     echo '
         <style>
+            .block-tickets,
+            .block-tickets h2,
+            .block-tickets-table-header h6 {
+                color: #fff;
+            }
+            .block-tickets {
+            background: #304048;
+            }
             .block-tickets-table {
-                background: #161e4a0C;
+                color: #fff;
             }
             .block-tickets-table-header {
-                background: #161e4a;
+                background: #d82026;
             }
             .block-tickets-table-header h6 {
                 color: #fff;
                 margin: 0;
+            }
+            .block-tickets-table-row {
+                color: #fff;
             }
         </style>
 
@@ -20,11 +35,10 @@
                 <div class="row">
 
                     <div class="col-12">
-                        <h2 class="block-tickets-title text-left">Tickets for the Collection</h2>
-                        <p class="lead block-tickets-description text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta possimus nihil, totam vitae ex provident minus amet veniam sunt veritatis!</p>
+                        <h2 class="block-tickets-title text-left">' . $tickets_header . '</h2>
+                        <p class="lead block-tickets-description text-left">' . $tickets_description . '</p>
                     </div>
 
-                
                 </div>
                 
                 <div class="row justify-content-center">
@@ -33,45 +47,43 @@
                     
                         <div class="row block-tickets-table">
                         
-                            <div class="col-3 block-tickets-table-header px-2 py-3">
+                            <div class="col-4 block-tickets-table-header p-3">
                                 <h6>Ticket Type</h6>
                             </div>
-                            <div class="col-3 block-tickets-table-header px-2 py-3">
-                                <h6>Adult</h6>
+                            <div class="col-4 block-tickets-table-header p-3">
+                                <h6>Standard</h6>
                             </div>
-                            <div class="col-3 block-tickets-table-header px-2 py-3">
-                                <h6>Child</h6>
+                            <div class="col-4 block-tickets-table-header p-3">
+                                <h6>Gift Aid</h6>
                             </div>
-                            <div class="col-3 block-tickets-table-header px-2 py-3">
-                                <h6>Conc<wbr>ession</h6>
-                            </div>
-                            <div class="col-3 block-tickets-table-row px-2 py-3">
-                                Day Entry
-                            </div>
-                            <div class="col-3 block-tickets-table-row px-2 py-3">
-                                £8.50
-                            </div>
-                            <div class="col-3 block-tickets-table-row px-2 py-3">
-                                £4.50
-                            </div>
-                            <div class="col-3 block-tickets-table-row px-2 py-3">
-                                £6.50
-                            </div>
-                            <div class="col-3 block-tickets-table-row px-2 py-3">
-                                Day Entry
-                            </div>
-                            <div class="col-3 block-tickets-table-row px-2 py-3">
-                                £8.50
-                            </div>
-                            <div class="col-3 block-tickets-table-row px-2 py-3">
-                                £4.50
-                            </div>
-                            <div class="col-3 block-tickets-table-row px-2 py-3">
-                                £6.50
-                            </div>
-    
+                        ';
+
+                            if( have_rows( 'tickets_table' ) ):
+                                while ( have_rows( 'tickets_table' ) ) : the_row();
+
+                                    $ticket_type        = get_sub_field( 'ticket_table_type' );
+                                    $ticket_standard    = get_sub_field( 'ticket_table_standard' );
+                                    $ticket_giftaid     = get_sub_field( 'ticket_table_giftaid' );
+
+                                    echo ( 
+                                        $ticket_type && $ticket_standard && $ticket_giftaid ?
+                                        '<div class="col-4 block-tickets-table-row p-3">
+                                            <strong>' . $ticket_type . '</strong>
+                                        </div>
+                                        <div class="col-4 block-tickets-table-row p-3">
+                                            ' . ( $ticket_standard !== 'Free' ? '£' : '' ) . $ticket_standard . '
+                                        </div>
+                                        <div class="col-4 block-tickets-table-row p-3">
+                                            ' . ( $ticket_giftaid !== 'Free' ? '£' : '' ) . $ticket_giftaid . '
+                                        </div>' : 
+                                        ''
+                                    );
+                           
+                                endwhile;
+                            endif;
+                            
+                    echo '
                         </div>
-                        
                     </div>
                 </div>
             </div>
