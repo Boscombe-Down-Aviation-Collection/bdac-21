@@ -8,7 +8,8 @@
         <style>
             .block-tickets,
             .block-tickets h2,
-            .block-tickets-table-header h6 {
+            .block-tickets-table-header h6,
+            .block-tickets-table-row {
                 color: #fff;
             }
             .block-tickets {
@@ -21,11 +22,10 @@
                 background: #d82026;
             }
             .block-tickets-table-header h6 {
-                color: #fff;
                 margin: 0;
             }
             .block-tickets-table-row {
-                color: #fff;
+                border-bottom: 0.25px solid #ffffff7f;
             }
         </style>
 
