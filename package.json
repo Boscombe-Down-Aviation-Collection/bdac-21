@@ -5,7 +5,8 @@
   "main": "index.php",
   "scripts": {
     "start": "webpack --config webpack.dev.js",
-    "build": "wepback --config webpack.prod.js"
+    "build": "wepback --config webpack.prod.js",
+    "scss-build": "npx node-sass -rw inc/scss/layout -o dist/css/layout"
   },
   "author": "Oliver Berry",
   "license": "ISC",
