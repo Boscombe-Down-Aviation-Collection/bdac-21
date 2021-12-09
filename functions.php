@@ -213,10 +213,29 @@
                                     )
                 )
         );
-
+        
         /**
-         * Styling Blocks
+         * Tickets Block
          */
+        acf_register_block_type(
+            array(
+                'name'              => 'tickets',
+                'title'             => __( 'BDAC Tickets Block' ),
+                'description'       => __( 'BDAC Tickets block' ),
+                'category'          => 'BDAC',
+                'render_template'   => 'inc/template-parts/blocks/block-tickets.php',
+                'icon'              => 'money-alt',
+                'keywords'          => array(
+                                        'tickets',
+                                        'prices',
+                                        'entry'
+                                    )
+                )
+        );
+
+    /**
+     * Styling Blocks
+     */
 
         /**
          * Arrow
