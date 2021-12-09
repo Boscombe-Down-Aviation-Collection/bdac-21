@@ -1,0 +1,27 @@
+@import "../base/variables";
+
+.block-tickets,
+.block-tickets h2,
+.block-tickets-table-header h6,
+.block-tickets-table-row {
+  color: $tertiary-colour;
+}
+.block-tickets {
+  background: $black;
+
+  &-table {
+    color: $tertiary-colour;
+
+    &-header {
+      background: $primary-colour;
+
+      h6 {
+        margin: 0;
+      }
+    }
+
+    &-row {
+      border-bottom: 0.25px solid rgba($tertiary-colour, 0.2);
+    }
+  }
+}

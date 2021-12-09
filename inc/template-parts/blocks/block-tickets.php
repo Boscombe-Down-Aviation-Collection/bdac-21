@@ -5,30 +5,6 @@
     $tickets_table          = get_field( 'tickets_table' );
 
     echo '
-        <style>
-            .block-tickets,
-            .block-tickets h2,
-            .block-tickets-table-header h6,
-            .block-tickets-table-row {
-                color: #fff;
-            }
-            .block-tickets {
-            background: #304048;
-            }
-            .block-tickets-table {
-                color: #fff;
-            }
-            .block-tickets-table-header {
-                background: #d82026;
-            }
-            .block-tickets-table-header h6 {
-                margin: 0;
-            }
-            .block-tickets-table-row {
-                border-bottom: 0.25px solid #ffffff7f;
-            }
-        </style>
-
         <section class="block-tickets">
 
             <div class="container">
