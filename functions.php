@@ -116,7 +116,7 @@
                 'title'             => __( 'Carousel' ),
                 'description'       => __( 'BDAC Carousel block' ),
                 'render_template'   => 'inc/template-parts/blocks/carousel.php',
-                // 'enqueue_style'     => get_template_directory_uri() . '/inc/css/blocks/carousel.css',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/block_carousel.css',
                 'icon'              => 'format-gallery',
                 'keywords'          => array(
                                         'carousel',
@@ -135,6 +135,7 @@
                 'title'             => __( 'FAQ' ),
                 'description'       => __( 'BDAC FAQ block' ),
                 'render_template'   => 'inc/template-parts/blocks/faq.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/block_faq.css',
                 'icon'              => 'list-view',
                 'keywords'          => array(
                                         'faq',
@@ -153,6 +154,7 @@
                 'title'             => __( 'General Content' ),
                 'description'       => __( 'General Content block' ),
                 'render_template'   => 'inc/template-parts/blocks/general.php',
+                // 'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/block_faq.css',
                 'icon'              => 'edit',
                 'keywords'          => array(
                                         'general',
@@ -170,6 +172,7 @@
                 'title'             => __( 'Image Text Content' ),
                 'description'       => __( 'Image Text Content block' ),
                 'render_template'   => 'inc/template-parts/blocks/image-text.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/block_image-text.css',
                 'icon'              => 'edit',
                 'keywords'          => array(
                                         'image text',
@@ -188,6 +191,7 @@
                 'description'       => __( 'BDAC intro block' ),
                 'category'          => 'BDAC',
                 'render_template'   => 'inc/template-parts/blocks/intro.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/block_intro.css',
                 'icon'              => 'id',
                 'keywords'          => array(
                                         'intro',
@@ -206,6 +210,7 @@
                 'description'       => __( 'BDAC Map block' ),
                 'category'          => 'BDAC',
                 'render_template'   => 'inc/template-parts/blocks/map.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/block_map.css',
                 'icon'              => 'id',
                 'keywords'          => array(
                                         'map',
@@ -220,10 +225,11 @@
         acf_register_block_type(
             array(
                 'name'              => 'tickets',
-                'title'             => __( 'BDAC Tickets Block' ),
+                'title'             => __( 'Tickets Block' ),
                 'description'       => __( 'BDAC Tickets block' ),
                 'category'          => 'BDAC',
                 'render_template'   => 'inc/template-parts/blocks/block-tickets.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/block_tickets.css',
                 'icon'              => 'money-alt',
                 'keywords'          => array(
                                         'tickets',
@@ -246,6 +252,7 @@
                 'title'             => __( 'Arrow' ),
                 'description'       => __( 'BDAC arrow block' ),
                 'render_template'   => 'inc/template-parts/styling/arrow.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/style_arrow.css',
                 'category'			=> 'formatting',
                 'icon'              => 'arrow-up-alt2',
                 'keywords'          => array(
@@ -264,6 +271,7 @@
                 'title'             => __( 'Inverted Arrow' ),
                 'description'       => __( 'BDAC inverted arrow block' ),
                 'render_template'   => 'inc/template-parts/styling/arrow_inv.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/layout/style_arrow_inv.css',
                 'category'			=> 'formatting',
                 'icon'              => 'arrow-down-alt2',
                 'keywords'          => array(
