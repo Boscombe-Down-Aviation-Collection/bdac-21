@@ -73,4 +73,24 @@
       }
     }
   }
+
+  &-content {
+    &-form {
+      background: #fff;
+
+      @media (min-width: 992px) {
+        border-top: 1rem solid $primary-colour;
+        box-shadow: 5px 5px 10px 2px rgb($secondary-colour, 10%);
+        position: relative;
+        top: -15vh;
+      }
+
+      .wpcf7-form-control-wrap,
+      label,
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
+  }
 }
