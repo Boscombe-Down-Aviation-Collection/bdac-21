@@ -7,8 +7,10 @@
     background-size: cover;
     max-height: 345px;
     height: 100%;
+    margin: 1rem 0;
     padding: 5rem 0 0;
     border-radius: 0.3rem;
+    position: relative;
     overflow: hidden;
     box-shadow: 0.15rem 0.15rem 0.6rem rgba(7, 31, 91, 0.65);
     transition: transform 600ms ease, box-shadow 600ms ease;
@@ -69,6 +71,19 @@
 
     &:focus-within {
       transition-duration: 0ms;
+    }
+
+    &-date {
+      background: #121f5b;
+      padding: 0.5rem 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      p {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+      }
     }
 
     &-content {
