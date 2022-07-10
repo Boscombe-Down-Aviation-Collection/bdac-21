@@ -3,30 +3,47 @@
     border-left: $default-border;
     border-right: $default-border;
   }
-  &-image {
-    width: 100vw;
-    height: 50vh;
-    object-fit: cover;
-    position: relative;
-    background-size: 115vw !important;
-    background-position-y: top !important;
-    background-repeat: no-repeat !important;
+  &-hero {
+    background: $white;
+    padding: 0;
 
     @media (min-width: 992px) {
-      width: 100%;
-      height: 60vh;
-      background-size: cover !important;
-      background-position-y: center !important;
-      background-repeat: no-repeat !important;
-      object-fit: cover;
+      background: none;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       position: relative;
     }
 
+    &-image {
+      background: $white;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: relative;
+      background-size: 115vw;
+      background-position-y: top;
+      background-repeat: no-repeat;
+      clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+
+      @media (min-width: 992px) {
+        width: 100%;
+        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        margin: 0;
+        position: relative;
+      }
+    }
+
     &-details {
-      background: #f7f7ff;
+      background: $white;
       max-width: 100%;
-      padding: 1rem;
-      position: absolute;
+      padding: 1.5rem 1rem;
       left: 0;
       right: 0;
       bottom: 0;
@@ -35,16 +52,17 @@
         max-width: 45vw;
         padding: 2rem 1rem;
         border-radius: 0.1875rem;
-        box-shadow: 5px 5px 10px 2px rgb($secondary-colour, 10%);
-        left: 5%;
-        top: 60%;
-        bottom: unset;
+        box-shadow: 5px 5px 10px 2px rgb(7 31 91 / 25%);
+        position: absolute;
+        left: calc((100vw - 1380px) / 2);
+        bottom: 3rem;
       }
 
       &-meta {
         flex-direction: column;
+        align-items: center;
 
-        @media (min-width: 768px) {
+        @media (min-width: 968px) {
           flex-direction: row;
           align-items: flex-end;
         }
@@ -68,6 +86,8 @@
 
       &-presenter {
         font-size: 1.25em;
+        display: flex;
+        justify-content: center;
 
         span {
           color: $primary-colour;
@@ -79,14 +99,22 @@
   }
 
   &-content {
+    padding: 0;
+
+    @media (min-width: 992px) {
+      padding: initial;
+    }
+
+    &-description {
+      background: #fff;
+    }
+
     &-form {
       background: #fff;
 
       @media (min-width: 992px) {
         border-top: 1rem solid $primary-colour;
         box-shadow: 5px 5px 10px 2px rgb($secondary-colour, 10%);
-        position: relative;
-        top: -15vh;
       }
 
       .wpcf7-form-control-wrap,
@@ -94,6 +122,31 @@
       input,
       textarea {
         width: 100%;
+      }
+    }
+  }
+
+  &s {
+    .page-header {
+      height: 25vh;
+      padding: 0;
+      background-size: cover;
+      width: 100%;
+      background-position-y: 35%;
+      position: relative;
+
+      &-title {
+        background: #fff;
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        // left: 0.5rem;
+        position: relative;
+
+        @media (min-width: 992px) {
+          background: none;
+          color: $tertiary-colour;
+          max-width: 50%;
+        }
       }
     }
   }

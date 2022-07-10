@@ -5,17 +5,12 @@
 ?>
 
     <article class="events">
-        <section class="page-header bg-black d-flex align-items-end" style="background-image: url(' <?php echo ( $bannerBg ? $bannerBg['url'] : 'http://bdac:8888/wp-content/uploads/TSR-2-Ground-Crew-opt.jpg'); ?> '); height: 25vh; padding: 0; background-size: cover; width: 100%; background-position-y: 35%; position: relative;">
+        <section class="page-header bg-black d-flex align-items-end" style="background-image: url(' <?php echo ( $bannerBg ? $bannerBg['url'] : 'http://bdac:8888/wp-content/uploads/TSR-2-Ground-Crew-opt.jpg'); ?> ');">
             <div class="page-header-overlay" style="background: #d91f26; position: absolute; top: 0; bottom: 0; left: 0; right: 0; opacity: 80%;"></div>
             <div class="container">
-                <div class="row" style="">
+                <div class="row">
                     <div class="col">
-                        <h1 class="page-banner-title" style="    background: #fff;
-    width: fit-content;
-    padding: 0.5rem 1rem;
-    left: 0.5rem;
-    position: relative;
-    max-width: 50%;">Presentations &amp; Events<br> at BDAC</h1>
+                        <h1 class="page-header-title">Presentations &amp; Events<br> at BDAC</h1>
                         <div class="row justify-content-sm-start justify-content-md-between page-banner-subtitle" style="margin: 0;">
                             <?php 
                                 if ( function_exists('yoast_breadcrumb') ) {
@@ -103,6 +98,15 @@
                 $i++;
 				endwhile;
 				wp_reset_postdata();
+                
+                if (is_active_sidebar('events_description')) {
+                    ?>
+                    <li>
+                         <?php dynamic_sidebar('events_description'); ?>
+                    </li>
+                <?php
+                    }
+
             
             ?>
 

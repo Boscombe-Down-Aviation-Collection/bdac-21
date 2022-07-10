@@ -47,10 +47,10 @@
                                         )    
                                     ) 
                                 ) .
-                                '<div class="mt-auto">' . 
+                                '<div class="mt-auto bdac-card-footer">' . 
                                     ( 
                                         $introBtnLabel && $introBtnLink ? 
-                                        '<a href="' . $introBtnLink . '" class="bdac-card-link">' . $introBtnLabel . ' <i class="fas fa-chevron-right" aria-hidden="true"></i></a>' : 
+                                        '<a href="' . $introBtnLink . '" class="bdac-card-footer-link">' . $introBtnLabel . ' <i class="fas fa-chevron-right" aria-hidden="true"></i></a>' : 
                                         '' 
                                     ) . 
                                 '</div> 

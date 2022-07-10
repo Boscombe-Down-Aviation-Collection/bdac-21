@@ -44,8 +44,16 @@
 @import "./components/search-overlay";
 
 // --------------------
-// 3: Custom Post Types
+// 3: Pages
 // --------------------
 
-// 3.2: - Events
+// 3.1: - Index
+
+@import "./pages/index";
+
+// --------------------
+// 4: Custom Post Types
+// --------------------
+
+// 4.2: - Events
 @import "./post_types/event";

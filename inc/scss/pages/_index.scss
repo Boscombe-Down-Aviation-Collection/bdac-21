@@ -1,0 +1,34 @@
+.blog {
+  #content {
+    padding-right: 20px;
+  }
+
+  // Side bar
+  .side-bar {
+    padding-left: 20px;
+    border-left: $default-border;
+
+    &-item {
+      ul {
+        padding-top: 0.5rem;
+        list-style: none;
+
+        li {
+          margin: 1rem 0;
+
+          a {
+            color: $secondary-colour;
+
+            &:hover {
+              color: $primary-colour;
+            }
+          }
+        }
+      }
+
+      hr {
+        margin: 2rem 0 0.5rem;
+      }
+    }
+  }
+}

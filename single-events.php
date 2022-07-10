@@ -13,19 +13,21 @@
     echo '
         <article class="event">
 
-            <section class="event-image" style="background: url(' . get_the_post_thumbnail_url() . '); background-size: cover; background-position: center;">
+            <section class="event-hero">
 
-                <div class="event-image-details">
+                <img class="event-hero-image" src="' . get_the_post_thumbnail_url() . '" style="" />
+
+                <div class="event-hero-details">
                 
                 <div class="row">
-                    <div class="col-12 d-flex event-image-details-meta">
+                    <div class="col-12 d-flex event-hero-details-meta">
                         <h2>' . $event_title . '</h2>
                         <p> ' . $event_date_start . ' from ' . $event_time_start . '</p>
                     </div>
                 </div>
                 <div class="row">
                 
-                    <div class="col-12 event-image-details-presenter">
+                    <div class="col-12 event-hero-details-presenter">
                         <p class="lead">presented by <span>' . $event_speaker . '</span></p>
                     </div>
                 </div>
@@ -41,10 +43,10 @@
 
             </section>
 
-            <section class="event-content py-5">
+            <section class="event-content">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-md-7 event-content-description">
+                        <div class="col-md-7 event-content-description pt-5 pb-3">
                             ' . $event_description . '
                         </div>
                         <div class="col-md-4 event-content-form p-5">

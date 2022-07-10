@@ -56,6 +56,13 @@
             'after_title'   => '</h6>'
         ) );
     
+        register_sidebar( array(
+            'name'          => 'Events Description',
+            'id'            => 'events_description',
+            'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-white">',
+            'after_title'   => '</h6>'
+        ) );
+
     }
     add_action( 'widgets_init', 'bdac_widgets' );
 
