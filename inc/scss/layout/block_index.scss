@@ -7,20 +7,20 @@
 
   .bdac-post {
     &-title a {
-      color: $secondary-colour;
+      color: $bdac-blue;
       transition: 300ms;
 
       &:hover {
-        color: $primary-colour;
+        color: $bdac-red;
         text-decoration: none;
       }
     }
     &-link {
-      color: $secondary-colour;
+      color: $bdac-blue;
       transition: 300ms ease;
 
       &:hover {
-        color: $primary-colour;
+        color: $bdac-red;
         text-decoration: none;
       }
     }
@@ -32,13 +32,13 @@
         list-style: none;
 
         a {
-          color: $secondary-colour;
+          color: $bdac-blue;
           transition: 300ms ease;
           position: relative;
 
           &::after {
             content: "";
-            background: $primary-colour;
+            background: $bdac-red;
             width: 100%;
             height: 0.0625rem;
             position: absolute;
@@ -50,7 +50,7 @@
           }
 
           &:hover {
-            color: $primary-colour;
+            color: $bdac-red;
             text-decoration: none;
 
             &::after {
@@ -59,7 +59,7 @@
           }
 
           &:hover {
-            color: $primary-colour;
+            color: $bdac-red;
           }
         }
       }

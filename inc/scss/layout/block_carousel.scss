@@ -9,14 +9,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: $secondary-colour;
+        background: $bdac-blue;
         z-index: 1;
 
         &-red {
-          background: $primary-colour;
+          background: $bdac-red;
         }
         &-white {
-          background: $tertiary-colour;
+          background: $bdac-white;
         }
       }
       img {
@@ -60,7 +60,7 @@
         }
 
         h1 {
-          color: $primary-colour;
+          color: $bdac-red;
           letter-spacing: 2.5px;
           font-size: 3.2rem;
           font-weight: 700;
@@ -72,13 +72,13 @@
 
         .colour {
           &-red {
-            color: $primary-colour;
+            color: $bdac-red;
           }
           &-blue {
-            color: $secondary-colour;
+            color: $bdac-blue;
           }
           &-white {
-            color: $tertiary-colour;
+            color: $bdac-white;
           }
         }
 
@@ -87,9 +87,9 @@
           justify-content: center;
 
           .btn-bdac {
-            color: $tertiary-colour;
+            color: $bdac-white;
             padding: 1rem 3.5rem;
-            border: 0.2rem solid $tertiary-colour;
+            border: 0.2rem solid $bdac-white;
             transition: all 600ms;
             font-size: 1rem;
             font-weight: 700;
@@ -108,8 +108,8 @@
             }
             &:hover,
             &:focus {
-              background: $tertiary-colour;
-              color: $primary-colour;
+              background: $bdac-white;
+              color: $bdac-red;
             }
             &:after {
               content: "";
@@ -119,7 +119,7 @@
             }
             a:hover,
             a:focus {
-              color: $primary-colour;
+              color: $bdac-red;
               text-decoration: underline;
             }
             @media (max-width: 1024px) {

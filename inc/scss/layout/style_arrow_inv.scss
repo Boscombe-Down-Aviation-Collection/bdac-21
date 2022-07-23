@@ -30,7 +30,7 @@
   &--white.c-arrow--inverted > .c-arrow__left {
     border: 0;
     border-right: 1920px solid transparent;
-    border-bottom: 150px solid $tertiary-colour;
+    border-bottom: 150px solid $bdac-white;
 
     @media (max-width: 768px) {
       border-bottom-width: 350px;
@@ -39,7 +39,7 @@
   &--red.c-arrow--inverted > .c-arrow__left {
     border: 0;
     border-right: 1920px solid transparent;
-    border-bottom: 150px solid $primary-colour;
+    border-bottom: 150px solid $bdac-red;
 
     @media (max-width: 768px) {
       border-bottom-width: 350px;
@@ -48,7 +48,7 @@
   &--blue.c-arrow--inverted > .c-arrow__left {
     border: 0;
     border-right: 1920px solid transparent;
-    border-bottom: 150px solid $secondary-colour;
+    border-bottom: 150px solid $bdac-blue;
 
     @media (max-width: 768px) {
       border-bottom-width: 350px;
@@ -61,7 +61,7 @@
   // Right Arrow
   &--white.c-arrow--inverted > .c-arrow__right {
     border: 0;
-    border-right: 1920px solid $tertiary-colour;
+    border-right: 1920px solid $bdac-white;
     border-top: 150px solid transparent;
 
     @media (max-width: 768px) {
@@ -70,7 +70,7 @@
   }
   &--red.c-arrow--inverted > .c-arrow__right {
     border: 0;
-    border-right: 1920px solid $primary-colour;
+    border-right: 1920px solid $bdac-red;
     border-top: 150px solid transparent;
 
     @media (max-width: 768px) {
@@ -79,7 +79,7 @@
   }
   &--blue.c-arrow--inverted > .c-arrow__right {
     border: 0;
-    border-right: 1920px solid $secondary-colour;
+    border-right: 1920px solid $bdac-blue;
     border-top: 150px solid transparent;
 
     @media (max-width: 768px) {

@@ -52,10 +52,11 @@
                     $carouselSubTitleColour = get_sub_field( 'carousel_subtitle_colour' );
                     $carouselBtnColour      = get_sub_field( 'carousel_btn_colour' );
 
+                    $alignCol               = ( !$carouselAlign ? '' : 'style="text-align:' . $carouselAlign . '"' );
                     $oneCol                 = '<div class="col align-self-center" ' . $alignCol . '>';
                     $twoCol                 = '<div class="col col-sm-%s col-lg-%s align-self-center %s" ' . $alignCol . '>';
                     $endCol                 = '</div>';
-                    $alignCol               = ( !$carouselAlign ? '' : 'style="text-align:' . $carouselAlign . '"' );
+                    
                     $carouselColour         = ( 
                                                 $carouselOverlay !== 'blue' ? 
                                                 'carousel-overlay carousel-overlay-' . $carouselOverlay  : 

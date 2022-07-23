@@ -8,7 +8,7 @@
     h3 {
       &::after {
         content: "";
-        background: $primary-colour;
+        background: $bdac-red;
         width: 20%;
         height: 0.15rem;
         position: absolute;
@@ -19,10 +19,10 @@
     }
   }
   .card-header {
-    background: linear-gradient(to right, $tertiary-colour 0%, $tertiary-colour 96%, $secondary-colour 96%, $secondary-colour 98%, $primary-colour 98%, $primary-colour 100%);
+    background: linear-gradient(to right, $bdac-white 0%, $bdac-white 96%, $bdac-blue 96%, $bdac-blue 98%, $bdac-red 98%, $bdac-red 100%);
 
     .btn-card {
-      color: $secondary-colour;
+      color: $bdac-blue;
       padding-left: 0;
       padding-right: 0;
       font-size: 1.2rem;

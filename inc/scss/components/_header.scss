@@ -13,7 +13,7 @@
   -webkit-transition: padding 200ms;
   -o-transition: padding 200ms;
   transition: padding 200ms;
-  background-color: $tertiary-colour;
+  background-color: $bdac-white;
   top: 34px;
   z-index: 50;
 
@@ -23,7 +23,7 @@
 
   &-search {
     > i {
-      color: $tertiary-colour !important;
+      color: $bdac-blue !important;
     }
   }
 
@@ -36,8 +36,8 @@
   }
 
   .header-social {
-    background: $secondary-colour;
-    color: $tertiary-colour;
+    background: $bdac-blue;
+    color: $bdac-white;
     height: 34px;
     width: 100%;
     padding: 5px 0;
@@ -54,19 +54,19 @@
 
     &-links {
       i {
-        color: $tertiary-colour;
+        color: $bdac-white;
         margin: 0.2rem 0 0.2rem 1rem;
         font-size: 1rem;
 
         &:hover {
-          color: $primary-colour;
+          color: $bdac-red;
         }
       }
     }
   }
 
   i {
-    color: $tertiary-colour;
+    color: $bdac-white;
     font-size: 1rem;
     position: relative;
     top: 1px;
@@ -115,7 +115,7 @@
         }
       }
       &-link {
-        color: $secondary-colour;
+        color: $bdac-blue;
         padding: 0.5rem 1rem;
         position: relative;
         transition: opacity 300ms;
@@ -128,7 +128,7 @@
 
         &::after {
           content: "";
-          background: $primary-colour;
+          background: $bdac-red;
           width: 100%;
           height: 0.1875rem;
           position: absolute;
@@ -159,7 +159,7 @@
   }
 
   @media (min-width: 991px) {
-    background: none;
+    // background: none;
     top: 34px;
     border-bottom: none;
     transition: all 600ms;
@@ -174,14 +174,14 @@
     .menu-primary-menu-container {
       .nav {
         &-link {
-          color: $tertiary-colour;
+          color: $bdac-blue;
         }
       }
     }
 
     &-scrolled,
     &-not-front {
-      background: $tertiary-colour;
+      background: $bdac-white;
       border-bottom: $default-border;
 
       .logo-container {
@@ -192,10 +192,10 @@
       .menu-primary-menu-container {
         .nav {
           &-link {
-            color: $secondary-colour;
+            color: $bdac-blue;
 
             i {
-              color: $secondary-colour;
+              color: $bdac-blue;
             }
           }
         }

@@ -1,18 +1,24 @@
 #breadcrumbs {
-  padding: 1rem;
+  color: $bdac-blue;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1rem 1.5rem;
   position: relative;
   left: -1rem;
   bottom: -0.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 992px) {
     left: 0;
   }
 
   a {
-    color: $black;
+    color: $bdac-black;
 
     &:hover {
-      color: $primary-colour;
+      color: $bdac-red;
     }
   }
 }

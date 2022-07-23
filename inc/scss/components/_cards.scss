@@ -1,9 +1,9 @@
 .bdac {
   &-card {
-    background: $black;
+    background: $bdac-black;
     object-fit: cover;
     object-position: center;
-    color: $tertiary-colour;
+    color: $bdac-white;
     background-size: cover;
     max-height: 345px;
     height: 100%;
@@ -40,7 +40,7 @@
 
     &-header {
       hr {
-        background: $primary-colour;
+        background: $bdac-red;
         width: 30%;
         height: 0.15rem;
       }
@@ -50,13 +50,13 @@
       margin-top: 1rem;
 
       &-link {
-        color: $secondary-colour;
+        color: $bdac-blue;
         transition: 300ms ease;
         position: relative;
 
         &::after {
           content: "";
-          background: $primary-colour;
+          background: $bdac-red;
           width: 100%;
           height: 0.15rem;
           position: absolute;
@@ -68,7 +68,7 @@
         }
 
         &:hover {
-          color: $primary-colour;
+          color: $bdac-red;
           text-decoration: none;
 
           &::after {
@@ -85,6 +85,7 @@
     &-date {
       background: #121f5b;
       padding: 0.5rem 1rem;
+      font-family: "Oswald", sans-serif;
       position: absolute;
       top: 0;
       right: 0;
@@ -96,7 +97,7 @@
     }
 
     &-content {
-      background: linear-gradient(rgba($black, 0), rgba($black, 0.6) 20%, rgba($black, 1));
+      background: linear-gradient(rgba($bdac-black, 0), rgba($bdac-black, 0.6) 20%, rgba($bdac-black, 1));
       height: 100%;
       padding: 1.5rem;
 
@@ -122,13 +123,14 @@
       }
 
       &-title {
-        color: $tertiary-colour;
+        color: $bdac-white;
         width: max-content;
         max-width: 100%;
         position: relative;
 
         a {
-          color: $tertiary-colour;
+          color: $bdac-white;
+          font-family: "Oswald", sans-serif;
           text-overflow: ellipsis;
           overflow-y: hidden;
           display: -webkit-box;
@@ -143,14 +145,14 @@
           left: calc(1.5rem * -1);
           bottom: -0.3rem;
           height: 0.1875rem;
-          background: $primary-colour;
+          background: $bdac-red;
           transform-origin: left;
           transition: transform 600ms ease;
         }
       }
 
       &-body {
-        color: rgba($tertiary-colour, 0.95);
+        color: rgba($bdac-white, 0.95);
         min-height: 4.5rem;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -164,13 +166,14 @@
         width: max-content;
         padding: 0.5em 1.25em;
         border-radius: 0.3rem;
+        font-family: "Oswald", sans-serif;
         display: inline-block;
         transition: 600ms ease;
 
         &:hover,
         :focus {
-          background: $tertiary-colour;
-          color: $primary-colour;
+          background: $bdac-white;
+          color: $bdac-red;
         }
       }
 
@@ -183,11 +186,11 @@
         font-size: 0.9rem;
 
         a {
-          color: $black;
+          color: $bdac-black;
           font-weight: 700;
 
           &:hover {
-            color: $primary-colour;
+            color: $bdac-red;
           }
         }
       }
@@ -196,16 +199,16 @@
     &-post {
       &-link {
         display: none;
-        background: $primary-colour;
-        color: $tertiary-colour;
+        background: $bdac-red;
+        color: $bdac-white;
         width: fit-content;
         margin-top: 1rem;
         padding: 0.75rem 1.25rem;
         border: $default-border;
 
         &:hover {
-          background: $tertiary-colour;
-          color: $primary-colour;
+          background: $bdac-white;
+          color: $bdac-red;
         }
 
         @media (min-width: 992px) {
@@ -277,7 +280,7 @@
 //   }
 
 //     &-img {
-//       background-color: $secondary-colour;
+//       background-color: $bdac-blue;
 //       background-size: cover;
 //       border: $default-border;
 //       height: 15rem;
@@ -341,7 +344,7 @@
 //           }
 //         }
 //         small a {
-//           color: $black;
+//           color: $bdac-black;
 //           font-weight: 700;
 //           transition: 300ms;
 

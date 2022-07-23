@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap");
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $secondary-colour;
-  letter-spacing: 2px;
+  color: $bdac-blue;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 540px) {

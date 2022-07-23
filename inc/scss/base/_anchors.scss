@@ -1,8 +1,9 @@
 a {
+  font-family: $header-font;
   transition: 300ms ease;
 
   &:hover {
-    color: $primary-colour;
+    color: $bdac-red;
     text-decoration: none;
   }
 }

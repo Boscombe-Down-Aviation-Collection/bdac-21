@@ -1,16 +1,16 @@
 // Colours
-$primary-colour: #d91f26; // BDAC Red
-$primary-colour-alt: #8c191b; // BDAC Alt Red
-$secondary-colour: #071f5b; // BDAC Blue
-$tertiary-colour: #f7f7ff;
+$bdac-red: #d91f26; // BDAC Red
+$bdac-red-alt: #8c191b; // BDAC Alt Red
+$bdac-blue: #071f5b; // BDAC Blue
+$bdac-white: #f7f7ff;
 $quaternary-colour: #fcba04;
-$black: #304048; // RAF Blue/Grey
+$bdac-black: #304048; // RAF Blue/Grey
 $white: #ffffff;
-// $black: #444; Old Black Colour
+// $bdac-black: #444; Old Black Colour
 
 // Fonts
-$header-font: "Exo", sans-serif;
+$header-font: "Economica", sans-serif;
 $body-font: "Open-Sans", sans-serif;
 
 // Borders
-$default-border: 0.125rem solid $primary-colour;
+$default-border: 0.125rem solid $bdac-red;

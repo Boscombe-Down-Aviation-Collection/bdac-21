@@ -34,7 +34,7 @@
     }
 
     &-caption {
-      background: $tertiary-colour;
+      background: $bdac-white;
       padding: 0.25rem 1rem 0.25rem 2rem;
       border-radius: 0 0.3rem 0.3rem 0;
       position: absolute;
@@ -73,14 +73,14 @@
       width: fit-content;
       padding: 0.5rem 1.25rem;
       border: $default-border;
-      border-color: $tertiary-colour;
+      border-color: $bdac-white;
       border-radius: 0.3rem;
-      color: $tertiary-colour;
+      color: $bdac-white;
       font-weight: 500;
 
       &:hover {
-        background: $tertiary-colour;
-        color: $primary-colour;
+        background: $bdac-white;
+        color: $bdac-red;
       }
     }
   }

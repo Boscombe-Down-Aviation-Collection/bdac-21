@@ -4,16 +4,16 @@
 .block-tickets h2,
 .block-tickets-table-header h6,
 .block-tickets-table-row {
-  color: $tertiary-colour;
+  color: $bdac-white;
 }
 .block-tickets {
-  background: $black;
+  background: $bdac-black;
 
   &-table {
-    color: $tertiary-colour;
+    color: $bdac-white;
 
     &-header {
-      background: $primary-colour;
+      background: $bdac-red;
 
       h6 {
         margin: 0;
@@ -21,7 +21,7 @@
     }
 
     &-row {
-      border-bottom: 0.25px solid rgba($tertiary-colour, 0.2);
+      border-bottom: 0.25px solid rgba($bdac-white, 0.2);
     }
   }
 }

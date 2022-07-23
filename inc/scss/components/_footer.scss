@@ -1,6 +1,6 @@
 #footer {
-  background: $black;
-  color: $tertiary-colour;
+  background: $bdac-black;
+  color: $bdac-white;
   min-height: 20rem;
   padding: 2rem 0;
   border-top: $default-border;
@@ -18,7 +18,7 @@
   }
 
   h6 {
-    color: $tertiary-colour;
+    color: $bdac-white;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: $default-border;
@@ -39,11 +39,11 @@
       list-style: none;
 
       a {
-        color: $tertiary-colour;
+        color: $bdac-white;
         font-size: 0.9rem;
 
         &:hover {
-          color: $primary-colour;
+          color: $bdac-red;
         }
       }
     }

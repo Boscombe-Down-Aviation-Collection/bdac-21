@@ -3,7 +3,7 @@
 }
 
 .search-overlay {
-  background-color: rgba($tertiary-colour, 0.96);
+  background-color: rgba($bdac-white, 0.96);
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1000;
@@ -23,15 +23,15 @@
   }
 
   &-close {
-    background: $primary-colour;
-    color: $tertiary-colour;
+    background: $bdac-red;
+    color: $bdac-white;
     padding: 0.3rem 0.5rem;
     border-radius: 0.6rem;
     transition: 300ms ease;
 
     &:hover {
-      background: $tertiary-colour;
-      color: $primary-colour;
+      background: $bdac-white;
+      color: $bdac-red;
     }
   }
 
@@ -42,7 +42,7 @@
   }
 
   &-top {
-    background: rgba($secondary-colour, 0.1);
+    background: rgba($bdac-blue, 0.1);
 
     .container {
       align-items: center;
@@ -51,13 +51,13 @@
 
     &-term {
       background: none;
-      color: $secondary-colour;
+      color: $bdac-blue;
       width: calc(80%);
       padding: 1rem;
       border: none;
 
       &:focus {
-        color: $primary-colour;
+        color: $bdac-red;
         outline: none;
       }
     }
@@ -69,10 +69,10 @@
     overflow: hidden;
 
     &-link {
-      color: $secondary-colour;
+      color: $bdac-blue;
 
       &:hover {
-        color: $primary-colour;
+        color: $bdac-red;
       }
     }
 
@@ -87,7 +87,7 @@
     .col-sm-4 {
       height: calc(100vh - 5.5rem);
       padding: 1rem;
-      border-right: 0.05rem solid rgba($secondary-colour, 0.3);
+      border-right: 0.05rem solid rgba($bdac-blue, 0.3);
 
       &:last-of-type {
         border-right: none;
@@ -118,8 +118,8 @@
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
-  border: 0.375rem solid rgba($secondary-colour, 0.5);
-  border-top-color: $primary-colour;
+  border: 0.375rem solid rgba($bdac-blue, 0.5);
+  border-top-color: $bdac-red;
   -webkit-animation: loading-spinner 1s infinite linear;
   animation: loading-spinner 1s infinite linear;
   position: absolute;

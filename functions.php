@@ -10,6 +10,7 @@
         ) );
 
         // Stylesheets
+        wp_enqueue_style( 'google-fonts-oswald', '//fonts.googleapis.com/css2?family=Economica:wght@400;700&family=Oswald:wght@200;400;700&display=swap' );
         wp_enqueue_style( 'google-fonts-open-sans', '//fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' );
         wp_enqueue_style( 'bdac_fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css', NULL, microtime() );
         wp_enqueue_style( 'bdac_bootstrap_styles', get_template_directory_uri() . '/dist/css/bootstrap.css', NULL, microtime() );
@@ -36,7 +37,7 @@
         register_sidebar( array(
             'name'          => 'Index Sidebar',
             'id'            => 'index_sidebar',
-            'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-red">',
+            'before_title'  => '<h6 class="text-uppercase mb-1 bdac-colour-red">',
             'after_title'   => '</h6>',
             'before_widget' => '<div>',
             'after_widget'  => '</div><hr>'
@@ -45,21 +46,21 @@
         register_sidebar( array(
             'name'          => 'Footer Description',
             'id'            => 'footer_description',
-            'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-white">',
+            'before_title'  => '<h6 class="text-uppercase mb-1 bdac-colour-white">',
             'after_title'   => '</h6>'
         ) );
 
         register_sidebar( array(
             'name'          => 'Footer Menu',
             'id'            => 'footer_menu',
-            'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-white">',
+            'before_title'  => '<h6 class="text-uppercase mb-1 bdac-colour-white">',
             'after_title'   => '</h6>'
         ) );
     
         register_sidebar( array(
             'name'          => 'Events Description',
             'id'            => 'events_description',
-            'before_title'  => '<h6 class="text-uppercase mb-1 font-weight-bold bdac-colour-white">',
+            'before_title'  => '<h6 class="text-uppercase mb-1 bdac-colour-white">',
             'after_title'   => '</h6>'
         ) );
 

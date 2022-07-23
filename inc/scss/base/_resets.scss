@@ -5,13 +5,13 @@
 }
 
 body {
-  background: $tertiary-colour;
-  color: $black;
+  background: $bdac-white;
+  color: $bdac-black;
 }
 
 #main {
-  background: $tertiary-colour;
-  color: $black;
+  background: $bdac-white;
+  color: $bdac-black;
   min-height: calc(100vh - 60px - 0.125rem);
   margin-top: 60px;
 
@@ -42,31 +42,31 @@ section {
 .bdac {
   &-bg {
     &-red {
-      background: $primary-colour;
+      background: $bdac-red;
     }
     &-blue {
-      background: $secondary-colour;
+      background: $bdac-blue;
     }
     &-white {
-      background: $tertiary-colour;
+      background: $bdac-white;
     }
     &-black {
-      color: $black;
+      color: $bdac-black;
     }
   }
 
   &-colour {
     &-red {
-      color: $primary-colour;
+      color: $bdac-red;
     }
     &-blue {
-      color: $secondary-colour;
+      color: $bdac-blue;
     }
     &-white {
-      color: $tertiary-colour;
+      color: $bdac-white;
     }
     &-black {
-      color: $black;
+      color: $bdac-black;
     }
   }
 
@@ -75,10 +75,10 @@ section {
   }
 
   &-shadow {
-    box-shadow: 0.15rem 0.15rem 0.6rem rgba($secondary-colour, 65%);
+    box-shadow: 0.15rem 0.15rem 0.6rem rgba($bdac-blue, 65%);
 
     &:hover {
-      box-shadow: 0.07rem 0.07rem 0.3rem rgba($secondary-colour, 0.85);
+      box-shadow: 0.07rem 0.07rem 0.3rem rgba($bdac-blue, 0.85);
     }
   }
 }

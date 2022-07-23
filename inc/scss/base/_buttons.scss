@@ -1,7 +1,7 @@
 .btn-bdac {
-  color: $secondary-colour;
+  color: $bdac-blue;
   padding: 5px 0;
-  border: 0.125rem solid $primary-colour;
+  border: 0.125rem solid $bdac-red;
   border-radius: 4px;
   text-transform: uppercase;
   display: inline-block;
@@ -21,15 +21,15 @@
   }
 
   &::after {
-    background-color: $primary-colour;
+    background-color: $bdac-red;
     color: #fff;
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;
     background: #cc4627;
-    background: -webkit-gradient(linear, left top, right top, from(#cc4627), to($primary-colour));
-    background: -o-linear-gradient(left, #cc4627, $primary-colour);
-    background: linear-gradient(to right, #cc4627, $primary-colour);
+    background: -webkit-gradient(linear, left top, right top, from(#cc4627), to($bdac-red));
+    background: -o-linear-gradient(left, #cc4627, $bdac-red);
+    background: linear-gradient(to right, #cc4627, $bdac-red);
     content: "";
     position: absolute;
     width: 100%;
@@ -52,36 +52,36 @@
   }
   a:hover,
   a:focus {
-    color: $primary-colour;
+    color: $bdac-red;
     text-decoration: underline;
   }
 
   &-red {
-    background: $primary-colour;
-    color: $tertiary-colour;
+    background: $bdac-red;
+    color: $bdac-white;
     border: $default-border;
 
     &:hover,
     &:focus {
-      background: $tertiary-colour;
-      color: $primary-colour;
+      background: $bdac-white;
+      color: $bdac-red;
     }
   }
   &-blue {
-    background: $secondary-colour;
-    color: $tertiary-colour;
-    border-color: $secondary-colour;
+    background: $bdac-blue;
+    color: $bdac-white;
+    border-color: $bdac-blue;
 
     &:hover,
     &:focus {
-      background: $tertiary-colour;
-      color: $secondary-colour;
+      background: $bdac-white;
+      color: $bdac-blue;
     }
   }
 
   &-donation {
-    background: $primary-colour;
-    color: $tertiary-colour;
+    background: $bdac-red;
+    color: $bdac-white;
     height: 100%;
     border: none;
     border-left: $default-border;
@@ -96,9 +96,9 @@
     justify-content: center;
 
     &:hover {
-      background: $tertiary-colour;
-      color: $primary-colour;
-      border-color: $primary-colour;
+      background: $bdac-white;
+      color: $bdac-red;
+      border-color: $bdac-red;
     }
   }
 }
