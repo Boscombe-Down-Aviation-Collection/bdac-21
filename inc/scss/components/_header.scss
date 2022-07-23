@@ -1,3 +1,32 @@
+.header {
+  &-social {
+    background: $bdac-blue;
+    color: $bdac-white;
+    height: 34px;
+
+    &-opening {
+      width: fit-content;
+    }
+
+    .container {
+      max-width: 100%;
+      padding: 0 19px;
+    }
+
+    &-links {
+      i {
+        color: $bdac-white;
+        margin: 0.2rem 0 0.2rem 1rem;
+        font-size: 1rem;
+
+        &:hover {
+          color: $bdac-red;
+        }
+      }
+    }
+  }
+}
+
 .customize-support {
   .navbar .header-social {
     top: 32px;
@@ -33,36 +62,6 @@
 
   .navbar-toggler-icon {
     margin: 9px;
-  }
-
-  .header-social {
-    background: $bdac-blue;
-    color: $bdac-white;
-    height: 34px;
-    width: 100%;
-    padding: 5px 0;
-    position: fixed;
-    top: 0;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-
-    .container {
-      max-width: 100%;
-      padding: 0 19px;
-    }
-
-    &-links {
-      i {
-        color: $bdac-white;
-        margin: 0.2rem 0 0.2rem 1rem;
-        font-size: 1rem;
-
-        &:hover {
-          color: $bdac-red;
-        }
-      }
-    }
   }
 
   i {
