@@ -21,53 +21,7 @@
               <p class="header-social-opening-hours bdac-colour-white m-0">
                 <span class="header-social-opening-hours-current">
                   <?php 
-                    $today = date('Y M jS');
-                    $args = array(  
-                        'post_type'         => 'opening_hours',
-                        'post_status'       => 'publish',
-                        'posts_per_page'    => 1,
-                        'meta_key'          => 'season_to',
-                        'orderby'           => 'meta_value',
-                        'order'             => 'ASC',
-                        'meta_query'        => array(
-                            array(
-                                'key'       => 'season_to',
-                                'compare'   => '>=',
-                                'value'     => $today
-                            )
-                        )
-                    );
-    
-                    $seasons = new WP_Query( $args ); 
-                        
-                    while ( $seasons->have_posts() ) : $seasons->the_post(); 
-    
-                        $checkDay       = date('w');
-                        $checkHour      = date('ga');
-                        $seasonTitle    = get_the_title();
-                        $seasonStart    = get_field( 'season_from' );
-                        $seasonEnd      = get_field( 'season_to' );
-                        $dateEnd        = get_field( 'season_to' );
-                        $dayOpen        = get_field( 'season_opening' );
-                        $dayClose       = get_field( 'season_closing' );
-                        $dayEntry       = get_field( 'season_entry' );
-                        $weekStart      = get_field( 'season_start' );
-                        $weekEnd        = get_field( 'season_end' );
-    
-                        echo ( 
-                          $checkHour < $dayOpen || $checkHour >= $dayClose ? 
-                          '<strong>Collection Closed</strong>, open ' . ( 
-                            $checkDay == 7 ? 
-                            $weekStart . ' - ' . $weekEnd : ( 
-                              $checkHour > $dayClose ? 
-                              'Today' : 
-                              'Tomorrow'
-                            ) ) . ' ' . $dayOpen . ' - ' . $dayClose : 
-                          '<strong>Collection Open</strong> ' . $dayOpen . ' - ' . $dayClose 
-                        );
-                    endwhile;
-    
-                    wp_reset_postdata(); 
+                    bdac_is_open();
                   ?>
                 </span>
                 <span class="header-social-opening-hours-weather"></span>
