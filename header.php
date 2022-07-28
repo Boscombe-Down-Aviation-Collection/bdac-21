@@ -1,6 +1,6 @@
 <?php
 /**
- * Header file for the MyGym 2020 theme.
+ * Header file for the BDAC 2022 theme.
  */
 
 ?>
@@ -9,7 +9,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<?php wp_head(); ?>
+	  <?php 
+      wp_head();
+    ?>
   </head>
 
   <body <?php body_class(); ?>>
