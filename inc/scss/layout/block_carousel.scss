@@ -38,6 +38,7 @@
         padding: 0;
         text-align: left;
         text-transform: uppercase;
+        z-index: 2;
 
         @media (max-width: 768px) {
           top: 3rem;
