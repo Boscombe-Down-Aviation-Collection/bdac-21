@@ -92,7 +92,7 @@
                                 ' . ( 
                                     $carouselBtn ? 
                                     sprintf($twoCol, '12', '8', '') . $carouselContent . $endCol . 
-                                    sprintf($twoCol, '12', '4', ' justify-content-center carousel-link') . $carouselButton . $endCol : 
+                                    sprintf($twoCol, '12', '8', ' justify-content-start carousel-link') . $carouselButton . $endCol : 
                                     '<div class="col align-self-center" style="text-align:' . $carouselAlign . '">'
                                         . $carouselContent . $endCol
                                 ) .

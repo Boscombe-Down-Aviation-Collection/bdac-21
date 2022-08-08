@@ -56,7 +56,7 @@
           <a class="navbar-brand logo-container" href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <?php bdacLogo(90); ?>
           </a>
-          <button class="navbar-toggler navbar-light ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler navbar-light ms-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
   
