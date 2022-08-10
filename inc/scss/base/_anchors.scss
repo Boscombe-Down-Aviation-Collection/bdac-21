@@ -1,6 +1,7 @@
 a {
   font-family: $header-font;
   transition: 300ms ease;
+  text-decoration: none;
 
   &:hover {
     color: $bdac-red;
