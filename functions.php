@@ -218,7 +218,7 @@
                 'category'          => 'BDAC',
                 'render_template'   => 'inc/template-parts/blocks/events.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_events.css',
-                'icon'              => 'id',
+                'icon'              => 'tickets',
                 'keywords'          => array(
                                         'events',
                                         'text'
