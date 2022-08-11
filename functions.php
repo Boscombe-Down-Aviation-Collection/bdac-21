@@ -206,6 +206,25 @@
                                     )
                 )
         );
+        
+        /**
+         * Events
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'events',
+                'title'             => __( 'BDAC Events Block' ),
+                'description'       => __( 'BDAC Events block' ),
+                'category'          => 'BDAC',
+                'render_template'   => 'inc/template-parts/blocks/events.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_events.css',
+                'icon'              => 'id',
+                'keywords'          => array(
+                                        'events',
+                                        'text'
+                                    )
+                )
+        );
 
         /**
          * Map Block
