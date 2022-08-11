@@ -3,4 +3,17 @@
 .events-section {
   background-color: $bdac-blue;
   background-color: #dbe2f3;
+
+  h2 {
+    width: fit-content;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
 }
