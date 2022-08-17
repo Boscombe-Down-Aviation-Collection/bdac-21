@@ -1,0 +1,49 @@
+@import "../base/variables";
+
+.events-section {
+  background-color: $bdac-blue;
+  background-color: #dbe2f3;
+
+  h2 {
+    width: fit-content;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+
+  .row {
+    justify-content: space-around;
+
+    &:nth-of-type(2) {
+      padding: 3.125rem 0;
+    }
+
+    .col {
+      text-align: center;
+
+      .bdac-card {
+        border-radius: 0.625rem;
+
+        &-content {
+          text-align: left;
+
+          &-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+
+          &-link {
+            padding: 0.625rem 1.25rem;
+            font-family: $body-font;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 0.75rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
