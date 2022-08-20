@@ -246,6 +246,25 @@
         );
         
         /**
+         * News Block
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'news',
+                'title'             => __( 'BDAC News Block' ),
+                'description'       => __( 'BDAC News block' ),
+                'category'          => 'BDAC',
+                'render_template'   => 'inc/template-parts/blocks/block-news.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_news.css',
+                'icon'              => 'id',
+                'keywords'          => array(
+                                        'news',
+                                        'text'
+                                    )
+                )
+        );
+        
+        /**
          * Tickets Block
          */
         acf_register_block_type(
