@@ -284,6 +284,26 @@
                 )
         );
 
+        /**
+         * Questions Block
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'questions',
+                'title'             => __( 'Questions Block' ),
+                'description'       => __( 'BDAC Questions block' ),
+                'category'          => 'BDAC',
+                'render_template'   => 'inc/template-parts/blocks/block-questions.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_questions.css',
+                'icon'              => 'money-alt',
+                'keywords'          => array(
+                                        'questions',
+                                        'prices',
+                                        'entry'
+                                    )
+                )
+        );
+
     /**
      * Styling Blocks
      */
