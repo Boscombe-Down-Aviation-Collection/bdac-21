@@ -4,6 +4,41 @@
      * BDAC ACF Blocks
      */
 
+
+    /* Exit if accessed directly */
+    if ( !defined( 'ABSPATH' ) ) {
+        exit;
+    }
+
+    if ( !class_exists( 'acf' ) ) {
+
+        $acf_dir = ABSPATH . 'wp-content/plugins/advanced-custom-fields-pro/';
+        include_once( $acf_dir . '/acf.php');
+    }
+    add_filter( 'acf/settings/load_joson', 'register_acf_json_load_point' );
+
+    function register_acf_json_load_point( $paths ) {
+
+        // Change to theme
+        $path = get_stylesheet_directory() . '/inc/template-parts/acf-json';
+
+        // Apend path
+        $paths[] = $path;
+        
+        // return
+        return $paths;
+    }
+    add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
+
+    function my_acf_json_save_point( $path ) {
+
+        // Update path
+        $path = get_stylesheet_directory() . '/inc/template-parts/acf-json';
+
+        // return
+        return $path;
+    } 
+
     /*  Check if ACF is activated */
 
     if ( function_exists( 'acf_register_block_type' ) ) {
@@ -11,6 +46,8 @@
         /* Adding specific ACF action*/
         add_action( 'acf/init', 'register_acf_block_types' );
     }
+
+     
 
     function register_acf_block_types() {
 
@@ -33,6 +70,26 @@
                                         'carousel',
                                         'banner',
                                         'hero'
+                                    )
+                )
+        );
+
+        /**
+         * CTA Block
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'cta-block',
+                'title'             => __( 'CTA' ),
+                'description'       => __( 'Add a call to action to any page or post' ),
+                'render_template'   => 'inc/template-parts/blocks/block-cta.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_cta.css',
+                'icon'              => 'megaphone',
+                'keywords'          => array(
+                                        'cta',
+                                        'c2a',
+                                        'call-to-action',
+                                        'call to action'
                                     )
                 )
         );
