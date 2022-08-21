@@ -84,6 +84,9 @@
                 'description'       => __( 'Add a call to action to any page or post' ),
                 'render_template'   => 'inc/template-parts/blocks/block-cta.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_cta.css',
+                'supports'          => array(
+                                        'align' => 'full'
+                                    ),
                 'icon'              => 'megaphone',
                 'keywords'          => array(
                                         'cta',
