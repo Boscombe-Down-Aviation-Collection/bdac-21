@@ -74,10 +74,9 @@
                   )
                 );
             ?>
-            <!-- <a href="" class="navbar-search"><i class="fa fa-search"></i></a> -->
           </div>
         </div>
-        <div class="donate-area d-none d-lg-block">
+        <div class="donate-area d-none d-lg-flex">
           <div class="header-donation">
             <a href="#" target="_blank" class="btn btn-bdac-donation">
                 Donate To BDAC

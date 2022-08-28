@@ -45,31 +45,37 @@ section {
 .bdac {
   &-bg {
     &-red {
-      background: $bdac-red;
+      background-color: $bdac-red !important;
     }
     &-blue {
-      background: $bdac-blue;
+      background-color: $bdac-blue !important;
+    }
+    &-altblue {
+      background-color: $bdac-blue-alt !important;
     }
     &-white {
-      background: $bdac-white;
+      background-color: $bdac-white !important;
     }
     &-black {
-      color: $bdac-black;
+      background-color: $bdac-black !important;
     }
   }
 
   &-colour {
     &-red {
-      color: $bdac-red;
+      color: $bdac-red !important;
     }
     &-blue {
-      color: $bdac-blue;
+      color: $bdac-blue !important;
+    }
+    &-altblue {
+      color: $bdac-blue-alt !important;
     }
     &-white {
-      color: $bdac-white;
+      color: $bdac-white !important;
     }
     &-black {
-      color: $bdac-black;
+      color: $bdac-black !important;
     }
   }
 
