@@ -24,34 +24,42 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
+            
             <div class="carousel-item active">
                 <img class="carousel-item-image" src="http://bdac.olberry01.me/wp-content/uploads/2020/12/south_hangar_hero.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-inner-overlay"></div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="carousel-caption-title">Interested in visiting our collection?</h1>
-                    <a href="#" class="carousel-caption-button">
-                        <button>check opening times</button>
-                    </a>
+                <div class="container h-100">
+
+                    <div class="carousel-caption d-md-block">
+                        <h1 class="carousel-caption-title">Interested in visiting our collection?</h1>
+                        <a href="#" class="carousel-caption-button">
+                            <button>check opening times</button>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="carousel-item-image" src="http://bdac.olberry01.me/wp-content/uploads/2021/12/SWI1595a-scaled-1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-inner-overlay"></div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="carousel-caption-title">The ROYAL FLYING CORPS EXHIBITION</h1>
-                    <a href="#" class="carousel-caption-button">
-                        <button>More Details</button>
-                    </a>
+                <div class="container h-100">
+                    <div class="carousel-caption d-md-block">
+                        <h1 class="carousel-caption-title">The ROYAL FLYING CORPS EXHIBITION</h1>
+                        <a href="#" class="carousel-caption-button">
+                            <button>More Details</button>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="carousel-item-image" src="http://bdac.olberry01.me/wp-content/uploads/2019/12/tigerMoth-to-lightning.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-inner-overlay"></div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="carousel-caption-title">What presentations and events are on</h1>
-                    <a href="#" class="carousel-caption-button">
-                        <button>View our events</button>
-                    </a>
+                <div class="container h-100">
+                    <div class="carousel-caption d-md-block">
+                        <h1 class="carousel-caption-title">What presentations and events are on</h1>
+                        <a href="#" class="carousel-caption-button">
+                            <button>View our events</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

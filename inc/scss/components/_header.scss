@@ -1,4 +1,10 @@
 .header {
+  background-color: $bdac-blue-alt;
+
+  @media screen and (min-width: 992px) {
+    background-color: transparent;
+  }
+
   &-social {
     background: $bdac-blue;
     color: $bdac-white;
@@ -9,7 +15,7 @@
     }
 
     .container {
-      max-width: 100%;
+      max-width: 100rem;
       padding: 0 19px;
     }
 
@@ -29,7 +35,7 @@
 
 .customize-support {
   .navbar .header-social {
-    top: 32px;
+    // top: 32px;
   }
   #nav {
     top: 66px;
@@ -37,17 +43,22 @@
 }
 
 .navbar {
+  background-color: $bdac-blue-alt;
+  max-width: 100rem;
+  margin: 0 auto;
   padding: 0;
   border-bottom: $default-border;
   -webkit-transition: padding 200ms;
   -o-transition: padding 200ms;
   transition: padding 200ms;
-  background-color: $bdac-white;
-  top: 34px;
   z-index: 50;
 
   @media (max-width: 540px) {
     top: 0;
+  }
+  @media screen and (min-width: 992px) {
+    height: 3.75rem;
+    background-color: transparent;
   }
 
   &-search {
@@ -116,10 +127,15 @@
       &-link {
         color: $bdac-blue;
         padding: 0.5rem 1rem;
+        font-family: $body-font;
+        font-weight: 700;
+        line-height: 1rem;
+        text-transform: uppercase;
         position: relative;
         transition: opacity 300ms;
 
         @media (max-width: 991px) {
+          color: $bdac-white;
           font-size: 1.1rem;
           font-weight: 500;
           text-transform: uppercase;
@@ -148,18 +164,17 @@
   }
 
   .donate-area {
-    height: 100%;
+    height: 3.75rem;
+    padding-right: 0.75rem;
+    align-items: center;
 
     .header-donation {
-      width: 12.5rem;
-      height: 58px;
-      font-size: 14px;
+      font-size: 1rem;
     }
   }
 
-  @media (min-width: 991px) {
-    // background: none;
-    top: 34px;
+  @media (min-width: 992px) {
+    // top: 34px;
     border-bottom: none;
     transition: all 600ms;
 
@@ -173,7 +188,8 @@
     .menu-primary-menu-container {
       .nav {
         &-link {
-          color: $bdac-blue;
+          color: $bdac-white;
+          font-size: 0.875rem;
         }
       }
     }
