@@ -45,6 +45,13 @@
                 echo '
                     
                 </div>
+                <div class="row py-5 justify-content-center">
+                    <a href="/news">
+                        <button class="btn-bdac-alt">
+                            View All Articles 
+                        </button>
+                    </a>
+                </div>
             </div>
         </section>
     ';
