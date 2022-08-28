@@ -1,0 +1,51 @@
+{
+    "key": "group_5f6b54e16a4ae",
+    "title": "Styling: Arrow Specs",
+    "fields": [
+        {
+            "key": "field_5f6b54eae6cb7",
+            "label": "Arrow Colour",
+            "name": "arrow_colour",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "white": "White",
+                "blue": "Blue",
+                "altblue": "Light Blue",
+                "red": "Red"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/arrow"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1661701177
+}
