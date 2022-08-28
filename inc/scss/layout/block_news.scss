@@ -28,6 +28,10 @@
     box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
     border-radius: 0.625rem 0.625rem 0.625rem 0;
     overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
   }
 
   &-wrapper {
