@@ -163,13 +163,11 @@
     align-items: center;
 
     .header-donation {
-      // height: 3.75rem;
       font-size: 1rem;
     }
   }
 
   @media (min-width: 992px) {
-    // background: none;
     top: 34px;
     border-bottom: none;
     transition: all 600ms;
@@ -185,6 +183,7 @@
       .nav {
         &-link {
           color: $bdac-white;
+          font-size: 0.875rem;
         }
       }
     }

@@ -54,6 +54,15 @@
       border-bottom-width: 350px;
     }
   }
+  &--altblue.c-arrow--inverted > .c-arrow__left {
+    border: 0;
+    border-right: 1920px solid transparent;
+    border-bottom: 150px solid $bdac-blue-alt;
+
+    @media (max-width: 768px) {
+      border-bottom-width: 350px;
+    }
+  }
   &__left {
     right: 50%;
   }
@@ -80,6 +89,15 @@
   &--blue.c-arrow--inverted > .c-arrow__right {
     border: 0;
     border-right: 1920px solid $bdac-blue;
+    border-top: 150px solid transparent;
+
+    @media (max-width: 768px) {
+      border-top-width: 350px;
+    }
+  }
+  &--altblue.c-arrow--inverted > .c-arrow__right {
+    border: 0;
+    border-right: 1920px solid $bdac-blue-alt;
     border-top: 150px solid transparent;
 
     @media (max-width: 768px) {
