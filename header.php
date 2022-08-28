@@ -73,10 +73,11 @@
           echo '
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!--
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -90,7 +91,20 @@
                 </li>
               </ul>
             </div>
+            -->';
 
+              wp_nav_menu(
+                array(
+                  // 'theme_location'  => 'headerMenu',
+                  'menu_id'         => 'primary-menu',
+                  'menu_class'      => 'navbar-nav ms-auto mb-2 mb-lg-0',
+                  'before'          => '<div class="collapse navbar-collapse" id="navbarTogglerDemo03">',
+                  'after'           => '</div>',
+                  'walker'          => new wp_bootstrap_navwalker()
+                )
+              );
+            
+          echo '
             <a href="#" target="_blank" class="btn btn-bdac d-none d-md-block">
                   Donate To BDAC
               </a>

@@ -19,13 +19,26 @@
 
     add_action( 'wp_enqueue_scripts', 'bdac_resources' );
 
+    
+
     function bdac_features() {
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );
-        register_nav_menu( 'headerMenu', 'Header Menu' );
+        // register_nav_menu( 'headerMenu', 'Header Menu' );
+        
     }
-
     add_action( 'after_setup_theme', 'bdac_features' );
+
+    if ( ! function_exists( 'bdac_register_nav_menu' ) ) {
+    
+        function bdac_register_nav_menu() {
+            register_nav_menus( array(
+                'primary_menu' => __( 'Primary Menu', 'text_domain' ),
+                'footer_menu'  => __( 'Footer Menu', 'text_domain' ),
+            ) );
+        }
+        add_action( 'after_setup_theme', 'bdac_register_nav_menu', 0 );
+    }
 
     /**
      * Register Widgets
