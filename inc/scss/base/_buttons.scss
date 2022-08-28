@@ -1,15 +1,25 @@
 .btn-bdac {
-  color: $bdac-blue;
-  padding: 5px 0;
-  border: 0.125rem solid $bdac-red;
+  background: $bdac-red;
+  color: $bdac-white;
+  padding: 0.9375rem 1.875rem;
+  border: 0.25rem solid $bdac-red;
   border-radius: 0.25rem;
+  font-family: $body-font;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  transition-duration: all 330ms;
-  -webkit-transition-duration: all 330ms;
-  -o-transition-duration: all 330ms;
+  transition: 330ms all ease;
+  -webkit-transition: 330ms;
+  -o-transition: 330ms;
   z-index: 1;
+
+  &:hover {
+    background: transparent;
+    border-color: $bdac-white;
+  }
 
   &-alt {
     background-color: transparent;
@@ -20,10 +30,13 @@
     border-radius: 0.25rem;
     transition: 300ms ease-in;
     font-family: $body-font;
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1rem;
     text-transform: uppercase;
+    transition: 330ms all ease;
+    -webkit-transition: 330ms;
+    -o-transition: 330ms;
 
     a {
       width: 100%;

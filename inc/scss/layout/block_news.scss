@@ -1,0 +1,59 @@
+@import "../base/variables";
+
+.bdac-news {
+  .container {
+    max-height: 550px;
+  }
+
+  &-content {
+    border-radius: 0.625rem 0.625rem 0.625rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &-title {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &-article {
+    border-radius: 0.625rem 0 0 0.625rem;
+    box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+    overflow: hidden;
+  }
+
+  &-image {
+    object-fit: cover;
+    box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+    border-radius: 0.625rem 0.625rem 0.625rem 0;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &-wrapper {
+    max-height: 34.375rem;
+
+    h2 {
+      margin: 0;
+      font-size: 2.25rem;
+    }
+
+    h3 {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    p {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
