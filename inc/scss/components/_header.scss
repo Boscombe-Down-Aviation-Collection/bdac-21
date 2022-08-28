@@ -69,6 +69,16 @@
 
   .container {
     margin-right: 0;
+    flex-direction: column;
+  }
+  .container-fluid {
+    margin-right: 0;
+    flex-direction: column;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
   }
 
   .navbar-toggler-icon {
@@ -126,19 +136,25 @@
       }
       &-link {
         color: $bdac-blue;
+        margin: 0 auto;
         padding: 0.5rem 1rem;
         font-family: $body-font;
+        font-size: 0.875rem;
         font-weight: 700;
-        line-height: 1rem;
+        line-height: 0.875rem;
+        text-align: center;
         text-transform: uppercase;
         position: relative;
         transition: opacity 300ms;
 
-        @media (max-width: 991px) {
+        @media (min-width: 992px) {
           color: $bdac-white;
           font-size: 1.1rem;
-          font-weight: 500;
           text-transform: uppercase;
+        }
+
+        &.active {
+          color: $bdac-red;
         }
 
         &::after {
