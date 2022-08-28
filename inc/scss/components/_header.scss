@@ -1,4 +1,10 @@
 .header {
+  background-color: $bdac-blue-alt;
+
+  @media screen and (min-width: 992px) {
+    background-color: transparent;
+  }
+
   &-social {
     background: $bdac-blue;
     color: $bdac-white;
@@ -29,7 +35,7 @@
 
 .customize-support {
   .navbar .header-social {
-    top: 32px;
+    // top: 32px;
   }
   #nav {
     top: 66px;
@@ -45,13 +51,13 @@
   -webkit-transition: padding 200ms;
   -o-transition: padding 200ms;
   transition: padding 200ms;
-  top: 34px;
   z-index: 50;
 
   @media (max-width: 540px) {
     top: 0;
   }
   @media screen and (min-width: 992px) {
+    height: 3.75rem;
     background-color: transparent;
   }
 
@@ -168,7 +174,7 @@
   }
 
   @media (min-width: 992px) {
-    top: 34px;
+    // top: 34px;
     border-bottom: none;
     transition: all 600ms;
 
