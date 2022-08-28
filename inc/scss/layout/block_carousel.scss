@@ -1,7 +1,11 @@
 @import "../base/variables";
 
 .hero-section {
-  height: 85vh;
+  height: 70vh;
+
+  @media screen and (min-width: 992px) {
+    height: 85vh;
+  }
 
   .carousel {
     background-color: $bdac-blue;
@@ -42,17 +46,24 @@
 
       &-image {
         width: 100%;
-        height: 85vh;
+        height: 70vh;
         object-fit: cover;
-        object-position: center;
+        object-position: left;
         position: fixed;
         z-index: 0;
+
+        @media screen and (min-width: 992px) {
+          height: 85vh;
+          object-position: center;
+        }
       }
 
       .container {
         padding-bottom: 7.5vh;
-        display: flex;
-        align-items: flex-end;
+
+        .row {
+          align-items: flex-end;
+        }
       }
     }
 
@@ -66,7 +77,6 @@
       bottom: 7.5vh;
 
       @media screen and (min-width: 992px) {
-        width: 35vw;
         border-radius: 0.625rem;
         position: relative;
         top: unset;

@@ -29,12 +29,15 @@
                 <img class="carousel-item-image" src="http://bdac.olberry01.me/wp-content/uploads/2020/12/south_hangar_hero.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-inner-overlay"></div>
                 <div class="container h-100">
-
-                    <div class="carousel-caption d-md-block">
-                        <h1 class="carousel-caption-title">Interested in visiting our collection?</h1>
-                        <a href="#" class="carousel-caption-button">
-                            <button>check opening times</button>
-                        </a>
+                    <div class="row h-100">
+                        <div class="col col-12 col-md-5">
+                            <div class="carousel-caption d-md-block">
+                                <h1 class="carousel-caption-title">Interested in visiting our collection?</h1>
+                                <a href="#" class="carousel-caption-button">
+                                    <button>check opening times</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
