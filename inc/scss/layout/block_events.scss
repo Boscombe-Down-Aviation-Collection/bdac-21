@@ -1,8 +1,7 @@
 @import "../base/variables";
 
 .events-section {
-  background-color: $bdac-blue;
-  background-color: #dbe2f3;
+  background-color: $bdac-blue-alt;
 
   h2 {
     width: fit-content;
@@ -16,7 +15,11 @@
     justify-content: space-around;
 
     &:nth-of-type(2) {
-      padding: 3.125rem 0;
+      padding: 0 0 3.125rem;
+
+      @media screen and (min-width: 992px) {
+        padding: 3.125rem 0;
+      }
     }
 
     .col {
