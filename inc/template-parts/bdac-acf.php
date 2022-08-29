@@ -160,7 +160,7 @@
                 'title'             => __( 'BDAC Intro Block' ),
                 'description'       => __( 'BDAC intro block' ),
                 'category'          => 'BDAC',
-                'render_template'   => 'inc/template-parts/blocks/intro.php',
+                'render_template'   => 'inc/template-parts/blocks/block-intro.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_intro.css',
                 'icon'              => 'id',
                 'keywords'          => array(
