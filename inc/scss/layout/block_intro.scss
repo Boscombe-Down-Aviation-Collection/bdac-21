@@ -1,4 +1,32 @@
 @import "../base/variables";
 
-.intro-section {
+.bdac-intro {
+  .row {
+    @media screen and (min-width: 992px) {
+      min-height: 31.25rem;
+      align-items: center;
+    }
+  }
+  &-title {
+  }
+
+  &-content {
+  }
+
+  .col.col-12.col-md-5 {
+  }
+
+  .col.col-12.col-md-6 {
+    position: relative;
+    align-self: flex-start;
+  }
+
+  &-image {
+    max-height: 31.25rem;
+    position: absolute;
+    left: 0;
+    width: 50vw;
+    object-fit: cover;
+    border-radius: 0.625rem 0 0 0.625rem;
+  }
 }
