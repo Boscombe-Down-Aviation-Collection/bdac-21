@@ -13,9 +13,11 @@ body {
   background: $bdac-white;
   color: $bdac-black;
   min-height: calc(100vh - 60px - 0.125rem);
+  overflow-x: hidden;
 
   &-alt {
-    margin-top: 60px;
+    margin-top: 5.75rem;
+    overflow-x: hidden;
   }
 
   @media (min-width: 992px) {
@@ -25,6 +27,16 @@ body {
       margin-top: 94px;
     }
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 section {
