@@ -8,7 +8,7 @@ const liveSearch = new Search()
 
 // Header Background Scroll
 window.addEventListener("scroll", () => {
-  const navBar = document.querySelector("#header")
+  const navBar = document.querySelector(".navbar")
   const scrollHeight = window.pageYOffset
   const navHeight = navBar.getBoundingClientRect().height
 
@@ -19,5 +19,5 @@ window.addEventListener("scroll", () => {
     navBar.classList.remove("navbar-scrolled", "bdac-shadow-small")
   }
 
-  scrollHeight > navHeight ? scrollDown() : scrollUp()
+  scrollHeight > navHeight * 3 ? scrollDown() : scrollUp()
 })
