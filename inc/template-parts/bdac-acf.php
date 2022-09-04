@@ -104,7 +104,7 @@
                 'name'              => 'faq',
                 'title'             => __( 'FAQ' ),
                 'description'       => __( 'BDAC FAQ block' ),
-                'render_template'   => 'inc/template-parts/blocks/faq.php',
+                'render_template'   => 'inc/template-parts/blocks/block-faq.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_faq.css',
                 'icon'              => 'list-view',
                 'keywords'          => array(
