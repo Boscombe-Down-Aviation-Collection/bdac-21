@@ -2,7 +2,9 @@
 
 .bdac-news {
   .container {
-    max-height: 550px;
+    @media screen and (min-width: 992px) {
+      max-height: 550px;
+    }
   }
 
   &-content {
@@ -18,16 +20,27 @@
   }
 
   &-article {
-    border-radius: 0.625rem 0 0 0.625rem;
-    box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+    border-radius: 0.625rem 0.625rem 0 0;
+    text-align: center;
     overflow: hidden;
+
+    @media screen and (min-width: 992px) {
+      border-radius: 0.625rem 0 0 0.625rem;
+      box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+      text-align: left;
+    }
   }
 
   &-image {
     object-fit: cover;
+    border-radius: 0 0 0.625rem 0.625rem;
     box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
-    border-radius: 0.625rem 0.625rem 0.625rem 0;
+
     overflow: hidden;
+
+    @media screen and (min-width: 992px) {
+      border-radius: 0.625rem 0.625rem 0.625rem 0;
+    }
 
     img {
       object-fit: cover;

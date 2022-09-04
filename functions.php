@@ -3,6 +3,7 @@
     function bdac_resources() {
         // Scripts
         wp_enqueue_script( 'bdac-dist-vendors', get_template_directory_uri() . '/dist/js/vendors.js', array(), false, true  );
+        wp_enqueue_script( 'bdac-dist-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array(), false, true  );
         wp_enqueue_script( 'bdac-dist-main', get_template_directory_uri() . '/dist/js/main.js', array(), false, true  );
         wp_localize_script( 'bdac-dist-main', 'bdacData', array(
             'root_url' => get_site_url()
@@ -19,13 +20,24 @@
 
     add_action( 'wp_enqueue_scripts', 'bdac_resources' );
 
+    
+
     function bdac_features() {
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );
-        register_nav_menu( 'headerMenu', 'Header Menu' );
     }
-
     add_action( 'after_setup_theme', 'bdac_features' );
+
+    if ( ! function_exists( 'bdac_register_nav_menu' ) ) {
+    
+        function bdac_register_nav_menu() {
+            register_nav_menus( array(
+                'primary_menu' => __( 'Primary Menu', 'text_domain' ),
+                'footer_menu'  => __( 'Footer Menu', 'text_domain' ),
+            ) );
+        }
+        add_action( 'after_setup_theme', 'bdac_register_nav_menu', 0 );
+    }
 
     /**
      * Register Widgets
