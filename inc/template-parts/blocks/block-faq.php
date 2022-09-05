@@ -3,7 +3,7 @@
     $faqHeader  = get_field( 'faq_header' );
     $faqs       = get_field( 'faq_repeater' );
 ?>
-<section class="bdac-faq py-5">
+<section class="bdac-faq">
     <div class="container">
         <div class="bdac-faq-title mb-3">
             <h2><?php echo ($faqHeader ? $faqHeader : 'FAQs' ); ?></h2>
