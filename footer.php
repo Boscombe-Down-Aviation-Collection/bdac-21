@@ -19,6 +19,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 footer-section bdac-colour-white">
+                <h6>Boscombe Down Aviation Collection</h6>
                 <?php dynamic_sidebar( 'footer_description' ); ?>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 footer-section bdac-colour-white">
