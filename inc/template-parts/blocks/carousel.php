@@ -67,49 +67,28 @@
                 endwhile;
                 wp_reset_postdata(); 
             endif;
+
+        echo '
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        ';
         ?>
             
-            
-            <!-- <div class="carousel-item">
-                <img class="carousel-item-image" src="http://bdac.olberry01.me/wp-content/uploads/2021/12/SWI1595a-scaled-1.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-inner-overlay"></div>
-                <div class="container h-100">
-                    <div class="carousel-caption d-md-block">
-                        <h1 class="carousel-caption-title">The ROYAL FLYING CORPS EXHIBITION</h1>
-                        <a href="#" class="carousel-caption-button">
-                            <button>More Details</button>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="carousel-item">
-                <img class="carousel-item-image" src="http://bdac.olberry01.me/wp-content/uploads/2019/12/tigerMoth-to-lightning.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-inner-overlay"></div>
-                <div class="container h-100">
-                    <div class="carousel-caption d-md-block">
-                        <h1 class="carousel-caption-title">What presentations and events are on</h1>
-                        <a href="#" class="carousel-caption-button">
-                            <button>View our events</button>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        
 
     <!-- Old Carousel -->
 
     <div id="mainCarousel" class="carousel slide d-none" data-ride="carousel">
         
-        <ol class="carousel-indicators">
+        <!-- <ol class="carousel-indicators">
             <?php $indicator = 0;
                 while( have_rows('carousel') ): the_row();
                     if ($indicator === 0) {
@@ -121,7 +100,7 @@
             endwhile; ?>
         </ol>
 
-        <div class="carousel-inner">
+        <div class="carousel-inner"> -->
 
             <?php 
                 // $slide = 0;
