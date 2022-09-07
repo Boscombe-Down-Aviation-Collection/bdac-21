@@ -3,58 +3,49 @@
 .bdac-faq {
   &-title {
     text-align: center;
-    position: relative;
 
-    h3 {
-      &::after {
-        content: "";
-        background: $bdac-red;
-        width: 20%;
-        height: 0.15rem;
-        position: absolute;
-        left: 40%;
-        right: 40%;
-        bottom: 0;
-      }
+    @media screen and (min-width: 992px) {
+      text-align: left;
     }
   }
-  .card-header {
-    background: linear-gradient(to right, $bdac-white 0%, $bdac-white 96%, $bdac-blue 96%, $bdac-blue 98%, $bdac-red 98%, $bdac-red 100%);
 
-    .btn-card {
+  &-accordion {
+    border-radius: 0.625rem;
+    box-shadow: 0 0 1.25rem rgb(7 31 91 / 25%);
+    overflow: hidden;
+
+    &-item {
+      background-color: $bdac-blue-alt;
+      overflow: hidden;
+
+      &:nth-of-type(even) {
+        background-color: $bdac-white;
+      }
+    }
+
+    &-header {
+      margin: 0;
+    }
+
+    &-button {
+      background-color: transparent;
+      color: $bdac-blue !important;
+      font-family: $body-font;
+      font-size: 1.25rem;
+      font-weight: 700;
+      width: 100%;
+      border: none;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      padding: 1rem;
+    }
+
+    &-body {
       color: $bdac-blue;
-      padding-left: 0;
-      padding-right: 0;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      transition: all 300ms ease;
-      &:hover {
-        text-decoration: none;
-        opacity: 0.5;
-      }
-      &:focus {
-        text-decoration: none;
-        box-shadow: none;
-      }
-      i {
-        transition: transform 300ms ease;
-      }
-      &-clicked {
-        i.fas.fa-chevron-right {
-          transform: rotate(90deg);
-        }
-      }
-    }
-    h5 {
-      text-transform: uppercase;
-    }
-  }
-  .card-body {
-    background: #f4f4f4;
-
-    @media (min-width: 991px) {
-      padding: 1rem 3rem;
+      padding: 0 1rem 1rem;
+      font-weight: 500;
+      font-size: 1.1875rem;
     }
   }
 }

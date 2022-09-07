@@ -13,9 +13,11 @@ body {
   background: $bdac-white;
   color: $bdac-black;
   min-height: calc(100vh - 60px - 0.125rem);
+  overflow-x: hidden;
 
   &-alt {
-    margin-top: 60px;
+    margin-top: 5.75rem;
+    overflow-x: hidden;
   }
 
   @media (min-width: 992px) {
@@ -27,14 +29,28 @@ body {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 section {
   background-color: $bdac-white;
-  padding: 3.125rem 0;
+  padding: 1.875rem 0;
   position: relative;
   z-index: 1;
 
   @media (min-width: 992px) {
-    padding: 6.25rem 0;
+    padding: 3.125rem 0;
+
+    &:last-of-type {
+      padding-bottom: 6.25rem;
+    }
   }
 }
 

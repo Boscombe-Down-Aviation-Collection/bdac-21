@@ -2,11 +2,39 @@
   background: $bdac-black;
   color: $bdac-white;
   min-height: 20rem;
-  padding: 2rem 0;
+  padding: 0;
   border-top: $default-border;
   list-style: none;
   position: relative;
   z-index: 1;
+
+  .pre-footer {
+    height: 6rem;
+    margin-bottom: 2rem;
+    padding: 0;
+
+    a {
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      transition: 600ms all ease;
+
+      .pre-footer-btn {
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        font-family: $header-font;
+        font-size: 1.875rem;
+      }
+
+      &:hover {
+        .pre-footer-btn {
+          color: $bdac-red;
+        }
+      }
+    }
+  }
 
   .footer {
     &-section {
