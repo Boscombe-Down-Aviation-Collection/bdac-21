@@ -41,12 +41,16 @@ h6 {
 
 section {
   background-color: $bdac-white;
-  padding: 3.125rem 0;
+  padding: 1.875rem 0;
   position: relative;
   z-index: 1;
 
   @media (min-width: 992px) {
-    padding: 6.25rem 0;
+    padding: 3.125rem 0;
+
+    &:last-of-type {
+      padding-bottom: 6.25rem;
+    }
   }
 }
 
