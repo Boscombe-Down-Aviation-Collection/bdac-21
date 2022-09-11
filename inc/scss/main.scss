@@ -7,6 +7,8 @@
 // 0: - Variales
 @import "./base/variables";
 
+@import "./base/mixins";
+
 // 0: - Resets
 @import "./base/resets";
 
@@ -50,6 +52,7 @@
 // 3.1: - Index
 
 @import "./pages/index";
+@import "./pages/single";
 
 // --------------------
 // 4: Custom Post Types
