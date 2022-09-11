@@ -42,11 +42,13 @@ h6 {
 section {
   background-color: $bdac-white;
   padding: 1.875rem 0;
+  text-align: center;
   position: relative;
   z-index: 1;
 
   @media (min-width: 992px) {
     padding: 3.125rem 0;
+    text-align: left;
 
     &:last-of-type {
       padding-bottom: 6.25rem;
@@ -103,5 +105,20 @@ section {
     &:hover {
       box-shadow: 0.07rem 0.07rem 0.3rem rgba($bdac-blue, 0.85);
     }
+  }
+}
+
+// CMS Styling
+.block-editor-block-list__block {
+  p,
+  strong,
+  ul,
+  li {
+    font-size: 0.875rem !important;
+    line-height: 1.125rem !important;
+  }
+
+  li {
+    padding-left: 1rem !important;
   }
 }
