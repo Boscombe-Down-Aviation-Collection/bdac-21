@@ -21,9 +21,43 @@
       font-size: 1.125rem;
       line-height: 1.5rem;
 
-      strong {
-        font-size: 1.375rem;
-        line-height: 1.625rem;
+      &:first-of-type {
+        strong {
+          color: $bdac-blue;
+          font-size: 1.375rem;
+          line-height: 1.625rem;
+        }
+      }
+    }
+
+    figure {
+      margin-block: 3.125rem;
+
+      img {
+        border-radius: 0.625rem !important;
+        @include bdac-box-shadow;
+      }
+
+      figcaption {
+        color: $bdac-red;
+        margin-top: 0.3125rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-share {
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        background: $bdac-red;
+
+        i {
+          color: red;
+        }
       }
     }
   }

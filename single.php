@@ -37,8 +37,35 @@
                     $divClose . 
                 $divClose . '
             </section>
+            <section class="single-post-share">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-8 mx-auto">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fab-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fab-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fab-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
         </article>
     ';
+
 
     get_footer(); 
     
