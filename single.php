@@ -44,17 +44,17 @@
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <i class="fa fab-facebook-f"></i>
+                                    <i class="fab fa-facebook-f"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="fa fab-twitter"></i>
+                                        <i class="fab fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="fa fab-linkedin-in"></i>
+                                        <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </li>
                             </ul>

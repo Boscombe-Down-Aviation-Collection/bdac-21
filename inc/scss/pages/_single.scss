@@ -17,6 +17,10 @@
       text-align: center;
     }
 
+    .col-12 {
+      text-align: left;
+    }
+
     p {
       font-size: 1.125rem;
       line-height: 1.5rem;
@@ -49,14 +53,23 @@
 
   &-share {
     ul {
+      padding-left: 0;
       display: flex;
       list-style: none;
 
       li {
         background: $bdac-red;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         i {
-          color: red;
+          color: $bdac-white;
+          font-size: 1.125rem;
         }
       }
     }
