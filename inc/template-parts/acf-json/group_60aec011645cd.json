@@ -5,26 +5,7 @@
         {
             "key": "field_60aec01a63bfe",
             "label": "Heading",
-            "name": "heading",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_60aec02063c02",
-            "label": "SubHeading",
-            "name": "subheading",
+            "name": "intro_heading",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -43,7 +24,7 @@
         {
             "key": "field_60aec01f63c01",
             "label": "Text",
-            "name": "text",
+            "name": "intro_text",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -60,10 +41,10 @@
             "new_lines": ""
         },
         {
-            "key": "field_60aec01e63c00",
-            "label": "Default",
-            "name": "default",
-            "type": "true_false",
+            "key": "field_63190c80b27dd",
+            "label": "Image",
+            "name": "intro_image",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -72,28 +53,31 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
         },
         {
-            "key": "field_60aec01e63bff",
-            "label": "Background Colour",
-            "name": "color",
-            "type": "color_picker",
+            "key": "field_63190c9db27de",
+            "label": "Link",
+            "name": "intro_link",
+            "type": "link",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "enable_opacity": false,
-            "return_format": "string"
+            "return_format": "array"
         }
     ],
     "location": [
@@ -101,7 +85,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "acf\/intro"
             }
         ]
     ],
@@ -114,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661106621
+    "modified": 1662586377
 }
