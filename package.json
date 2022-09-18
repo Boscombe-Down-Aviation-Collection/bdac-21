@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "scss-build": "sass inc/scss/layout:../dist/css/blocks -w"
+    "scss-build": "sass inc/scss/layout:dist/css/blocks -w"
   },
   "author": "Oliver Berry",
   "license": "ISC",

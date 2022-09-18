@@ -5,13 +5,12 @@
   width: 100%;
   left: 0;
   margin-left: 0;
-  margin-top: -4vw;
-  height: 150px;
-  height: 4vw;
+  margin-top: -2vh;
+  height: 4vh;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    margin-top: -10vw;
+    margin-top: 0;
     height: 10vw;
   }
 
@@ -29,8 +28,6 @@
   // Left Arrow
   &--white.c-arrow > .c-arrow__left {
     border: 0;
-    // border-right: 1920px solid transparent;
-    // border-bottom: 150px solid $bdac-white;
     border-left: 1920px solid transparent;
     border-top: 150px solid $bdac-white;
 
@@ -40,8 +37,6 @@
   }
   &--red.c-arrow > .c-arrow__left {
     border: 0;
-    // border-right: 1920px solid transparent;
-    // border-bottom: 150px solid $bdac-red;
     border-left: 1920px solid transparent;
     border-top: 150px solid $bdac-red;
 
@@ -51,10 +46,17 @@
   }
   &--blue.c-arrow > .c-arrow__left {
     border: 0;
-    // border-right: 1920px solid transparent;
-    // border-bottom: 150px solid $bdac-blue;
     border-left: 1920px solid transparent;
     border-top: 150px solid $bdac-blue;
+
+    @media (max-width: 768px) {
+      border-bottom-width: 350px;
+    }
+  }
+  &--altblue.c-arrow > .c-arrow__left {
+    border: 0;
+    border-left: 1920px solid transparent;
+    border-top: 150px solid $bdac-blue-alt;
 
     @media (max-width: 768px) {
       border-bottom-width: 350px;
@@ -67,8 +69,6 @@
   // Right Arrow
   &--white.c-arrow > .c-arrow__right {
     border: 0;
-    // border-right: 1920px solid $bdac-white;
-    // border-top: 150px solid transparent;
     border-left: 1920px solid $bdac-white;
     border-bottom: 150px solid transparent;
 
@@ -78,8 +78,6 @@
   }
   &--red.c-arrow > .c-arrow__right {
     border: 0;
-    // border-right: 1920px solid $bdac-red;
-    // border-top: 150px solid transparent;
     border-left: 1920px solid $bdac-red;
     border-bottom: 150px solid transparent;
 
@@ -89,9 +87,16 @@
   }
   &--blue.c-arrow > .c-arrow__right {
     border: 0;
-    // border-right: 1920px solid $bdac-blue;
-    // border-top: 150px solid transparent;
     border-left: 1920px solid $bdac-blue;
+    border-bottom: 150px solid transparent;
+
+    @media (max-width: 768px) {
+      border-top-width: 350px;
+    }
+  }
+  &--altblue.c-arrow > .c-arrow__right {
+    border: 0;
+    border-left: 1920px solid $bdac-blue-alt;
     border-bottom: 150px solid transparent;
 
     @media (max-width: 768px) {
