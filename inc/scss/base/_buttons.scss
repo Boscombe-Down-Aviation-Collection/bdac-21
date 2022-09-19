@@ -1,15 +1,26 @@
 .btn-bdac {
-  color: $bdac-blue;
-  padding: 5px 0;
-  border: 0.125rem solid $bdac-red;
+  background: $bdac-red;
+  color: $bdac-white;
+  padding: 0.9375rem 1.875rem;
+  border: 0.25rem solid $bdac-red;
   border-radius: 0.25rem;
+  font-family: $body-font;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 0.875rem;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  transition-duration: all 330ms;
-  -webkit-transition-duration: all 330ms;
-  -o-transition-duration: all 330ms;
+  transition: 330ms all ease;
+  -webkit-transition: 330ms;
+  -o-transition: 330ms;
   z-index: 1;
+
+  &:hover {
+    background: transparent;
+    color: $bdac-red;
+    border-color: $bdac-red;
+  }
 
   &-alt {
     background-color: transparent;
@@ -20,10 +31,13 @@
     border-radius: 0.25rem;
     transition: 300ms ease-in;
     font-family: $body-font;
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 0.875rem;
     text-transform: uppercase;
+    transition: 330ms all ease;
+    -webkit-transition: 330ms;
+    -o-transition: 330ms;
 
     a {
       width: 100%;
@@ -40,9 +54,6 @@
     margin-left: 10px;
     position: relative;
     color: inherit;
-  }
-  &:hover {
-    color: #fff;
   }
 
   &::after {
@@ -107,16 +118,15 @@
   &-donation {
     background: $bdac-red;
     color: $bdac-white;
-    height: 100%;
+    padding: 0.75rem 1.25rem;
     border: none;
-    border-left: $default-border;
-    border-radius: 0;
-    text-transform: uppercase;
+    border-radius: 0.1875rem;
+    font-family: $body-font;
     font-size: 0.8rem;
     font-weight: 700;
+    text-transform: uppercase;
     letter-spacing: 1.5px;
     transition: all 600ms;
-    display: flex;
     align-items: center;
     justify-content: center;
 

@@ -13,30 +13,46 @@ body {
   background: $bdac-white;
   color: $bdac-black;
   min-height: calc(100vh - 60px - 0.125rem);
-  margin-top: 60px;
+  overflow-x: hidden;
 
   &-alt {
-    margin-top: 60px;
+    margin-top: 5.75rem;
+    overflow-x: hidden;
   }
 
   @media (min-width: 992px) {
     min-height: calc(100vh - 24px - 0.125rem);
-    margin-top: 34px;
 
     &-alt {
-      margin-top: 94px;
+      margin-top: 5.875rem;
     }
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 section {
   background-color: $bdac-white;
-  padding: 1rem 0;
+  padding: 1.875rem 0;
+  text-align: center;
   position: relative;
   z-index: 1;
 
   @media (min-width: 992px) {
-    padding: 6.25rem 0;
+    padding: 3.125rem 0;
+    text-align: left;
+
+    &:last-of-type {
+      padding-bottom: 6.25rem;
+    }
   }
 }
 
@@ -45,31 +61,37 @@ section {
 .bdac {
   &-bg {
     &-red {
-      background: $bdac-red;
+      background-color: $bdac-red !important;
     }
     &-blue {
-      background: $bdac-blue;
+      background-color: $bdac-blue !important;
+    }
+    &-altblue {
+      background-color: $bdac-blue-alt !important;
     }
     &-white {
-      background: $bdac-white;
+      background-color: $bdac-white !important;
     }
     &-black {
-      color: $bdac-black;
+      background-color: $bdac-black !important;
     }
   }
 
   &-colour {
     &-red {
-      color: $bdac-red;
+      color: $bdac-red !important;
     }
     &-blue {
-      color: $bdac-blue;
+      color: $bdac-blue !important;
+    }
+    &-altblue {
+      color: $bdac-blue-alt !important;
     }
     &-white {
-      color: $bdac-white;
+      color: $bdac-white !important;
     }
     &-black {
-      color: $bdac-black;
+      color: $bdac-black !important;
     }
   }
 
@@ -83,5 +105,20 @@ section {
     &:hover {
       box-shadow: 0.07rem 0.07rem 0.3rem rgba($bdac-blue, 0.85);
     }
+  }
+}
+
+// CMS Styling
+.block-editor-block-list__block {
+  p,
+  strong,
+  ul,
+  li {
+    font-size: 0.875rem !important;
+    line-height: 1.125rem !important;
+  }
+
+  li {
+    padding-left: 1rem !important;
   }
 }
