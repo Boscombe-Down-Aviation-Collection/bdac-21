@@ -33,6 +33,7 @@
                 $event_author       = get_the_author_meta( 'display_name' );
                 $eventSpeaker       = get_field( 'event_speaker' );
                 $event_description  = wp_trim_words( get_field( 'event_description' ), 20 );
+                $event_excerpt      = get_the_excerpt();
                 $event_date		    = get_field( 'event_date_start' );
 
         ?>
@@ -51,7 +52,13 @@
                                     </a>
                                 </h3>
                                 <small class="bdac-card-content-meta">By <a href=""></a><a href="/" title="Posts by BDAC Admin" rel="author">BDAC Admin</a> in <a href="/" rel="category tag">Test Category</a></small>
-                                <p class="bdac-card-content-body mt-3"><?php echo $event_description; ?></p>
+                                <p class="bdac-card-content-body mt-3"><?php
+                                    if ( has_excerpt() ) {
+                                        echo $event_excerpt;
+                                    } else {
+                                        echo wp_trim_words( $event_description, 20 );
+                                    };  
+                                ?></p>
                                 <a href="<?php echo esc_attr( $event_link ) ?>" class="bdac-card-content-link mt-auto">
                                     Read More <i class="fas fa-chevron-right" aria-hidden="true"></i>
                                 </a>
