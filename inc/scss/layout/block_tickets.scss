@@ -1,27 +1,39 @@
 @import "../base/variables";
+@import "../base/mixins";
 
-.block-tickets,
-.block-tickets h2,
-.block-tickets-table-header h6,
-.block-tickets-table-row {
-  color: $bdac-white;
-}
-.block-tickets {
-  background: $bdac-black;
+.bdac-tickets {
+  &-content {
+    background-color: $bdac-blue;
+    border-radius: 0;
+
+    @media (min-width: 80rem) {
+      border-radius: 0.625rem 0 0 0.625rem;
+      box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+    }
+  }
 
   &-table {
-    color: $bdac-white;
+    &-wrapper {
+      background-color: $white;
 
-    &-header {
-      background: $bdac-red;
-
-      h6 {
-        margin: 0;
+      @media (min-width: 80rem) {
+        border-radius: 0.625rem 0.625rem 0.625rem 0;
+        box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
       }
     }
 
-    &-row {
-      border-bottom: 0.25px solid rgba($bdac-white, 0.2);
+    &-head {
+      th {
+        border: 0.0625rem solid $bdac-blue;
+        font-family: $header-font;
+      }
+    }
+
+    &-entry {
+      h5 {
+        color: $white;
+        margin-bottom: 0;
+      }
     }
   }
 }
