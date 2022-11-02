@@ -4,7 +4,8 @@
 .bdac-tickets {
   &-content {
     background-color: $bdac-blue;
-    border-radius: 0;
+    border-radius: 0 0 0.625rem 0.625rem;
+    box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
 
     @media (min-width: 80rem) {
       border-radius: 0.625rem 0 0 0.625rem;
@@ -15,6 +16,8 @@
   &-table {
     &-wrapper {
       background-color: $white;
+      border-radius: 0.625rem 0.625rem 0 0;
+      box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.15);
 
       @media (min-width: 80rem) {
         border-radius: 0.625rem 0.625rem 0.625rem 0;
