@@ -38,15 +38,7 @@
 }
 
 .navbar {
-  background-color: $bdac-blue-alt;
-  // max-width: 100rem;
-  // margin: 0 auto;
-  // padding: 0;
-  // border-bottom: $default-border;
-  // -webkit-transition: padding 200ms;
-  // -o-transition: padding 200ms;
-  // transition: padding 200ms;
-  // z-index: 50;
+  background-color: $white;
 
   @media (max-width: 540px) {
     top: 0;
@@ -172,7 +164,7 @@
 
     &-scrolled,
     &-not-front {
-      background: $bdac-blue-alt;
+      background: $white;
       border-bottom: $default-border;
 
       .logo-container {

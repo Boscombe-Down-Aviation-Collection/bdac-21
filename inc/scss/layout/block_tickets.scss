@@ -1,27 +1,63 @@
 @import "../base/variables";
+@import "../base/mixins";
 
-.block-tickets,
-.block-tickets h2,
-.block-tickets-table-header h6,
-.block-tickets-table-row {
-  color: $bdac-white;
-}
-.block-tickets {
-  background: $bdac-black;
+.bdac-tickets {
+  &-content {
+    background-color: $bdac-blue;
+    border-radius: 0 0 0.625rem 0.625rem;
+    box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+
+    @media (min-width: 80rem) {
+      border-radius: 0.625rem 0 0 0.625rem;
+      box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+    }
+  }
 
   &-table {
-    color: $bdac-white;
+    &-wrapper {
+      background-color: $white;
+      border-radius: 0.625rem 0.625rem 0 0;
+      box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.15);
+      display: flex;
 
-    &-header {
-      background: $bdac-red;
-
-      h6 {
-        margin: 0;
+      @media (min-width: 80rem) {
+        border-radius: 0.625rem 0.625rem 0.625rem 0;
+        box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
       }
     }
 
-    &-row {
-      border-bottom: 0.25px solid rgba($bdac-white, 0.2);
+    &-head {
+      th {
+        background: $bdac-red;
+        border: 0.0625rem solid $bdac-red;
+        font-family: $header-font;
+
+        &:first-of-type {
+          width: 40%;
+
+          @media (min-width: 62rem) {
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    &-entry {
+      border-bottom: 0.0625rem solid rgba($bdac-black, 0.3);
+      transition: 330ms ease;
+
+      &:hover {
+        background-color: rgba($bdac-blue-alt, 0.3);
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      h6 {
+        // color: $white;
+        margin-bottom: 0.25rem;
+      }
     }
   }
 }
