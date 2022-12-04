@@ -62,7 +62,7 @@
                 'name'              => 'carousel',
                 'title'             => __( 'Carousel' ),
                 'description'       => __( 'BDAC Carousel block' ),
-                'render_template'   => 'inc/template-parts/blocks/carousel.php',
+                'render_template'   => 'inc/template-parts/blocks/block-carousel.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_carousel.css',
                 'icon'              => 'format-gallery',
                 'keywords'          => array(
