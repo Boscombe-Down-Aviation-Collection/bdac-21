@@ -62,7 +62,7 @@
                 'name'              => 'carousel',
                 'title'             => __( 'Carousel' ),
                 'description'       => __( 'BDAC Carousel block' ),
-                'render_template'   => 'inc/template-parts/blocks/carousel.php',
+                'render_template'   => 'inc/template-parts/blocks/block-carousel.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_carousel.css',
                 'icon'              => 'format-gallery',
                 'keywords'          => array(
@@ -104,7 +104,7 @@
                 'name'              => 'faq',
                 'title'             => __( 'FAQ' ),
                 'description'       => __( 'BDAC FAQ block' ),
-                'render_template'   => 'inc/template-parts/blocks/faq.php',
+                'render_template'   => 'inc/template-parts/blocks/block-faq.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_faq.css',
                 'icon'              => 'list-view',
                 'keywords'          => array(
@@ -160,7 +160,7 @@
                 'title'             => __( 'BDAC Intro Block' ),
                 'description'       => __( 'BDAC intro block' ),
                 'category'          => 'BDAC',
-                'render_template'   => 'inc/template-parts/blocks/intro.php',
+                'render_template'   => 'inc/template-parts/blocks/block-intro.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_intro.css',
                 'icon'              => 'id',
                 'keywords'          => array(

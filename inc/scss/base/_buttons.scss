@@ -4,10 +4,11 @@
   padding: 0.9375rem 1.875rem;
   border: 0.25rem solid $bdac-red;
   border-radius: 0.25rem;
-  font-family: $body-font;
-  font-size: 1rem;
+  font-family: $header-font;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1rem;
+  line-height: 0.875rem;
+  clip-path: polygon(0 0.25rem, 0.25rem 0, calc(100% - 0.25rem) 0, 100% 0.25rem, 100% calc(100% - 0.25rem), calc(100% - 0.25rem) 100%, 0.25rem 100%, 0 calc(100% - 0.25rem));
   text-transform: uppercase;
   display: inline-block;
   position: relative;
@@ -16,9 +17,14 @@
   -o-transition: 330ms;
   z-index: 1;
 
+  &-link {
+    overflow: hidden;
+  }
+
   &:hover {
     background: transparent;
-    border-color: $bdac-white;
+    color: $bdac-red;
+    border-color: $bdac-red;
   }
 
   &-alt {
@@ -30,9 +36,9 @@
     border-radius: 0.25rem;
     transition: 300ms ease-in;
     font-family: $body-font;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    line-height: 1rem;
+    line-height: 0.875rem;
     text-transform: uppercase;
     transition: 330ms all ease;
     -webkit-transition: 330ms;
@@ -54,40 +60,37 @@
     position: relative;
     color: inherit;
   }
-  &:hover {
-    color: #fff;
-  }
 
-  &::after {
-    background-color: $bdac-red;
-    color: #fff;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-    background: #cc4627;
-    background: -webkit-gradient(linear, left top, right top, from(#cc4627), to($bdac-red));
-    background: -o-linear-gradient(left, #cc4627, $bdac-red);
-    background: linear-gradient(to right, #cc4627, $bdac-red);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    -webkit-transition: all 250ms;
-    -o-transition: all 250ms;
-    transition: all 250ms;
-    content: " ";
-    display: block;
-    width: 0;
-    height: 2px;
-  }
+  // &::after {
+  //   background-color: $bdac-red;
+  //   color: #fff;
+  //   -webkit-transition-duration: 500ms;
+  //   -o-transition-duration: 500ms;
+  //   transition-duration: 500ms;
+  //   background: #cc4627;
+  //   background: -webkit-gradient(linear, left top, right top, from(#cc4627), to($bdac-red));
+  //   background: -o-linear-gradient(left, #cc4627, $bdac-red);
+  //   background: linear-gradient(to right, #cc4627, $bdac-red);
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   -webkit-transition: all 250ms;
+  //   -o-transition: all 250ms;
+  //   transition: all 250ms;
+  //   content: " ";
+  //   display: block;
+  //   width: 0;
+  //   height: 2px;
+  // }
 
-  &:hover::after {
-    color: #fff;
-    opacity: 1;
-  }
+  // &:hover::after {
+  //   color: #fff;
+  //   opacity: 1;
+  // }
   a:hover,
   a:focus {
     color: $bdac-red;

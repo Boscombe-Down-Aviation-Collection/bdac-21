@@ -13,28 +13,46 @@ body {
   background: $bdac-white;
   color: $bdac-black;
   min-height: calc(100vh - 60px - 0.125rem);
+  overflow-x: hidden;
 
   &-alt {
-    margin-top: 60px;
+    margin-top: 5.75rem;
+    overflow-x: hidden;
   }
 
   @media (min-width: 992px) {
     min-height: calc(100vh - 24px - 0.125rem);
 
     &-alt {
-      margin-top: 94px;
+      margin-top: 5.875rem;
     }
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 section {
   background-color: $bdac-white;
-  padding: 3.125rem 0;
+  padding: 1.875rem 0;
+  text-align: center;
   position: relative;
   z-index: 1;
 
   @media (min-width: 992px) {
-    padding: 6.25rem 0;
+    padding: 3.125rem 0;
+    text-align: left;
+
+    &:last-of-type {
+      padding-bottom: 6.25rem;
+    }
   }
 }
 
@@ -87,5 +105,20 @@ section {
     &:hover {
       box-shadow: 0.07rem 0.07rem 0.3rem rgba($bdac-blue, 0.85);
     }
+  }
+}
+
+// CMS Styling
+.block-editor-block-list__block {
+  p,
+  strong,
+  ul,
+  li {
+    font-size: 0.875rem !important;
+    line-height: 1.125rem !important;
+  }
+
+  li {
+    padding-left: 1rem !important;
   }
 }

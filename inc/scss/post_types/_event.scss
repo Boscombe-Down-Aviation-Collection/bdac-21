@@ -1,15 +1,35 @@
 .event {
+  &s {
+    padding-block: 1rem;
+
+    @media screen and (min-width: 992px) {
+      padding-block: 3.125rem;
+    }
+  }
   .container {
-    padding: 6.25rem 0 !important;
+    padding-block: 6.25rem !important;
   }
 
   &-next {
-    margin-bottom: 3.125rem;
-    padding: 0 0 0 1.5rem;
-    border-left: $default-border;
+    margin-bottom: 1.5625rem;
+    padding: 1.5rem 0 1.5rem 0.75rem;
+
+    @media screen and (min-width: 992px) {
+      padding: 1.5rem 0 1.5rem 1.5rem;
+      border-left: 0.125rem solid $bdac-blue-alt;
+    }
 
     &-image {
       background-position-y: center !important;
+      border-radius: 0.625rem 0 0 0.625rem;
+
+      @media screen and (min-width: 992px) {
+        width: calc(50vw - 1.5rem);
+      }
+
+      .bdac-card-content {
+        box-shadow: 5px 5px 10px 2px rgb($bdac-blue, 10%);
+      }
     }
   }
   &-hero {
@@ -109,6 +129,7 @@
 
   &-content {
     padding: 0;
+    padding-right: calc((100vw - 81.5rem) / 2);
 
     @media (min-width: 992px) {
       padding: initial;
@@ -123,7 +144,6 @@
 
       @media (min-width: 992px) {
         border-top: 1rem solid $bdac-red;
-        box-shadow: 5px 5px 10px 2px rgb($bdac-blue, 10%);
       }
 
       .wpcf7-form-control-wrap,
@@ -158,5 +178,14 @@
         }
       }
     }
+  }
+}
+
+.events-intro {
+  align-self: center;
+
+  h2 {
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }

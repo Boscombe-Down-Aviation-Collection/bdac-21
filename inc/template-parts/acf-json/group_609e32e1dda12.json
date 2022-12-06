@@ -1,17 +1,17 @@
 {
-    "key": "group_60aec011645cd",
-    "title": "Block - Introduction",
+    "key": "group_609e32e1dda12",
+    "title": "Block: Map",
     "fields": [
         {
-            "key": "field_60aec01a63bfe",
-            "label": "Heading",
-            "name": "intro_heading",
+            "key": "field_609e32e96eb3e",
+            "label": "Title",
+            "name": "map_title",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -22,10 +22,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_60aec01f63c01",
-            "label": "Text",
-            "name": "intro_text",
-            "type": "textarea",
+            "key": "field_609e33166eb40",
+            "label": "List Items",
+            "name": "map_list_items",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,40 +34,37 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_609e33386eb41",
+                    "label": "List Item",
+                    "name": "map_list_item",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         },
         {
-            "key": "field_63190c80b27dd",
-            "label": "Image",
-            "name": "intro_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": ""
-        },
-        {
-            "key": "field_63190c9db27de",
+            "key": "field_631dbbc9d9805",
             "label": "Link",
-            "name": "intro_link",
+            "name": "map_link",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -85,7 +82,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/intro"
+                "value": "acf\/map"
             }
         ]
     ],
@@ -98,5 +95,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662586377
+    "modified": 1662893681
 }
