@@ -21,7 +21,7 @@
         <?php get_template_part( 'inc/template-parts/header-social' ); ?>
         <nav class="navbar<?php echo ( !is_front_page() ? ' navbar-not-front ' : ' '  ); ?> navbar-expand-lg">
           <div class="container-fluid">
-            <a class="navbar-brand logo-container" href="<?php esc_url( home_url( '/' ) ); ?>">
+            <a class="navbar-brand logo-container" href="<?php echo esc_url( home_url( '/' ) ); ?>">
               <?php echo bdacLogo(90); ?>
             </a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#bdacMainMenu" aria-controls="bdacMainMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,8 @@
               )
             );
             ?>
-            <a href="#" target="_blank" class="btn btn-bdac d-none d-md-block">Donate To BDAC</a>
+            <a href="#" target="_blank" class="btn btn-bdac btn-bdac-donate">Donate To BDAC</a>
+            <!-- d-none d-md-block -->
           </div>
         </nav>
       </header>
