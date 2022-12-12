@@ -3,8 +3,8 @@
 
 <footer id="footer">
     <section class="pre-footer">
-        <a href="#" class="w-100 h-100">
-            <button href="#" class="btn-bdac pre-footer-btn">
+        <a  href="https://www.paypal.com/donate?token=KgqvS-KTyadrJwSlzBJbyOgiVPF8CwvDyIu7SBNdI4KjVWyRcVtReASFDckoaxhXuY0F7H2KBGon8Te_" class="w-100 h-100">
+            <button class="btn-bdac pre-footer-btn">
                 Like what we do? Consider donating
             </button>
         </a>
