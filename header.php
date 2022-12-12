@@ -18,7 +18,7 @@
     
     <!-- Header -->
       <header id="header" class="header fixed-top">
-        <?php get_template_part( 'inc/template-parts/header-social' ); ?>
+        <?php get_template_part( 'inc/template-parts/header', 'social' ); ?>
         <nav class="navbar<?php echo ( !is_front_page() ? ' navbar-not-front ' : ' '  ); ?> navbar-expand-lg">
           <div class="container-fluid">
             <a class="navbar-brand logo-container" href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -39,7 +39,7 @@
               )
             );
             ?>
-            <a href="#" target="_blank" class="btn btn-bdac btn-bdac-donate">Donate To BDAC</a>
+            <a href="https://www.paypal.com/donate?token=KgqvS-KTyadrJwSlzBJbyOgiVPF8CwvDyIu7SBNdI4KjVWyRcVtReASFDckoaxhXuY0F7H2KBGon8Te_" target="_blank" class="btn btn-bdac btn-bdac-donate">Donate To BDAC</a>
             <!-- d-none d-md-block -->
           </div>
         </nav>
