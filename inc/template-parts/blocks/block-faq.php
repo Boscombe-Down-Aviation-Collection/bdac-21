@@ -22,10 +22,10 @@
         
                         echo '
                             <div class=" bdac-faq-accordion-item">
-                                <h2 class=" bdac-faq-accordion-header" id="headingThree">
-                                <button class=" bdac-faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#' . $faqTarget . '" aria-expanded="false" aria-controls="' . $faqTarget . '">
-                                ' . $faqTitle . '?
-                                </button>
+                                <h2 class="bdac-faq-accordion-header" id="headingThree">
+                                    <button class="accordion-button bdac-faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#' . $faqTarget . '" aria-expanded="false" aria-controls="' . $faqTarget . '">
+                                    ' . $faqTitle . '?
+                                    </button>
                                 </h2>
                                 <div id="' . $faqTarget . '" class="accordion-collapse collapse" aria-labelledby="headingThree" 
                                 data-bs-parent="#bdacAccordion">
