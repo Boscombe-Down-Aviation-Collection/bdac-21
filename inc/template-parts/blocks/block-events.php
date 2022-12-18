@@ -21,8 +21,10 @@
 
         <?php
             $events_block = new WP_Query( array(
-                'posts_per_page' => 3,
-                'post_type' => 'events'
+                'posts_per_page'    => 3,
+                'post_type'         => 'events',
+                'orderby'           => 'post_date', 
+                'order'             => 'ASC'
             ) );
 
             while( $events_block->have_posts() ) {

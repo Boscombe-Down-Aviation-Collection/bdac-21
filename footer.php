@@ -48,9 +48,6 @@
             <a href="https://aviationheritageuk.org/" target="_blank"  class="footer-associate-item">
                 <img src="<?php bloginfo('template_url'); ?>/dist/img/AviationHeritageLogo_500px.png" alt="Aviation Heritage Logo">
             </a>
-            <a href="https://www.visitbritain.org/business-advice/were-good-go-industry-standard" target="_blank"  class="footer-associate-item">
-                <img src="<?php bloginfo('template_url'); ?>/inc/img/gtg-mark_England.png" alt="We're Good To Go Logo">
-            </a>
         </div>
     </div>
     </footer>

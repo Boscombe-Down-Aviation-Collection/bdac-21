@@ -89,6 +89,22 @@
     add_action( 'after_setup_theme', 'register_navwalker' );
 
     /**
+     * Order Events
+     */
+    function bdac_events_order($query) {
+        if ( !is_admin() && $query->is_main_query() ) {
+      
+          if (is_post_type_archive('events')) {
+            $query->set('orderby', 'date' );
+            $query->set('order', 'ASC' );
+          }
+      
+        }
+      }
+      
+      add_action( 'pre_get_posts', 'bdac_events_order' );
+
+    /**
      * Import ACF Blocks
      */
     require get_template_directory(  ) . '/inc/template-parts/bdac-acf.php';
