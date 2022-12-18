@@ -32,10 +32,10 @@
                 $event_title        = get_the_title();
                 $event_link         = get_the_permalink();
                 $event_author       = get_the_author_meta( 'display_name' );
-                $eventSpeaker       = get_field( 'event_speaker' );
-                $event_description  = wp_trim_words( get_field( 'event_description' ), 20 );
+                $event_speaker      = get_field( 'event_speaker', $post->ID );
+                $event_description  = wp_trim_words( get_field( 'event_description', $post->ID ), 20 );
                 $event_excerpt      = get_the_excerpt();
-                $event_date		    = get_field( 'event_date_start' );
+                $event_date		    = get_field( 'event_date_start', $post->ID );
                 $event_cats         = get_the_category($post->ID);
 
         ?>
@@ -53,21 +53,9 @@
                                         <?php echo esc_attr( $event_title ); ?>
                                     </a>
                                 </h3>
-                                <small class="bdac-card-content-meta">By 
-                                    <!-- <a href=""></a> -->
-                                    <a href="/" title="Posts by BDAC Admin" rel="author">BDAC Admin</a> in 
-                                    <a href="/" rel="category tag">
-                                    <?php
-                                        foreach( $event_cats as $category ):
-                                            echo $category->cat_name;
-                                        endforeach;
-                                    ?>
-                                    </a>
-                                </small>
+                                <small class="bdac-card-content-meta">Presented by <?php echo $event_speaker; ?></small>
                                 <p class="bdac-card-content-body mt-3">
-                                    <?php
-                                        echo ( has_excerpt() ? $event_excerpt : wp_trim_words( $event_description, 20 ) );  
-                                    ?>
+                                    <?php echo $event_description; ?>
                                 </p>
                                 <a href="<?php echo esc_attr( $event_link ) ?>" class="bdac-card-content-link mt-auto">
                                     Read More <i class="fas fa-chevron-right" aria-hidden="true"></i>

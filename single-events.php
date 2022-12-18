@@ -1,5 +1,6 @@
 <?php
 
+$event_thumb        = get_the_post_thumbnail_url();
 $event_title        = get_the_title();
 $event_speaker      = get_field( 'event_speaker' );
 $event_date_start   = get_field( 'event_date_start' );
@@ -9,8 +10,6 @@ $event_form         = get_field( 'event_interest_form' );
 
 // single variables
 $bannerSubTitle = get_field('page_subtitle');
-$bannerBg       = get_field('page_bg_image');
-$pageHeaderImg  = get_the_post_thumbnail_url();
 
 get_header();
 wp_reset_postdata(); 
@@ -21,7 +20,7 @@ wp_reset_postdata();
     <section class="single-post-image">
         <div class="container">
             <div class="row col-12 col-md-10 mx-auto">
-                <img src="<?php echo $pageHeaderImg; ?>" style="width: 100%; border-radius: 0.625rem">
+                <img src="<?php echo $event_thumb; ?>" style="width: 100%; border-radius: 0.625rem">
             </div>
         </div>
     </section>
