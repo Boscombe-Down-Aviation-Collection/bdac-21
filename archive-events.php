@@ -6,7 +6,7 @@
 
     <article class="events">
 		<div class="container">
-			<div class="row justify-content-center">
+			<div class="row">
 			
             <?php 
             
