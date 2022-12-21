@@ -8,12 +8,12 @@ body {
   background: $bdac-white;
   color: $bdac-black;
 
-  &.logged-in {
-    #header,
-    .carousel-item-image {
-      margin-top: 32px;
-    }
-  }
+  // &.logged-in {
+  //   #header,
+  //   .carousel-item-image {
+  //     margin-top: 32px;
+  //   }
+  // }
 }
 
 #main {
