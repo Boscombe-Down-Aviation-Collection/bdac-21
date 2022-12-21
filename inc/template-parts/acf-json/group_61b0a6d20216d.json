@@ -6,6 +6,7 @@
             "key": "field_6362e8819f7e9",
             "label": "Description",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_61b0d759e6cac",
             "label": "Header",
             "name": "tickets_header",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,6 +43,7 @@
             "key": "field_61b0d769e6cad",
             "label": "Description",
             "name": "tickets_content",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -54,12 +57,35 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
+                {
+                    "key": "field_63a386fc1928d",
+                    "label": "Header",
+                    "name": "tickets_head",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_61b0d769e6cad"
+                },
                 {
                     "key": "field_6362db754a416",
                     "label": "Paragraph",
                     "name": "tickets_text",
+                    "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -73,7 +99,8 @@
                     "new_lines": "",
                     "maxlength": "",
                     "placeholder": "",
-                    "rows": ""
+                    "rows": "",
+                    "parent_repeater": "field_61b0d769e6cad"
                 }
             ]
         },
@@ -81,6 +108,7 @@
             "key": "field_6362e8929f7ea",
             "label": "Table Entries",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -97,6 +125,7 @@
             "key": "field_61b0d77ae6cae",
             "label": "Price List",
             "name": "tickets_table",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -110,12 +139,14 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_61b0d799e6caf",
                     "label": "Ticket Type",
                     "name": "ticket_type",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -129,12 +160,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_61b0d77ae6cae"
                 },
                 {
                     "key": "field_6362ec18c78bd",
                     "label": "Ticket Type Cond",
                     "name": "ticket_type_cond",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -148,12 +181,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_61b0d77ae6cae"
                 },
                 {
                     "key": "field_61b0d7bce6cb0",
                     "label": "Summer Ticket Price",
                     "name": "ticket_summer",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -167,12 +202,14 @@
                     "placeholder": "",
                     "prepend": "£",
                     "append": "",
-                    "maxlength": 10
+                    "maxlength": 10,
+                    "parent_repeater": "field_61b0d77ae6cae"
                 },
                 {
                     "key": "field_61b0d7f2e6cb1",
                     "label": "with Gift Aid",
                     "name": "ticket_summer_ga",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -186,12 +223,14 @@
                     "placeholder": "",
                     "prepend": "£",
                     "append": "",
-                    "maxlength": 10
+                    "maxlength": 10,
+                    "parent_repeater": "field_61b0d77ae6cae"
                 },
                 {
                     "key": "field_6362dba24a417",
                     "label": "Winter Ticket Price",
                     "name": "ticket_winter",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -205,12 +244,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_61b0d77ae6cae"
                 },
                 {
                     "key": "field_6362df494a418",
                     "label": "with Gift Aid",
                     "name": "ticket_winter_ga",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -224,7 +265,8 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_61b0d77ae6cae"
                 }
             ]
         }
@@ -247,5 +289,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667427938
+    "modified": 1671661334
 }
