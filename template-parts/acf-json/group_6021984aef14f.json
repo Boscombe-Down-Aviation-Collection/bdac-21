@@ -170,6 +170,118 @@
             "rows": "",
             "placeholder": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_63baed8d6fa48",
+            "label": "Tickets",
+            "name": "tickets_table",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Ticket Type",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63baee0e6fa49",
+                    "label": "Ticket Type",
+                    "name": "ticket_type",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_63baed8d6fa48"
+                },
+                {
+                    "key": "field_63baee296fa4a",
+                    "label": "Ticket Type Cond",
+                    "name": "ticket_type_cond",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_63baed8d6fa48"
+                },
+                {
+                    "key": "field_63baee376fa4b",
+                    "label": "Ticket Price",
+                    "name": "ticket_price",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "0.10",
+                    "prepend": "£",
+                    "append": "",
+                    "parent_repeater": "field_63baed8d6fa48"
+                },
+                {
+                    "key": "field_63baeead6fa4d",
+                    "label": "with Gift Aid",
+                    "name": "ticket_price_ga",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "0.10",
+                    "prepend": "£",
+                    "append": "",
+                    "parent_repeater": "field_63baed8d6fa48"
+                }
+            ]
         }
     ],
     "location": [
@@ -201,5 +313,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1671739402
+    "modified": 1673195201
 }

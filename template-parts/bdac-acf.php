@@ -19,7 +19,7 @@
     function register_acf_json_load_point( $paths ) {
 
         // Change to theme
-        $path = get_stylesheet_directory() . '/inc/template-parts/acf-json';
+        $path = get_stylesheet_directory() . '/template-parts/acf-json';
 
         // Apend path
         $paths[] = $path;
@@ -32,7 +32,7 @@
     function my_acf_json_save_point( $path ) {
 
         // Update path
-        $path = get_stylesheet_directory() . '/inc/template-parts/acf-json';
+        $path = get_stylesheet_directory() . '/template-parts/acf-json';
 
         // return
         return $path;
@@ -62,7 +62,7 @@
                 'name'              => 'carousel',
                 'title'             => __( 'Carousel' ),
                 'description'       => __( 'BDAC Carousel block' ),
-                'render_template'   => 'inc/template-parts/blocks/block-carousel.php',
+                'render_template'   => 'template-parts/blocks/block-carousel.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_carousel.css',
                 'icon'              => 'format-gallery',
                 'keywords'          => array(
@@ -81,7 +81,7 @@
                 'name'              => 'cta-block',
                 'title'             => __( 'CTA' ),
                 'description'       => __( 'Add a call to action to any page or post' ),
-                'render_template'   => 'inc/template-parts/blocks/block-cta.php',
+                'render_template'   => 'template-parts/blocks/block-cta.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_cta.css',
                 'supports'          => array(
                                         'align' => 'full'
@@ -104,7 +104,7 @@
                 'name'              => 'faq',
                 'title'             => __( 'FAQ' ),
                 'description'       => __( 'BDAC FAQ block' ),
-                'render_template'   => 'inc/template-parts/blocks/block-faq.php',
+                'render_template'   => 'template-parts/blocks/block-faq.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_faq.css',
                 'icon'              => 'list-view',
                 'keywords'          => array(
@@ -123,7 +123,7 @@
                 'name'              => 'general',
                 'title'             => __( 'General Content' ),
                 'description'       => __( 'General Content block' ),
-                'render_template'   => 'inc/template-parts/blocks/general.php',
+                'render_template'   => 'template-parts/blocks/general.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_faq.css',
                 'icon'              => 'edit',
                 'keywords'          => array(
@@ -141,7 +141,7 @@
                 'name'              => 'image-text',
                 'title'             => __( 'Image Text Content' ),
                 'description'       => __( 'Image Text Content block' ),
-                'render_template'   => 'inc/template-parts/blocks/image-text.php',
+                'render_template'   => 'template-parts/blocks/image-text.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_image-text.css',
                 'icon'              => 'edit',
                 'keywords'          => array(
@@ -160,7 +160,7 @@
                 'title'             => __( 'BDAC Intro Block' ),
                 'description'       => __( 'BDAC intro block' ),
                 'category'          => 'BDAC',
-                'render_template'   => 'inc/template-parts/blocks/block-intro.php',
+                'render_template'   => 'template-parts/blocks/block-intro.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_intro.css',
                 'icon'              => 'id',
                 'keywords'          => array(
@@ -179,7 +179,7 @@
                 'title'             => __( 'BDAC Events Block' ),
                 'description'       => __( 'BDAC Events block' ),
                 'category'          => 'BDAC',
-                'render_template'   => 'inc/template-parts/blocks/block-events.php',
+                'render_template'   => 'template-parts/blocks/block-events.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_events.css',
                 'icon'              => 'tickets',
                 'keywords'          => array(
@@ -198,7 +198,7 @@
                 'title'             => __( 'BDAC Map Block' ),
                 'description'       => __( 'BDAC Map block' ),
                 'category'          => 'BDAC',
-                'render_template'   => 'inc/template-parts/blocks/map.php',
+                'render_template'   => 'template-parts/blocks/map.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_map.css',
                 'icon'              => 'id',
                 'keywords'          => array(
@@ -217,7 +217,7 @@
                 'title'             => __( 'BDAC News Block' ),
                 'description'       => __( 'BDAC News block' ),
                 'category'          => 'BDAC',
-                'render_template'   => 'inc/template-parts/blocks/block-news.php',
+                'render_template'   => 'template-parts/blocks/block-news.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_news.css',
                 'icon'              => 'id',
                 'keywords'          => array(
@@ -236,7 +236,7 @@
                 'title'             => __( 'Tickets Block' ),
                 'description'       => __( 'BDAC Tickets block' ),
                 'category'          => 'BDAC',
-                'render_template'   => 'inc/template-parts/blocks/block-tickets.php',
+                'render_template'   => 'template-parts/blocks/block-tickets.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_tickets.css',
                 'icon'              => 'money-alt',
                 'keywords'          => array(
@@ -256,7 +256,7 @@
                 'title'             => __( 'Q&A Block' ),
                 'description'       => __( 'BDAC questions annd answers to your post or page' ),
                 'category'          => 'custom',
-                'render_template'   => 'inc/template-parts/blocks/block-questions.php',
+                'render_template'   => 'template-parts/blocks/block-questions.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/block_questions.css',
                 'icon'              => 'money-alt',
                 'keywords'          => array(
@@ -279,7 +279,7 @@
                 'name'              => 'arrow',
                 'title'             => __( 'Arrow' ),
                 'description'       => __( 'BDAC arrow block' ),
-                'render_template'   => 'inc/template-parts/styling/arrow.php',
+                'render_template'   => 'template-parts/styling/arrow.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/style_arrow.css',
                 'category'			=> 'formatting',
                 'icon'              => 'arrow-up-alt2',
@@ -298,7 +298,7 @@
                 'name'              => 'inverted arrow',
                 'title'             => __( 'Inverted Arrow' ),
                 'description'       => __( 'BDAC inverted arrow block' ),
-                'render_template'   => 'inc/template-parts/styling/arrow_inv.php',
+                'render_template'   => 'template-parts/styling/arrow_inv.php',
                 'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/style_arrow_inv.css',
                 'category'			=> 'formatting',
                 'icon'              => 'arrow-down-alt2',

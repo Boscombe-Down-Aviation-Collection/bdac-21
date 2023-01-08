@@ -107,7 +107,7 @@
     /**
      * Import ACF Blocks
      */
-    require get_template_directory(  ) . '/inc/template-parts/bdac-acf.php';
+    require get_template_directory(  ) . '/template-parts/bdac-acf.php';
 
     
     /**
