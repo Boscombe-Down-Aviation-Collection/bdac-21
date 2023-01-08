@@ -13,9 +13,6 @@
     $intro_image    = get_field( 'intro_image' );
     $intro_image_fb = 'http://bdac:8888/wp-content/uploads/harrier-roundel-header.jpg';
     $intro_link     = get_field( 'intro_link' );
-    $intro_url      = $intro_link['url'];
-    $intro_title    = $intro_link['title'];
-    $intro_target   = $intro_link['target'] ? $intro_link['target'] : '_self';
 
     ?>
     <section class="<?php echo $className; ?>">
@@ -44,9 +41,9 @@
                             '<a href="%1$s" target="%2$s">
                                 <button class="btn btn-bdac">%3$s</button>
                             </a>',
-                            $intro_url,
-                            $intro_target,
-                            esc_html( $intro_title )
+                            $intro_link['url'],
+                            ( $intro_link['target'] ? $intro_link['target'] : '_self' ),
+                            esc_html( $intro_link['title'] )
                         );
                     };
                     ?>

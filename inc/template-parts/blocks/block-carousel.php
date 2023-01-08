@@ -16,7 +16,7 @@
 
 <section class="<?php echo esc_attr( $className ); ?> p-0">
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <?php 
             $slide = 0;
