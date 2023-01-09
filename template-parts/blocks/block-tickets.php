@@ -55,7 +55,7 @@ $tickets_table          = get_field( 'tickets_table' );
                     'd-block d-md-none',
                     'Ticket Prices'
                 );
-                get_template_part( 'inc/template-parts/blocks/block-tickets', 'row' );
+                get_template_part( 'template-parts/blocks/block-tickets', 'row' );
                 ?>
             </div>      
         </div>
