@@ -14,39 +14,93 @@ if( have_rows('tickets_table') ):
         );
         echo sprintf(
             $tickets_head,
-            !$tickets_summer ? 'Winter Prices' : $tickets_summer
-        );
-        echo sprintf(
-            $tickets_head,
-            !$tickets_winter ? 'Summer Prices' : $tickets_winter
+            !$tickets_summer ?  'Price' : $tickets_summer
         );
         ?>
     </thead>
     <tbody>
         <?php 
-        while( have_rows('tickets_table') ) : the_row();
-            $ticket_type        = get_sub_field('ticket_type');
-            $ticket_type_cond   = get_sub_field('ticket_type_cond');
-            $ticket_summer      = get_sub_field('ticket_summer');
-            $ticket_summer_ga   = get_sub_field('ticket_summer_ga');
-            $ticket_winter      = get_sub_field('ticket_winter');
-            $ticket_winter_ga   = get_sub_field('ticket_winter_ga');
+        $today = date('Y M jS');
+        $args = array(  
+            'post_type'         => 'opening_hours',
+            'post_status'       => 'publish',
+            'posts_per_page'    => 1,
+            'meta_key'          => 'season_to',
+            'orderby'           => 'meta_value',
+            'order'             => 'ASC',
+            'meta_query'        => array(
+                array(
+                    'key'       => 'season_to',
+                    'compare'   => '>=',
+                    'value'     => $today
+                )
+            )
+        );
 
-            echo '
-            <tr class="bdac-tickets-table-entry">
-                <td class="px-3 py-2" width="50%">
-                    <h6 style="display: inline">' . esc_html( $ticket_type) . '</h6><br>
-                    <small>(' . wp_kses_post( $ticket_type_cond ) . ')</small>
-                </td>
-                <td class="px-3 py-2">
-                    <strong>£' . esc_html( $ticket_winter ) . '</strong><br><small>( £' . esc_html( $ticket_winter_ga ) . ' w/ Gift Aid )</small>
-                </td>
-                <td class="px-3 py-2">
-                    <strong>£' . esc_html( $ticket_summer ) . '</strong><br><small>( £' . esc_html( $ticket_summer_ga ) . ' w/ Gift Aid )</small>
-                </td>
-            </tr>
-            ';
+        $seasons = new WP_Query( $args ); 
+
+        while ( $seasons->have_posts() ) : $seasons->the_post();
+
+            while( have_rows('tickets_table') ) : the_row();
+                $ticket_type        = get_sub_field('ticket_type');
+                $ticket_type_cond   = get_sub_field('ticket_type_cond');
+                $ticket_price       = get_sub_field('ticket_price');
+                $ticket_price_ga    = get_sub_field('ticket_price_ga');
+
+                // <h6 style="display: inline">' . esc_html( $ticket_type ) . '</h6><br>
+                        // <small>(' . esc_html( $ticket_type_cond ) . ')</small>
+
+                echo '<tr class="bdac-tickets-table-entry">';
+
+                // echo sprintf(
+                //     '<td class="px-3 py-2" width="50%">
+                //         <h6 style="display: inline">%1$s</h6><br>
+                //         <small>(%2$s)</small>
+                //     </td>',
+                //     esc_html( $ticket_type ),
+                //     esc_html( $ticket_type_cond )
+                // );
+                echo sprintf(
+                    '<td width="65%">%1$s</td>',
+                    esc_html( $ticket_type )
+                );
+                echo sprintf(
+                    '<td class="px-3 py-2">
+                        <strong>£%1$s</strong><br><small>( £%2$s w/ Gift Aid )</small>
+                    </td>',
+                    esc_html( $ticket_price ),
+                    esc_html( $ticket_price_ga )
+                );
+                echo '</tr>';
+            endwhile;
+
+            wp_reset_postdata();
+
         endwhile;
+
+        // while( have_rows('tickets_table') ) : the_row();
+        //     $ticket_type        = get_sub_field('ticket_type');
+        //     $ticket_type_cond   = get_sub_field('ticket_type_cond');
+        //     $ticket_summer      = get_sub_field('ticket_summer');
+        //     $ticket_summer_ga   = get_sub_field('ticket_summer_ga');
+        //     $ticket_winter      = get_sub_field('ticket_winter');
+        //     $ticket_winter_ga   = get_sub_field('ticket_winter_ga');
+
+        //     echo '
+        //     <tr class="bdac-tickets-table-entry">
+        //         <td class="px-3 py-2" width="50%">
+        //             <h6 style="display: inline">' . esc_html( $ticket_type) . '</h6><br>
+        //             <small>(' . wp_kses_post( $ticket_type_cond ) . ')</small>
+        //         </td>
+        //         <td class="px-3 py-2">
+        //             <strong>£' . esc_html( $ticket_winter ) . '</strong><br><small>( £' . esc_html( $ticket_winter_ga ) . ' w/ Gift Aid )</small>
+        //         </td>
+        //         <td class="px-3 py-2">
+        //             <strong>£' . esc_html( $ticket_summer ) . '</strong><br><small>( £' . esc_html( $ticket_summer_ga ) . ' w/ Gift Aid )</small>
+        //         </td>
+        //     </tr>
+        //     ';
+        // endwhile;
         ?>
     </tbody>
 </table>
