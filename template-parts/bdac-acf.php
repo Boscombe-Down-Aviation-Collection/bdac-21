@@ -51,6 +51,30 @@
     function register_acf_block_types() {
 
     /**
+     * Archive Blocks
+     */
+
+        /**
+         * Exhibits Archive
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'exhibits_archive',
+                'title'             => __( 'Exhibits Archive' ),
+                'description'       => __( 'BDAC Exhibits Archive' ),
+                'render_template'   => 'template-parts/blocks/block_archive_exhibits.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/archive_exhibits.css',
+                'icon'              => 'format-gallery',
+                'keywords'          => array(
+                                        'all exhibits',
+                                        'exhibits',
+                                        'exhibits archive',
+                                        'archive'
+                                    )
+                )
+        );
+
+    /**
      * Content Blocks
      */
 
