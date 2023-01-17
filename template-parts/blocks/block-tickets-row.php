@@ -1,9 +1,26 @@
-<?php if( have_rows('tickets_table') ): ?>
+<?php 
+if( have_rows('tickets_table') ): 
+    $tickets_type   = get_field( 'tickets_type' );
+    $tickets_summer = get_field( 'tickets_summer' );
+    $tickets_winter = get_field( 'tickets_winter' );
+    $tickets_head   = '<th class="bdac-colour-white px-3 py-2">%1$s</th>'
+?>
 <table width="100%">
     <thead class="bdac-tickets-table-head">
-        <th class="bdac-colour-white px-3 py-2">Ticket Type</th>
-        <th class="bdac-colour-white px-3 py-2">Summer Prices</th>
-        <th class="bdac-colour-white px-3 py-2">Winter Prices</th>
+        <?php 
+        echo sprintf(
+            $tickets_head,
+            !$tickets_type ? 'Ticket Type' : $tickets_type
+        );
+        echo sprintf(
+            $tickets_head,
+            !$tickets_summer ? 'Winter Prices' : $tickets_summer
+        );
+        echo sprintf(
+            $tickets_head,
+            !$tickets_winter ? 'Summer Prices' : $tickets_winter
+        );
+        ?>
     </thead>
     <tbody>
         <?php 
@@ -22,10 +39,10 @@
                     <small>(' . wp_kses_post( $ticket_type_cond ) . ')</small>
                 </td>
                 <td class="px-3 py-2">
-                    <strong>£' . esc_html( $ticket_summer ) . '</strong><br><small>( £' . esc_html( $ticket_summer_ga ) . ' w/ Gift Aid )</small>
+                    <strong>£' . esc_html( $ticket_winter ) . '</strong><br><small>( £' . esc_html( $ticket_winter_ga ) . ' w/ Gift Aid )</small>
                 </td>
                 <td class="px-3 py-2">
-                    <strong>£' . esc_html( $ticket_winter ) . '</strong><br><small>( £' . esc_html( $ticket_winter_ga ) . ' w/ Gift Aid )</small>
+                    <strong>£' . esc_html( $ticket_summer ) . '</strong><br><small>( £' . esc_html( $ticket_summer_ga ) . ' w/ Gift Aid )</small>
                 </td>
             </tr>
             ';
