@@ -1,17 +1,16 @@
 <?php 
+$className = 'hero-section';
+if ( !empty( $block['className'] ) ) {
+    $className .= ' ' . $block[ 'className' ] ;
+}
+if ( !empty( $block['align'] ) ) {
+    $className .= 'align' . $block[ 'align' ] ;
+}
 
-    $className = 'hero-section';
-    if ( !empty( $block['className'] ) ) {
-        $className .= ' ' . $block[ 'className' ] ;
-    }
-    if ( !empty( $block['align'] ) ) {
-        $className .= 'align' . $block[ 'align' ] ;
-    }
-
-// $carouselArrow = '<a class="carousel-control-%1$s" data-bs-target="#carouselExampleControls"  role="button" data-slide="%1$s">
-//                     <span class="carousel-control-%1$s-icon" aria-hidden="true"></span>
-//                     <span class="sr-only">%2$s</span>
-//                 </a>';
+$carousel_arrow = '<a class="carousel-control-%1$s" data-bs-target="#carouselExampleControls"  role="button" data-slide="%1$s">
+                    <span class="carousel-control-%1$s-icon" aria-hidden="true"></span>
+                    <span class="sr-only">%2$s</span>
+                </a>';
 ?>
 
 <section class="<?php echo esc_attr( $className ); ?> p-0">
@@ -22,51 +21,63 @@
             $slide = 0;
             if ( have_rows( 'carousel' ) ) : 
                 while ( have_rows( 'carousel' ) ) : the_row();
-                    $carouselImg            = get_sub_field( 'carousel_img' );
-                    $carouselImg_alt        = 'http://bdac.olberry01.me/wp-content/uploads/2020/12/south_hangar_hero.jpg';
-                    $carouselTitle          = get_sub_field( 'carousel_title' );
-                    $carouselLink           = get_sub_field( 'carousel_link' );
-                    $carouselInterval       = get_sub_field( 'carousel_interval' );
+                    $carousel_img            = get_sub_field( 'carousel_img' );
+                    $carousel_img_alt        = 'http://bdac.olberry01.me/wp-content/uploads/2020/12/south_hangar_hero.jpg';
+                    $carousel_title          = get_sub_field( 'carousel_title' );
+                    $carousel_link           = get_sub_field( 'carousel_link' );
+                    $carousel_interval       = get_sub_field( 'carousel_interval' );
             ?>
 
-            <div class="carousel-item <?php echo ( $slide === 0 ? 'active' : '' ); ?>" data-interval="<?php echo ( $carouselInterval ? $carouselInterval : 8500 ); ?>">
-                <img class="carousel-item-image" src="<?php echo ( $carouselImg ? $carouselImg['url'] : 'no image' ); ?>" class="d-block w-100" alt="...">
+            <div class="carousel-item <?php echo ( $slide === 0 ? 'active' : '' ); ?>" data-interval="<?php echo ( $carousel_interval ? $carousel_interval : 8500 ); ?>">
+                <?php 
+                if ( $carousel_img ) {
+                    echo sprintf(
+                        '<img class="carousel-item-image" class="d-block w-100" src="%1$s" alt="%2$s">',
+                        $carousel_img['url'],
+                        $carousel_img['alt']
+                    );
+                }
+                ?>
                 <div class="carousel-inner-overlay"></div>
-                <div class="container h-100">
-                    <div class="row h-100">
-                        <div class="col col-12 col-md-5">
-                            <div class="carousel-caption d-md-block">
-                                <h1 class="carousel-caption-title"><?php echo ( $carouselTitle ? $carouselTitle : '!Interested in visiting our collection?' ); ?></h1>
-                                <a href="<?php echo $carouselLink['url']; ?>">
-                                    <button class="btn btn-bdac"><?php echo $carouselLink['title']; ?></button>
-                                </a>
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col col-12 col-md-5">
+                                <div class="carousel-caption d-md-block">
+                                    <?php 
+                                    if ( $carousel_title ) {
+                                        echo sprintf(
+                                            '<h1 class="carousel-caption-title">%1$s</h1>',
+                                            esc_html( $carousel_title )
+                                        );
+                                    }
+                                    if ( $carousel_link ) {
+                                        echo sprintf(
+                                            '<a href="%1$s">
+                                                <button class="btn btn-bdac">%2$s</button>
+                                            </a>',
+                                            esc_html( $carousel_link['url'] ),
+                                            esc_html( $carousel_link['title'] )
+                                        );
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php
+                        $slide++;
+                    endwhile;
+                    wp_reset_postdata(); 
+                endif;
+                ?>
             </div>
-            <?php
-                    $slide++;
-                endwhile;
-                wp_reset_postdata(); 
-            endif;
-            ?>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
         <?php 
-        // echo ( 
-        //     $slide > 1 
-        //     ? sprintf( $carouselArrow, 'prev', 'Previous' ) . sprintf( $carouselArrow, 'next', 'Next' ) 
-        //     : '' 
-        // );
+        if ( $slide >= 2  ) {
+            echo sprintf( 
+                $carousel_arrow, 'prev', 'Previous' ) . sprintf( $carousel_arrow, 'next', 'Next' 
+            );
+        }
         ?>  
     </div>
 
