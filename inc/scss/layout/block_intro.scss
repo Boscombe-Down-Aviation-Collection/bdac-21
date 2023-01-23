@@ -1,17 +1,88 @@
 @import "../base/variables";
 
 .bdac-intro {
-  .row {
+  &-row {
+    margin-bottom: 5rem;
+
     @media screen and (min-width: 992px) {
-      min-height: 31.25rem;
+      // min-height: 31.25rem;
       align-items: center;
     }
-  }
-  &-title {
-    font-size: 2.25rem;
-  }
 
-  &-content {
+    // &-img {
+    //   padding: 0;
+    // }
+
+    &-image {
+      width: 100%;
+      max-height: 30vh;
+      object-fit: cover;
+      border-radius: 0.625rem;
+      box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+      left: 0;
+
+      @media screen and (min-width: 992px) {
+        width: 50vw;
+        min-height: 31.25rem;
+        border-radius: 0.625rem 0 0 0.625rem;
+        // position: absolute;
+      }
+    }
+
+    &-text {
+      margin: 0 0 3rem 0;
+
+      @media (min-width: 992px) {
+        margin: 0 auto 0 0;
+      }
+
+      &-title {
+        margin-right: auto;
+        font-size: 2.25rem;
+      }
+
+      &-content {
+      }
+    }
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      .bdac-intro-row {
+        &-text {
+          @media (min-width: 992px) {
+            margin: 0 0 0 auto;
+          }
+
+          &-title {
+            font-size: 2.25rem;
+          }
+
+          &-content {
+          }
+        }
+
+        &-image {
+          width: 100%;
+          max-height: 30vh;
+          object-fit: cover;
+          border-radius: 0.625rem;
+          box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
+          position: relative;
+
+          @media screen and (min-width: 992px) {
+            width: 50vw;
+            min-height: 31.25rem;
+            border-radius: 0 0.625rem 0.625rem 0;
+            left: calc(((100vw - 1280px) / 2) * -1);
+          }
+        }
+      }
+    }
   }
 
   .col.col-12.col-md-5 {
@@ -31,22 +102,6 @@
     @media screen and (min-width: 992px) {
       padding-top: 0;
       padding-bottom: 0;
-    }
-  }
-
-  &-image {
-    width: 100%;
-    max-height: 30vh;
-    object-fit: cover;
-    border-radius: 0.625rem;
-    box-shadow: 0 0 1.25rem rgba($bdac-blue, 0.25);
-    left: 0;
-
-    @media screen and (min-width: 992px) {
-      width: 50vw;
-      min-height: 31.25rem;
-      border-radius: 0.625rem 0 0 0.625rem;
-      position: absolute;
     }
   }
 }
