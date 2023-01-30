@@ -1,6 +1,6 @@
 {
     "key": "group_60aec011645cd",
-    "title": "Block - Introduction",
+    "title": "Block: Intro",
     "fields": [
         {
             "key": "field_63cd91af6a933",
@@ -130,5 +130,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674418688
+    "modified": 1674596688
 }
