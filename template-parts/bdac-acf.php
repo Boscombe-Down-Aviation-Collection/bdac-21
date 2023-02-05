@@ -55,6 +55,26 @@
      */
 
         /**
+         * Learning Assets Archive
+         */
+        acf_register_block_type(
+            array(
+                'name'              => 'learning_archive',
+                'title'             => __( 'Learning Assets Archive' ),
+                'description'       => __( 'BDAC Exhibits Archive' ),
+                'render_template'   => 'template-parts/blocks/block_archive_assets.php',
+                'enqueue_style'     => get_template_directory_uri() . '/dist/css/blocks/archive_assets.css',
+                'icon'              => 'format-gallery',
+                'keywords'          => array(
+                                        'all assets',
+                                        'learning asses',
+                                        'learning assets archive',
+                                        'archive'
+                                    )
+                )
+        );
+
+        /**
          * Exhibits Archive
          */
         acf_register_block_type(
