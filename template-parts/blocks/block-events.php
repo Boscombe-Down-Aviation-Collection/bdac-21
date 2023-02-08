@@ -1,13 +1,11 @@
 <?php
-    global $post;
-
-    $className = 'events-section';
-    if ( !empty( $block['className'] ) ) {
-        $className .= ' ' . $block[ 'className' ] ;
-    }
-    if ( !empty( $block['align'] ) ) {
-        $className .= 'align' . $block[ 'align' ] ;
-    }
+$className = 'events-section';
+if ( !empty( $block['className'] ) ) {
+    $className .= ' ' . $block[ 'className' ] ;
+}
+if ( !empty( $block['align'] ) ) {
+    $className .= 'align' . $block[ 'align' ] ;
+}
 ?>
 
 <section class="<?php echo esc_attr( $className ); ?>">
@@ -34,11 +32,11 @@
                 $event_title        = get_the_title();
                 $event_link         = get_the_permalink();
                 $event_author       = get_the_author_meta( 'display_name' );
-                $event_speaker      = get_field( 'event_speaker', $post->ID );
-                $event_description  = wp_trim_words( get_field( 'event_description', $post->ID ), 20 );
+                $event_speaker      = get_field( 'event_speaker', get_the_ID() );
+                $event_description  = wp_trim_words( get_field( 'event_description', get_the_ID() ), 20 );
                 $event_excerpt      = get_the_excerpt();
-                $event_date		    = get_field( 'event_date_start', $post->ID );
-                $event_cats         = get_the_category($post->ID);
+                $event_date		    = get_field( 'event_date_start', get_the_ID() );
+                $event_cats         = get_the_category(get_the_ID());
 
         ?>
 

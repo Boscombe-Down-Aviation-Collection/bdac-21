@@ -17,24 +17,26 @@ $learning_block = new WP_Query( array(
 while( $learning_block->have_posts() ) {
     $learning_block->the_post();
 
-    $learning_title        = get_the_title( get_the_ID() );
-    $learning_link         = get_field( 'learning_asset', get_the_ID() );
-    $learning_description  = get_the_excerpt( get_the_ID(), 30 );
+    $learning_title         = get_the_title( get_the_ID() );
+    $learning_link          = get_field( 'learning_asset', get_the_ID() );
+    $learning_asset         = $learning_link['url'];
+    $learning_label         = $learning_link['title'];
+    $learning_description   = get_the_excerpt( get_the_ID(), 30 );
 ?>
-    <div class="col-12 col-md-6 mt-md-0 <?php echo $learning_class_name ?>-asset">
+    <div class="col-12 col-md-6 mt-md-0 mb-5 mb-lg-5 <?php echo $learning_class_name ?>-asset">
         
         <?php 
         echo sprintf( 
             '<h4 class="%1$s-asset-title">%2$s</h4>
             <p class="%1$s-asset-content">%3$s</p>
-            <a href="%4%s">
+            <a href="%4$s" target="_blank" download>
                 <button class="btn btn-bdac-alt">%5$s %6$s</button>
             </a>',
             $learning_class_name,
             $learning_title,
             $learning_description,
-            $learning_link['url'],
-            $learning_link['title'],
+            $learning_asset,
+            $learning_label,
             '<i class="fas fa-file-download"></i>'
         );
         ?>

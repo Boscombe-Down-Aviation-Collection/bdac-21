@@ -28,7 +28,7 @@ if ( !empty( $block['align'] ) ) {
                 $exhibit_thumb      = get_the_post_thumbnail_url();
                 $exhibit_excerpt    = get_the_excerpt();
                 $exhibit_link       = get_the_permalink();
-                $exhibit_reg       = get_field( 'exhibit_reg', $post->ID )
+                $exhibit_reg       = get_field( 'exhibit_reg', get_the_ID() )
             
             ?>
 

@@ -1,6 +1,6 @@
 {
     "key": "group_63dfc14c39607",
-    "title": "Blocks: Learning Assets",
+    "title": "Block: Learning Assets",
     "fields": [
         {
             "key": "field_63dfc14db3d02",
@@ -37,5 +37,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675610961
+    "modified": 1675625683
 }
