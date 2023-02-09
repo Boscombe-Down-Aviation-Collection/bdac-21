@@ -29,6 +29,8 @@ if ( !empty( $block['align'] ) ) {
                 $events_block->the_post();
 
                 $event_image        = get_the_post_thumbnail_url();
+                $event_image_id     = get_post_thumbnail_id( get_the_ID() );
+                $event_image_alt    = get_post_meta( $event_image_id, '_wp_attachment_image_alt', true );
                 $event_title        = get_the_title();
                 $event_link         = get_the_permalink();
                 $event_author       = get_the_author_meta( 'display_name' );
@@ -37,29 +39,55 @@ if ( !empty( $block['align'] ) ) {
                 $event_excerpt      = get_the_excerpt();
                 $event_date		    = get_field( 'event_date_start', get_the_ID() );
                 $event_cats         = get_the_category(get_the_ID());
-
         ?>
 
                     <div class="col col-12 col-md-4">
-                        <div class="bdac-card text-left" style="background: url(' <?php echo esc_attr( $event_image ); ?> '); background-size: cover; background-position-x: center;">
+                        <div class="bdac-card text-left">
+                            <?php 
+                            echo sprintf(
+                                '<img class="bdac-card-img" src="%1$s" alt="%2$s">',
+                                esc_attr( $event_image ),
+                                esc_attr( $event_image_alt )
+                            );
+
+                            echo sprintf(
+                                '<div class="bdac-card-date">
+                                    <p>%1$s</p>
+                                </div>',
+                                esc_attr( $event_date )
+                            );
+                            ?>
+
                             
-                            <div class="bdac-card-date">
-                                <p><?php echo esc_attr( $event_date ); ?></p>
-                            </div>
 
                             <div class="bdac-card-content">
-                                <h3 class="bdac-card-content-title mb-3">
-                                    <a href="<?php echo esc_attr( $event_link ) ?>" title="Posts by BDAC Admin" rel="author">
-                                        <?php echo esc_attr( $event_title ); ?>
-                                    </a>
-                                </h3>
-                                <small class="bdac-card-content-meta">Presented by <?php echo $event_speaker; ?></small>
-                                <p class="bdac-card-content-body mt-3">
-                                    <?php echo $event_description; ?>
-                                </p>
-                                <a href="<?php echo esc_attr( $event_link ) ?>" class="bdac-card-content-link mt-auto">
-                                    Read More <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                                </a>
+                                <?php 
+                                echo sprintf(
+                                    '<h3 class="bdac-card-content-title mb-3">
+                                        <a href="%1$s" title="%2$s" rel="author">%2$s</a>
+                                    </h3>',
+                                    esc_attr( $event_link ),
+                                    esc_attr( $event_title )
+                                );
+                                
+                                echo sprintf(
+                                    '<small class="bdac-card-content-meta">Presented by %1$s</small>',
+                                    wp_kses_post( $event_speaker )
+                                );
+
+                                echo sprintf(
+                                    '<p class="bdac-card-content-body mt-3">%1$s</p>',
+                                    esc_html( $event_description )
+                                );
+
+                                echo sprintf(
+                                    '<a href="%1$s" class="bdac-card-content-link mt-auto">
+                                        Read More %2$s
+                                    </a>',
+                                    esc_attr( $event_link ),
+                                    '<i class="fas fa-chevron-right" aria-hidden="true"></i>'
+                                );
+                                ?>
                             </div>
                         </div>
                     </div>
