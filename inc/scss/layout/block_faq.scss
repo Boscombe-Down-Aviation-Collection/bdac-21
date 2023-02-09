@@ -39,9 +39,16 @@
       margin: 0;
       display: flex;
       padding: 1rem;
+
+      &:not(.collapsed) {
+        background: $bdac-blue;
+        color: $bdac-white !important;
+        box-shadow: 0.3125rem 0 0.625rem $bdac-blue;
+      }
     }
 
     &-body {
+      background: $white;
       color: $bdac-blue;
       padding: 2rem 1rem;
       font-weight: 500;

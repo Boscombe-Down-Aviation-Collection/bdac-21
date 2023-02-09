@@ -39,6 +39,25 @@ h6 {
   text-transform: uppercase;
 }
 
+p,
+span,
+li {
+  font-family: $body-font;
+
+  a {
+    font-family: inherit;
+  }
+}
+
+sub,
+sup {
+  font-size: 0.5em;
+}
+
+sup {
+  top: -1em;
+}
+
 section {
   background-color: $bdac-white;
   padding: 1.875rem 0;

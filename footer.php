@@ -3,8 +3,8 @@
 
 <footer id="footer">
     <section class="pre-footer">
-        <a href="#" class="w-100 h-100">
-            <button href="#" class="btn-bdac pre-footer-btn">
+        <a  href="https://www.paypal.com/donate?token=KgqvS-KTyadrJwSlzBJbyOgiVPF8CwvDyIu7SBNdI4KjVWyRcVtReASFDckoaxhXuY0F7H2KBGon8Te_" class="w-100 h-100">
+            <button class="btn-bdac pre-footer-btn">
                 Like what we do? Consider donating
             </button>
         </a>
@@ -43,13 +43,10 @@
             </div>
             <script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=587&amp;locationId=3310055&amp;lang=en_UK&amp;border=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
             <a href="https://www.heritagefund.org.uk/" target="_blank"  class="footer-associate-item">
-                <img src="<?php bloginfo('template_url'); ?>/dist/img/heritage-lottery-fund-logo.png" alt="Heritage Lottery Fund Logo">
+                <img src="<?php bloginfo('template_url'); ?>/inc/img/heritage-lottery-fund.webp" alt="Heritage Lottery Fund Logo">
             </a>
             <a href="https://aviationheritageuk.org/" target="_blank"  class="footer-associate-item">
-                <img src="<?php bloginfo('template_url'); ?>/dist/img/AviationHeritageLogo_500px.png" alt="Aviation Heritage Logo">
-            </a>
-            <a href="https://www.visitbritain.org/business-advice/were-good-go-industry-standard" target="_blank"  class="footer-associate-item">
-                <img src="<?php bloginfo('template_url'); ?>/inc/img/gtg-mark_England.png" alt="We're Good To Go Logo">
+                <img src="<?php bloginfo('template_url'); ?>/inc/img/AviationHeritageLogo_500px.png" alt="Aviation Heritage Logo">
             </a>
         </div>
     </div>
