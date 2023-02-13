@@ -31,7 +31,7 @@
       background-color: transparent;
       color: $bdac-blue !important;
       font-family: $body-font;
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 700;
       width: 100%;
       border: none;
@@ -45,14 +45,23 @@
         color: $bdac-white !important;
         box-shadow: 0.3125rem 0 0.625rem $bdac-blue;
       }
+
+      @media (min-width: 62rem) {
+        font-size: 1.25rem;
+      }
     }
 
     &-body {
       background: $white;
       color: $bdac-blue;
-      padding: 2rem 1rem;
+      padding: 1rem;
       font-weight: 500;
-      font-size: 1.1875rem;
+      font-size: 1rem;
+
+      @media (min-width: 62rem) {
+        padding: 2rem 1rem;
+        font-size: 1.1875rem;
+      }
     }
   }
 }

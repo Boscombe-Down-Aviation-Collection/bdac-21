@@ -1,9 +1,10 @@
 @import "../base/variables";
 
 .hero-section {
-  height: 55vh;
+  height: 35rem;
+  margin-top: 4.625rem;
 
-  @media (min-width: 992px) {
+  @media (min-width: 62rem) {
     height: 85vh;
   }
 
@@ -13,7 +14,6 @@
     overflow: hidden;
 
     @media (min-width: 992px) {
-      // height: 65vh;
     }
 
     &-inner {
@@ -46,15 +46,15 @@
 
       &-image {
         width: 100%;
-        height: 55vh;
+        height: 100%;
         object-fit: cover;
         object-position: left;
-        position: fixed;
+        position: relative;
         inset: 0;
         z-index: 0;
 
         @media (min-width: 992px) {
-          height: 85vh;
+          height: 100%;
           object-position: center;
         }
       }
@@ -88,7 +88,7 @@
 
       h1 {
         margin-bottom: 1.25rem;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-weight: 700;
         text-transform: uppercase;
 

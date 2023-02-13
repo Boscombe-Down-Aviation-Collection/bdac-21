@@ -38,8 +38,14 @@
                 'walker'          => new wp_bootstrap_navwalker()
               )
             );
+            
+            echo sprintf(
+                '<a href="%1$s" target="%2$s" class="btn btn-bdac btn-bdac-donate d-none d-lg-block">%3$s</a>',
+                'https://www.paypal.com/donate?token=KgqvS-KTyadrJwSlzBJbyOgiVPF8CwvDyIu7SBNdI4KjVWyRcVtReASFDckoaxhXuY0F7H2KBGon8Te_',
+                '_blank',
+                'Donate To BDAC'
+            );
             ?>
-            <a href="https://www.paypal.com/donate?token=KgqvS-KTyadrJwSlzBJbyOgiVPF8CwvDyIu7SBNdI4KjVWyRcVtReASFDckoaxhXuY0F7H2KBGon8Te_" target="_blank" class="btn btn-bdac btn-bdac-donate">Donate To BDAC</a>
             <!-- d-none d-md-block -->
           </div>
         </nav>

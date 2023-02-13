@@ -39,6 +39,14 @@ h6 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 1.5rem !important;
+
+  @media (min-width: 62rem) {
+    font-size: 2rem !important;
+  }
+}
+
 p,
 span,
 li {
@@ -60,14 +68,17 @@ sup {
 
 section {
   background-color: $bdac-white;
-  padding: 1.875rem 0;
-  text-align: center;
+  padding: 2.5rem 0;
+  text-align: left;
   position: relative;
   z-index: 1;
 
+  &:last-of-type {
+    padding-bottom: 5rem;
+  }
+
   @media (min-width: 992px) {
     padding: 3.125rem 0;
-    text-align: left;
 
     &:last-of-type {
       padding-bottom: 6.25rem;
