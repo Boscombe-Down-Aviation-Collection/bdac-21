@@ -1,171 +1,286 @@
 @import "../base/variables";
 
-.hero-section {
-  height: 35rem;
-  margin-top: 4.625rem;
+.bdac-carousel {
+  height: 80vh;
+  min-height: 650px;
+  padding: unset;
+  overflow: hidden;
 
-  @media (min-width: 62rem) {
-    height: 85vh;
+  @media (max-height: 700px) {
+    min-height: unset;
+  }
+
+  @media (max-width: 1281px) and (max-height: 801px) {
+    min-height: unset;
+  }
+
+  @media screen and (min-width: 1630px) {
+    height: 37.5rem;
+    min-height: unset;
   }
 
   .carousel {
-    background-color: $bdac-blue;
+    background: $bdac-black;
     height: 100%;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    @media (min-width: 992px) {
+    &-indicators {
+      [data-bs-target] {
+        background-color: transparent;
+        height: 0.5rem;
+        width: 0.5rem;
+        border: 0.1875rem solid $bdac-blue;
+        border-radius: 1rem;
+        margin-left: 0.3125rem;
+        margin-right: 0.3125rem;
+        opacity: 1;
+
+        @media (min-width: 48rem) {
+          border-color: $bdac-white;
+        }
+      }
+
+      .active {
+        border-color: $bdac-red;
+        opacity: 1;
+      }
     }
 
     &-inner {
       height: 100%;
-      display: flex;
-      align-items: flex-end;
-
-      &-overlay {
-        background: rgba($bdac-blue, 0.2);
-        background: linear-gradient(180deg, rgba($bdac-blue, 0.8) 0%, rgba($bdac-blue, 0) 100%);
-        width: 100%;
-        height: 60%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-blend-mode: multiply;
-
-        &-red {
-          background: $bdac-red;
-        }
-        &-white {
-          background: $bdac-white;
-        }
-      }
     }
 
     &-item {
-      height: 100%;
-
-      &-image {
+      &-image,
+      &-video {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: left;
-        position: relative;
-        inset: 0;
-        z-index: 0;
+        object-position: 50%;
 
-        @media (min-width: 992px) {
-          height: 100%;
-          object-position: center;
+        @media screen and (min-width: 62rem) {
+          object-position: unset;
         }
       }
 
-      .container {
-        padding-bottom: 7.5vh;
+      &-video {
+        &-overlay {
+          position: absolute;
+          inset: 0;
 
-        .row {
-          align-items: flex-end;
+          @media screen and (min-width: 62rem) {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.22) 40%, rgba(0, 0, 0, 0.12) 60%, rgba(255, 255, 255, 0.12) 100%);
+          }
         }
       }
-    }
 
-    &-caption {
-      background-color: $bdac-white;
-      color: $bdac-blue;
-      padding: 1.875rem;
-      border-radius: 0.625rem 0 0 0.625rem;
-      text-align: left;
-      right: 0;
-      bottom: 2vh;
+      ul {
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        list-style: none;
 
-      @media screen and (min-width: 992px) {
-        border-radius: 0.625rem;
-        position: relative;
-        top: unset;
-        right: unset;
-        bottom: unset;
-        left: unset;
-      }
-
-      h1 {
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        font-weight: 700;
-        text-transform: uppercase;
-
-        @media screen and (min-width: 992px) {
-          font-size: 2.25rem;
+        li {
+          &::before {
+            content: "\2022";
+            color: $bdac-red;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
         }
       }
-    }
-
-    &-control-prev,
-    &-control-next {
-      width: 5.75rem !important;
     }
 
     &-indicators {
-      margin-bottom: 3rem;
+      z-index: 90;
+    }
+
+    &-button-container {
+      position: absolute !important;
+      top: 0;
+      z-index: 50;
+    }
+
+    &-control {
+      &-prev,
+      &-next {
+        background: none;
+        width: auto;
+        height: calc(100% - 4.375rem);
+        margin-top: 4.375rem;
+        border: none;
+      }
+
+      &-prev {
+        padding: 0 0 0.75rem 0.75rem;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 100;
+
+        @media screen and (min-width: 62rem) {
+          padding: 0 0 0 0.75rem;
+        }
+
+        @media screen and (min-width: 1630px) {
+          left: calc((100vw - 1630px) / 2);
+        }
+      }
+
+      &-next {
+        padding: 0 0.75rem 0.75rem 0;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 100;
+
+        @media screen and (min-width: 62rem) {
+          padding: 0 0.75rem 0 0;
+        }
+
+        @media screen and (min-width: 1630px) {
+          right: calc((100vw - 1630px) / 2);
+        }
+      }
+    }
+
+    &-contained {
+      margin: 0 1.5rem;
+
+      @media (min-width: 62rem) {
+        margin: 0 4rem;
+      }
+
+      @media (min-width: 1726px) {
+        margin: 0 auto;
+        max-width: 1598px;
+      }
+
+      .bdac-carousel-item-content {
+        max-height: unset;
+        height: 100%;
+        margin-top: 0;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        height: 100%;
+      }
+      .carousel-control-prev {
+        margin: 0;
+        left: 1rem;
+      }
+
+      .carousel-control-next {
+        margin: 0;
+        right: 1rem;
+      }
     }
   }
-}
 
-.block-editor-block-list__block {
-  .hero-section {
-    height: auto !important;
+  &-item {
+    height: 100%;
+    position: relative;
 
-    .carousel {
-      background-color: #fff !important;
+    &-content {
+      background: rgba($bdac-blue, 0.66);
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
 
-      &-indicators {
-        display: none !important;
+      @media screen and (min-width: 62rem) {
+        background: rgba($bdac-blue, 0);
       }
 
-      &-control {
-        &-prev,
-        &-next {
-          display: none !important;
+      .container {
+        color: $bdac-white;
+        height: calc(100% - 5rem);
+        width: 100vw;
+        margin: 5rem 0 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: relative;
+        z-index: 10;
+
+        @media screen and (min-width: 1280px) {
+          margin: 0;
+          padding: 0 2.75rem;
+        }
+
+        @media screen and (min-width: 1630px) {
+          // width: calc(100% - (216px * 2));
+        }
+
+        @media screen and (min-width: 1920px) {
+          width: 100%;
+        }
+
+        .row {
+          width: 100vw;
+
+          @media screen and (min-width: 768px) {
+            margin-bottom: 5rem;
+          }
+          @media screen and (min-width: 1280px) {
+            padding: 0 6.875rem;
+          }
+
+          p,
+          p span {
+            font-size: 1rem;
+            line-height: 1.25rem;
+            font-weight: 500 !important;
+
+            @media (min-width: 90rem) {
+              font-size: 1.125rem;
+              line-height: 1.5rem;
+            }
+          }
+
+          p:last-of-type {
+            margin-bottom: 1.5rem;
+
+            @media (min-width: 90rem) {
+              margin-bottom: 1.875rem;
+            }
+          }
+
+          ul {
+            margin-bottom: 2rem;
+
+            li {
+              margin-bottom: 1rem;
+            }
+          }
         }
       }
 
-      &-inner {
-        display: flex !important;
-        flex-direction: column !important;
+      &-panel {
+        background-color: $bdac-white;
+        padding-bottom: 3.5rem !important;
+        border-radius: 0.625rem 0.625rem 0 0;
 
-        &-overlay {
-          display: none !important;
+        @media (min-width: 48rem) {
+          padding-bottom: unset;
+          border-radius: 0 0.625rem 0.625rem 0;
+        }
+
+        @media (min-width: 80rem) {
+          border-radius: 0.625rem;
         }
       }
+    }
 
-      &-caption {
-        border-radius: 0 !important;
-
-        h1 {
-          margin-top: 0 !important;
-          font-family: $header-font !important;
-          font-size: 1.25rem !important;
-        }
-
-        button {
-          padding: 0.75rem 1.5rem !important;
-          border-radius: 0.1875rem !important;
-          font-size: 0.875rem !important;
-        }
-      }
-
-      &-item {
-        width: 100% !important;
-
-        .container {
-          padding: 0 !important;
-        }
-
-        &-image {
-          width: 100% !important;
-          height: 33vh !important;
-          object-fit: cover;
-          position: relative !important;
-        }
-      }
+    .carousel-contained {
+      margin: 0 4rem;
     }
   }
 }
