@@ -22,7 +22,7 @@
         <nav class="navbar<?php echo ( !is_front_page() ? ' navbar-not-front ' : ' '  ); ?> navbar-expand-lg">
           <div class="container-fluid">
             <a class="navbar-brand logo-container" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-              <?php echo bdacLogo(90); ?>
+              <?php bdacTheme::svg( 'logo' ); ?>
             </a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#bdacMainMenu" aria-controls="bdacMainMenu" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>

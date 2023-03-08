@@ -39,6 +39,7 @@ $carousel_width = get_field( 'carousel_width' );
                                         </button>';
             ?>
             <div class="carousel-item bdac-carousel-item<?php echo ( $slide === 0 ? ' active' : '' ) ?>" data-interval="<?php echo ( $slideInterval ? $slideInterval : 8500 ); ?>">
+                <div class="carousel-item-overlay"></div>
                 <?php
                 if ( $carousel_img ) {
                     echo sprintf(
