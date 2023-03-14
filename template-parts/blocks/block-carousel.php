@@ -13,30 +13,24 @@ $carousel_width = get_field( 'carousel_width' );
 <section <?php echo sprintf( 'id="%1$s"', esc_html( $carousel_id ) ); ?> class="<?php echo esc_attr( $className ); ?> p-0" <?php echo ( $carousel_width ? 'style="margin-bottom: 4rem"' : '' ) ?>>
     
     <div id="bdacCarousel" class="carousel <?php echo ( $carousel_width ? 'carousel-contained ' : '' ); ?>slide" data-bs-ride="carousel">
-        <div class="carousel-inner"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="125"
-            data-aos-offset="0">
-
+        <div class="carousel-inner">
             <?php 
             $slide = 0;
             if ( have_rows( 'carousel' ) ) : 
                 while ( have_rows( 'carousel' ) ) : the_row();
 
-                    $carousel_img       = get_sub_field( 'carousel_img' );
-                    $carousel_img       = get_sub_field( 'carousel_img' );
-                    $slide_video        = get_sub_field( 'slide_video' );
-                    $slide_video_img    = get_sub_field( 'slide_video_img' );
-                    $slide_overlay      = get_sub_field( 'slide_overlay' );
-                    $slide_overlay_cond = null;
-                    $slide_title        = get_sub_field( 'carousel_title' );
-                    $slide_copy         = get_sub_field( 'slide_copy' );
-                    $slide_link         = get_sub_field( 'carousel_link' );
-                    $slideInterval      = get_sub_field( 'carousel_interval' );
-                    $carouselArrow      = '<button class="carousel-control-%1$s" type="button" data-bs-target="#bdacCarousel" data-bs-slide="%1$s">
-                                            <span class="carousel-control-%1$s-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">%2$s</span>
-                                        </button>';
+                $carousel_img       = get_sub_field( 'carousel_img' );
+                $carousel_vid       = get_sub_field( 'carousel_vid' );
+                $carousel_vid_img   = get_sub_field( 'carousel_vid_img' );
+                $carousel_overlay   = get_sub_field( 'carousel_overlay' );
+                $carousel_title     = get_sub_field( 'carousel_title' );
+                $carousel_copy      = get_sub_field( 'carousel_copy' );
+                $carousel_link      = get_sub_field( 'carousel_link' );
+                $slideInterval      = get_sub_field( 'carousel_interval' );
+                $carouselArrow      = '<button class="carousel-control-%1$s" type="button" data-bs-target="#bdacCarousel" data-bs-slide="%1$s">
+                                        <span class="carousel-control-%1$s-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">%2$s</span>
+                                    </button>';
             ?>
             <div class="carousel-item bdac-carousel-item<?php echo ( $slide === 0 ? ' active' : '' ) ?>" data-interval="<?php echo ( $slideInterval ? $slideInterval : 8500 ); ?>">
                 <div class="carousel-item-overlay"></div>
@@ -48,36 +42,38 @@ $carousel_width = get_field( 'carousel_width' );
                         esc_html( $carousel_img['alt'] )
                     );
                 }
-                if ( $slide_video ) {
+                if ( $carousel_vid ) {
                     echo sprintf(
                         '<div class="carousel-item-video-overlay%4$s"></div>
                         <video class="carousel-item-video" autoplay loop muted>
                             <source src="%1$s" type="video/mp4" />
                             <img src="%2$s" title="Your browser does not support the video tag">
                         </video>',
-                        esc_html( $slide_video['url'] ),
-                        esc_html( $slide_video_img['url'] ),
-                        ( $slide_overlay ? '' : ' d-none' )
+                        esc_html( $carousel_vid['url'] ),
+                        esc_html( $carousel_vid_img['url'] ),
+                        ( $carousel_overlay ? '' : ' d-none' )
                     );
                 }
                 ?>
-                <div class="bdac-carousel-item-content" data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="1000"
-                    data-aos-offset="0">
+                <div class="bdac-carousel-item-content">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6 col-lg-5 p-4 bdac-carousel-item-content-panel">
-                                <h2><?php echo $slide_title; ?></h2>
-                                <p class="bdac-carousel-item-content-copy"><?php echo $slide_copy; ?></p>
+                                <h2><?php echo $carousel_title; ?></h2>
                                 <?php 
-                                if ( $slide_link ) {
+                                if ( $carousel_copy ) {
+                                    echo sprintf(
+                                        '<p class="bdac-carousel-item-content-copy">%1$s</p>',
+                                        wp_kses_post( $carousel_copy )
+                                    );
+                                }
+                                if ( $carousel_link ) {
                                     echo sprintf(
                                         '<a href="%1$s">
                                             <button class="btn btn-bdac">%2$s</button>
                                         </a>',
-                                        $slide_link['url'],
-                                        $slide_link['title']
+                                        $carousel_link['url'],
+                                        $carousel_link['title']
                                     );
                                 }
                                 ?>
