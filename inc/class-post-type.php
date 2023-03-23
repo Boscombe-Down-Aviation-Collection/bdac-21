@@ -16,7 +16,7 @@ class bdac_Post_Type_Bootstrap {
 		'exhibits',
         'events',
         'opening_hours',
-        // 'learning',
+        'learning'
         // 'volunteers'
 	);
 
