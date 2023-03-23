@@ -51,11 +51,7 @@ $tickets_table          = get_field( 'tickets_table' );
             </div>
             <div class="bdac-tickets-table-wrapper col col-12 col-lg-8 p-3 p-lg-5 order-1 order-lg-2">
                 <?php
-                echo sprintf( $tickets_title,
-                    'd-block d-md-none',
-                    'Ticket Prices'
-                );
-                get_template_part( 'template-parts/blocks/block-tickets', 'row' );
+                echo bdac_ticket_prices();
                 ?>
             </div>      
         </div>
