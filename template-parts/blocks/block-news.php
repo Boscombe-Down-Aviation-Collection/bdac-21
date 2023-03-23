@@ -35,7 +35,7 @@ if ( !empty( $block['align'] ) ) {
                                     <h3 class="bdac-colour-white">%2$s</h3>
                                 </div>',
                                 $className,
-                                esc_attr( $news_title )
+                                wp_kses_post( $news_title )
                             );
                         ?>
                         <div class="<?php echo $className; ?>-article-content">

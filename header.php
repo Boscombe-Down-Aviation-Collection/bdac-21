@@ -2,17 +2,25 @@
 /**
  * Header file for the BDAC 2022 theme.
  */
+$post_ID   = get_the_ID();
+$page_link = get_permalink( $post_ID );
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	  <?php 
-      wp_head();
-    ?>
-  </head>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="<?php bloginfo( 'charset' ); ?>" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	 
+		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSS2 Feed" href="<?php bloginfo( 'rss2_url' ); ?>" />
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+		<link rel="canonical" href="<?php echo $page_link; ?>" />
+		<title><?php wp_title(); ?></title>
+
+		<?php wp_head(); ?>
+	</head>
   
     <body <?php body_class(); ?>>
     
@@ -22,7 +30,7 @@
         <nav class="navbar<?php echo ( !is_front_page() ? ' navbar-not-front ' : ' '  ); ?> navbar-expand-lg">
           <div class="container-fluid">
             <a class="navbar-brand logo-container" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-              <?php echo bdacLogo(90); ?>
+              <?php bdacTheme::svg( 'logo' ); ?>
             </a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#bdacMainMenu" aria-controls="bdacMainMenu" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -38,8 +46,14 @@
                 'walker'          => new wp_bootstrap_navwalker()
               )
             );
+            
+            echo sprintf(
+                '<a href="%1$s" target="%2$s" class="btn btn-bdac btn-bdac-donate d-none d-lg-block">%3$s</a>',
+                'https://www.paypal.com/donate?token=KgqvS-KTyadrJwSlzBJbyOgiVPF8CwvDyIu7SBNdI4KjVWyRcVtReASFDckoaxhXuY0F7H2KBGon8Te_',
+                '_blank',
+                'Donate To BDAC'
+            );
             ?>
-            <a href="https://www.paypal.com/donate?token=KgqvS-KTyadrJwSlzBJbyOgiVPF8CwvDyIu7SBNdI4KjVWyRcVtReASFDckoaxhXuY0F7H2KBGon8Te_" target="_blank" class="btn btn-bdac btn-bdac-donate">Donate To BDAC</a>
             <!-- d-none d-md-block -->
           </div>
         </nav>

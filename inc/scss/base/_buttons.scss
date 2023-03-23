@@ -1,13 +1,13 @@
 .btn-bdac {
   background: $bdac-red;
   color: $bdac-white;
-  padding: 0.9375rem 1.875rem;
+  padding: 0.75rem 1.5rem;
   border: 0.125rem solid $bdac-red;
   border-radius: 0.25rem;
   font-family: $header-font;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 1.125rem;
+  line-height: 1rem;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
@@ -15,6 +15,12 @@
   -webkit-transition: 330ms;
   -o-transition: 330ms;
   z-index: 1;
+
+  @media (min-width: 62rem) {
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    padding: 0.9375rem 1.875rem;
+  }
 
   &-link {
     overflow: hidden;

@@ -1,7 +1,7 @@
 
 </main>
 
-<footer id="footer">
+<footer id="footer" class="footer">
     <section class="pre-footer">
         <a  href="https://www.paypal.com/donate?token=KgqvS-KTyadrJwSlzBJbyOgiVPF8CwvDyIu7SBNdI4KjVWyRcVtReASFDckoaxhXuY0F7H2KBGon8Te_" class="w-100 h-100">
             <button class="btn-bdac pre-footer-btn">
@@ -14,7 +14,7 @@
             <div class="col-sm-12 col-md-6 col-lg-3 footer-section">
                 <div class="logo-container d-flex justify-content-center">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <?php bdacLogo(150); ?>
+                        <?php bdacTheme::svg( 'logo' ); ?>
                     </a>
                 </div>
             </div>

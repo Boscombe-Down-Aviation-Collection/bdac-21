@@ -1,4 +1,4 @@
-#footer {
+.footer {
   background: $bdac-black;
   color: $bdac-white;
   min-height: 20rem;
@@ -32,8 +32,13 @@
         height: 100%;
         border-radius: 0;
         font-family: $header-font;
-        font-size: 1.875rem;
-        line-height: 2rem;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+
+        @media (min-width: 62rem) {
+          font-size: 1.875rem;
+          line-height: 2rem;
+        }
       }
 
       &:hover {
@@ -42,6 +47,11 @@
         }
       }
     }
+  }
+
+  .logo-container {
+    width: 12.5rem;
+    height: 12.5rem;
   }
 
   .footer {
