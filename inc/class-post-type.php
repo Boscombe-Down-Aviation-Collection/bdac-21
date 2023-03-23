@@ -13,8 +13,8 @@ class bdac_Post_Type_Bootstrap {
 	 * List of post types to load
 	 */
 	const POST_TYPES = array(
-		'exhibits'
-        // 'events',
+		'exhibits',
+        'events'
         // 'opening_hours',
         // 'learning',
         // 'volunteers'
