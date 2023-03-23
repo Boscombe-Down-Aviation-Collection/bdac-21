@@ -14,8 +14,8 @@ class bdac_Post_Type_Bootstrap {
 	 */
 	const POST_TYPES = array(
 		'exhibits',
-        'events'
-        // 'opening_hours',
+        'events',
+        'opening_hours',
         // 'learning',
         // 'volunteers'
 	);
