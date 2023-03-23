@@ -4,7 +4,7 @@ class bdacTheme {
 	/**
 	 * Class Constructor
 	 */
-	// public function __construct() {
+	public function __construct() {
 		// add_action( 'wp_enqueue_scripts', array( static::class, 'enqueue_scripts' ) );
 		// add_action( 'after_setup_theme', array( static::class, 'declare_theme_support' ) );
 		// add_action( 'widgets_init', array( static::class, 'setup_nav_menus' ) );
@@ -13,7 +13,7 @@ class bdacTheme {
 		 * ACF Blocks Import
 		 */
 		// if ( function_exists( 'acf_register_block_type' ) ) {
-		// 	require_once 'inc/cof-acf.php';
+		// 	require_once 'inc/bdac-acf.php';
 		// }
 
 		/**
@@ -24,25 +24,25 @@ class bdacTheme {
 		/**
 		 * Post Type Bootstrapper
 		 */
-		// require_once 'inc/class-post-type-boostrap.php';
-		// new coforge_Post_Type_Bootstrap();
+		require_once 'inc/class-post-type.php';
+		new bdac_Post_Type_Bootstrap();
 
 		/**
 		 * Fancy Menu
 		 */
-		// require_once 'inc/class-coforge-primary-menu-presenter.php';
-	// }
+		// require_once 'inc/class-bdacge-primary-menu-presenter.php';
+	}
 
 	/**
 	 * Enqueue assets
 	 */
 	// public static function enqueue_scripts() {
-	// 	wp_enqueue_script( 'cof-isotope', '//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', array(), COFORGE_THEME_VERSION, true );
-	// 	wp_enqueue_script( 'cof-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array( 'jquery' ), COFORGE_THEME_VERSION, true );
+	// 	wp_enqueue_script( 'bdac-isotope', '//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', array(), bdacGE_THEME_VERSION, true );
+	// 	wp_enqueue_script( 'bdac-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array( 'jquery' ), bdacGE_THEME_VERSION, true );
 
 	// 	// Stylesheets.
-	// 	wp_enqueue_style( 'cof_fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css', null, COFORGE_THEME_VERSION );
-	// 	wp_enqueue_style( 'cof-styles', get_stylesheet_uri(), array(), COFORGE_THEME_VERSION );
+	// 	wp_enqueue_style( 'bdac_fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css', null, bdacGE_THEME_VERSION );
+	// 	wp_enqueue_style( 'bdac-styles', get_stylesheet_uri(), array(), bdacGE_THEME_VERSION );
 	// }
 
 	/**
@@ -69,9 +69,9 @@ class bdacTheme {
 	// 		array(
 	// 			'name'          => 'Footer Column 1',
 	// 			'id'            => 'footer_column_1',
-	// 			'before_widget' => '<div class="cof-footer-bottom-menu">',
+	// 			'before_widget' => '<div class="bdac-footer-bottom-menu">',
 	// 			'after_widget'  => '</div>',
-	// 			'before_title'  => '<h6 class="cof-footer-bottom-title">',
+	// 			'before_title'  => '<h6 class="bdac-footer-bottom-title">',
 	// 			'after_title'   => '</h6>',
 	// 		)
 	// 	);
@@ -80,9 +80,9 @@ class bdacTheme {
 	// 		array(
 	// 			'name'          => 'Footer Column 2',
 	// 			'id'            => 'footer_column_2',
-	// 			'before_widget' => '<div class="cof-footer-bottom-menu">',
+	// 			'before_widget' => '<div class="bdac-footer-bottom-menu">',
 	// 			'after_widget'  => '</div>',
-	// 			'before_title'  => '<h6 class="cof-footer-bottom-title">',
+	// 			'before_title'  => '<h6 class="bdac-footer-bottom-title">',
 	// 			'after_title'   => '</h6>',
 	// 		)
 	// 	);
@@ -91,9 +91,9 @@ class bdacTheme {
 	// 		array(
 	// 			'name'          => 'Footer Column 3',
 	// 			'id'            => 'footer_column_3',
-	// 			'before_widget' => '<div class="cof-footer-bottom-menu">',
+	// 			'before_widget' => '<div class="bdac-footer-bottom-menu">',
 	// 			'after_widget'  => '</div>',
-	// 			'before_title'  => '<h6 class="cof-footer-bottom-title">',
+	// 			'before_title'  => '<h6 class="bdac-footer-bottom-title">',
 	// 			'after_title'   => '</h6>',
 	// 		)
 	// 	);
@@ -102,9 +102,9 @@ class bdacTheme {
 	// 		array(
 	// 			'name'          => 'Footer Column 4',
 	// 			'id'            => 'footer_column_4',
-	// 			'before_widget' => '<div class="cof-footer-bottom-menu">',
+	// 			'before_widget' => '<div class="bdac-footer-bottom-menu">',
 	// 			'after_widget'  => '</div>',
-	// 			'before_title'  => '<h6 class="cof-footer-bottom-title">',
+	// 			'before_title'  => '<h6 class="bdac-footer-bottom-title">',
 	// 			'after_title'   => '</h6>',
 	// 		)
 	// 	);
@@ -113,7 +113,7 @@ class bdacTheme {
 	// 		array(
 	// 			'name'          => 'Footer Awards',
 	// 			'id'            => 'footer_awards',
-	// 			'before_widget' => '<div class="cof-footer-awards">',
+	// 			'before_widget' => '<div class="bdac-footer-awards">',
 	// 			'after_widget'  => '</div>',
 	// 			'before_title'  => '',
 	// 			'after_title'   => '',
