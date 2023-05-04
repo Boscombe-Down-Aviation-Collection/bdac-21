@@ -34,7 +34,7 @@ if ( !empty( $block['align'] ) ) {
 
         if ( !$events_intro ) {
             echo sprintf(
-                '<div class="row">
+                '<div class="row section-events-title">
                     <h2>%1$s</h2>
                 </div>',
                 esc_html( $events_title )
@@ -42,7 +42,7 @@ if ( !empty( $block['align'] ) ) {
         }
         ?>
         
-        <div class="row">
+        <div class="row section-events-cards">
 
         <?php
         $i = 0;
@@ -80,7 +80,7 @@ if ( !empty( $block['align'] ) ) {
             ?>
 
 
-            <div class="col col-12 <?php echo ( $i == 0 && $events_intro ? 'col-md-6 events-next' : 'col-md-4' ) ?>">
+            <div class="col col-12 <?php echo ( $i == 0 && $events_intro ? 'col-md-6 section-events-next' : 'col-md-4' ) ?>">
                 <div class="bdac-card text-left">
                     <?php 
                     echo sprintf(
@@ -110,7 +110,7 @@ if ( !empty( $block['align'] ) ) {
                         );
                         
                         echo sprintf(
-                            '<small class="bdac-card-content-meta">Presented by %1$s</small>',
+                            '<small class="bdac-card-content-meta">Presented by <strong>%1$s</strong></small>',
                             wp_kses_post( $event_speaker )
                         );
 
@@ -138,7 +138,7 @@ if ( !empty( $block['align'] ) ) {
 
         <?php 
         if ( !$events_count < 1 ) {
-            echo '<div class="row">
+            echo '<div class="row section-events-all">
                     <a href="/events">
                         <button class="btn-bdac-alt">
                             All Our Events

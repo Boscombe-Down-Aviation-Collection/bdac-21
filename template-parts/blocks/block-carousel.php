@@ -10,7 +10,7 @@ $carousel_id    = get_field( 'carousel_id' );
 $carousel_width = get_field( 'carousel_width' );
 ?>
 
-<section <?php echo sprintf( 'id="%1$s"', esc_html( $carousel_id ) ); ?> class="<?php echo esc_attr( $className ); ?> p-0" <?php echo ( $carousel_width ? 'style="margin-bottom: 4rem"' : '' ) ?>>
+<section <?php echo sprintf( 'id="%1$s"', esc_html( $carousel_id ) ); ?> class="<?php echo esc_attr( $className ); ?>" <?php echo ( $carousel_width ? 'style="margin-bottom: 4rem"' : '' ) ?>>
     
     <div id="bdacCarousel" class="carousel <?php echo ( $carousel_width ? 'carousel-contained ' : '' ); ?>slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -58,12 +58,12 @@ $carousel_width = get_field( 'carousel_width' );
                 <div class="bdac-carousel-item-content">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12 col-md-6 col-lg-5 p-4 bdac-carousel-item-content-panel">
+                            <div class="col-12 col-md-8 col-lg-5 p-4 bdac-carousel-item-content-panel">
                                 <h2><?php echo $carousel_title; ?></h2>
                                 <?php 
                                 if ( $carousel_copy ) {
                                     echo sprintf(
-                                        '<p class="bdac-carousel-item-content-copy">%1$s</p>',
+                                        '<p class="bdac-carousel-item-content-copy d-none d-md-block">%1$s</p>',
                                         wp_kses_post( $carousel_copy )
                                     );
                                 }

@@ -28,7 +28,7 @@
 
   &:hover,
   &:focus {
-    background: $white;
+    background: transparent;
     color: $bdac-red;
     border-color: $bdac-red;
   }
@@ -112,7 +112,7 @@
     justify-content: center;
 
     &:hover {
-      background: $bdac-white;
+      background: transparent;
       color: $bdac-red;
       border-color: $bdac-red;
     }
@@ -122,7 +122,8 @@
     margin-left: 0.5rem;
 
     &:hover {
-      background: $white;
+      background-color: transparent;
+      color: $bdac-white;
     }
   }
 }
