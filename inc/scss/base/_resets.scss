@@ -9,10 +9,18 @@ body {
   color: $bdac-black;
 }
 
+.admin-bar {
+  #main,
+  .header {
+    margin-top: 32px !important;
+  }
+}
+
 #main {
   background: $bdac-white;
   color: $bdac-black;
   min-height: calc(100vh - 60px - 0.125rem);
+  margin-top: 4.75rem;
   overflow-x: hidden;
 
   &-alt {
@@ -20,12 +28,17 @@ body {
     overflow-x: hidden;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 48rem) {
     min-height: calc(100vh - 24px - 0.125rem);
+    margin-top: 6.75rem;
 
     &-alt {
       margin-top: 5.875rem;
     }
+  }
+
+  @media (min-width: 62rem) {
+    margin-top: 2.125rem;
   }
 }
 
@@ -40,10 +53,10 @@ h6 {
 }
 
 h2 {
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
 
   @media (min-width: 62rem) {
-    font-size: 2rem !important;
+    font-size: 2rem;
   }
 }
 
